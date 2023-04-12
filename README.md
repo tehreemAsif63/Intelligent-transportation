@@ -73,20 +73,30 @@ Use examples liberally, and show the expected output if you can. It's helpful to
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:
+Integration with more sensor types: Currently, the project relies on a limited set of sensors to gather information about the environment. In future releases, we plan to expand the range of sensors that can be used, such as adding cameras or lidar sensors.
+Improved machine learning algorithms: The project currently uses machine learning algorithms to analyze traffic data and make predictions about traffic patterns. In future releases, we plan to refine these algorithms and integrate more advanced techniques to improve accuracy and efficiency.
+Integration with smart city infrastructure: To fully realize the potential of intelligent transportation, it is important to integrate the project with other smart city infrastructure, such as traffic cameras, traffic management systems, and public transportation systems. In future releases, we plan to work towards this goal and enable seamless integration with these systems.
+Expansion of ADAS features: The Advanced Driving Assistance System (ADAS) currently includes basic distance sensing technology. In future releases, we plan to expand the range of features to include other safety features, such as lane departure warnings and automatic emergency braking.
+
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
+Ensure the code does not break the project's guideline, after you make the changes
+Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
+Add comments and documentation if you needed to classify the changes
+Make a pull request to the projects main repository for the developers review.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Yingchao Ji           gusjiyid@student.gu.se
+Hassan Saleh          gussalhaf@student.gu.se
+Jessie Johnsson       gusjohjefh@student.gu.se
+Tehreen Asif          gusasite@student.gu.se
+Elif Sayeed Yaqoud    gussayel@student.gu.se
+
+
 
 ## License
-For open source projects, say how it is licensed.
-
+This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
