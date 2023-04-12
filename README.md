@@ -106,6 +106,7 @@ In contemporary society, with the increasing number of cars on the road, the dem
 2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 
+
 ## Roadmap
 As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:
 Integration with more sensor types: Currently, the project relies on a limited set of sensors to gather information about the environment. In future releases, we plan to expand the range of sensors that can be used, such as adding cameras or lidar sensors.
