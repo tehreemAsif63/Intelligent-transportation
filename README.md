@@ -95,6 +95,7 @@ Tehreen Asif          gusasite@student.gu.se
 Elif Sayeed Yaqoud    gussayel@student.gu.se
 
 
+
 ## License
 This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
 ## Project status
