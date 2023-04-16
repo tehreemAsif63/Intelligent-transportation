@@ -52,25 +52,70 @@ When you're ready to make this README your own, just edit this file and use the 
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
-Choose a self-explaining name for your project.
+
+- ### Intelligent Transportation
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+- In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
+
+- Intelligent transportation systems include three parts: Adaptive Traffic Light System(ATLS), Advanced Driving Assistance System(ADAS), and intelligent transportation application.
+
+- The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
+
+- With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
+
+- The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
 
 ## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+- /appveyor/tests/:user/:repo
+- /appveyor/tests/:user/:repo/:branch
+- /eclipse-marketplace/dt/:name
+- /bitbucket/issues/:user/:repo
+- /amo/stars/:addonId
+- /bugzilla/:bugNumber
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+1. Install Gitlab on your computer
+ - You can download GitLab from the official website: https://about.gitlab.com/install/.
+2. Install the Arduino IDE
+ - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
+3. Install Mosquitto
+ - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
+4. Install Android Studio
+ - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
+5. Sign up for Tinkercad and connect your microcontroller and sensors to your computer.
+ - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
+   Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
+
+**Requirements:**
+  1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
+  2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
+  3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- **To user the Intelligent Transportation System, you will need to follow these steps:**
+  1. Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
+  2. Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
+  3. Compile and upload the code to the microcontroller
+  4. Run Mosquitto message broker on your computer to facilitate communication between devices.
+  5. Open Android Studio project for the Intelligent Transportation System.
+  6. Build and run the Android application on your device.
+  7. Use the app to control and monitor the features of the Intelligent Transportation System.
+  
+- **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
+- **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
+
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+- **If you need help with the project, you can find support in the following ways:**
+ 1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
+   https://discord.gg/KN5YJ7TU
+ 2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
+
+
 
 ## Roadmap
 - **As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:**
@@ -81,18 +126,26 @@ Tell people where they can go to for help. It can be any combination of an issue
 
 
 ## Contributing
+<<<<<<< HEAD
 Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
 Ensure the code does not break the project's guideline, after you make the changes
 Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
 Add comments and documentation if you needed to classify the changes
 Make a pull request to the projects main repository for the developers review. 
+=======
+- Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
+- Ensure the code does not break the project's guideline, after you make the changes
+- Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
+- Add comments and documentation if you needed to classify the changes
+- Make a pull request to the projects main repository for the developers review.
+>>>>>>> 36525de23b797df3223c189563bb43c5fec5556b
 
 ## Authors and acknowledgment
-Yingchao Ji           gusjiyid@student.gu.se
-Hassan Saleh          gussalhaf@student.gu.se
-Jessie Johnsson       gusjohjefh@student.gu.se
-Tehreen Asif          gusasite@student.gu.se
-Elif Sayeed Yaqoud    gussayel@student.gu.se
+- Yingchao Ji         gusjiyid@student.gu.se
+- Hassan Saleh        gussalhaf@student.gu.se
+- Jessie Johnsson     gusjohjefh@student.gu.se
+- Tehreen Asif        gusasite@student.gu.se
+- Elif Sayeed Yaqoud  gussayel@student.gu.se
 
 
 
