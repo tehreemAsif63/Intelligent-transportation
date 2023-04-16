@@ -53,11 +53,14 @@ Every project is different, so consider which of these sections apply to yours. 
 
 ## Name
 
-Intelligent Transportation
+- ### Intelligent Transportation
 
 ## Description
-In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety. The project includes two parts: Adaptive Traffic Light System(ATLS) and Advanced Driving Assistance System(ADAS). The aim of ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion. With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
-
+- In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
+- Intelligent transportation systems include three parts: Adaptive Traffic Light System(ATLS), Advanced Driving Assistance System(ADAS), and intelligent transportation application.
+- The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
+- With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
+- The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
 ## Badges
 - /appveyor/tests/:user/:repo
 - /appveyor/tests/:user/:repo/:branch
@@ -71,31 +74,32 @@ In contemporary society, with the increasing number of cars on the road, the dem
 
 ## Installation
 
-1.Install Gitlab on your computer
-- You can download GitLab from the official website: https://about.gitlab.com/install/.
-2.Install the Arduino IDE
-- You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
-3.Install Mosquitto
-- Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
-4.Install Android Studio
-- Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
-5.Sign up for Tinkercad and connect your microcontroller and sensors to your computer.
-- Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
-- Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
- Requirements:
-- The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
-- You will need to have a basic understanding of the C++ programming language to use API and libraries.
-- The Intelligent Transportation System is designed to run on every operating system and on Android applications.
+1. Install Gitlab on your computer
+ - You can download GitLab from the official website: https://about.gitlab.com/install/.
+2. Install the Arduino IDE
+ - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
+3. Install Mosquitto
+ - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
+4. Install Android Studio
+ - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
+5. Sign up for Tinkercad and connect your microcontroller and sensors to your computer.
+ - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
+   Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
+
+- Requirements:
+  1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
+  2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
+  3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
 ## Usage
 - To user the Intelligent Transportation System, you will need to follow these steps:
-1.Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
-2.Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
-3.Compile and upload the code to the microcontroller
-4.Run Mosquitto message broker on your computer to facilitate communication between devices.
-5.Open Android Studio project for the Intelligent Transportation System.
-6.Build and run the Android application on your device.
-7.Use the app to control and monitor the features of the Intelligent Transportation System.
+1. Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
+2. Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
+3. Compile and upload the code to the microcontroller
+4. Run Mosquitto message broker on your computer to facilitate communication between devices.
+5. Open Android Studio project for the Intelligent Transportation System.
+6. Build and run the Android application on your device.
+7. Use the app to control and monitor the features of the Intelligent Transportation System.
 - For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors. For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.
 
 
@@ -116,18 +120,18 @@ Expansion of ADAS features: The Advanced Driving Assistance System (ADAS) curren
 
 
 ## Contributing
-Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
-Ensure the code does not break the project's guideline, after you make the changes
-Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
-Add comments and documentation if you needed to classify the changes
-Make a pull request to the projects main repository for the developers review.
+- Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
+- Ensure the code does not break the project's guideline, after you make the changes
+- Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
+- Add comments and documentation if you needed to classify the changes
+- Make a pull request to the projects main repository for the developers review.
 
 ## Authors and acknowledgment
-Yingchao Ji           gusjiyid@student.gu.se
-Hassan Saleh          gussalhaf@student.gu.se
-Jessie Johnsson       gusjohjefh@student.gu.se
-Tehreen Asif          gusasite@student.gu.se
-Elif Sayeed Yaqoud    gussayel@student.gu.se
+- Yingchao Ji         gusjiyid@student.gu.se
+- Hassan Saleh        gussalhaf@student.gu.se
+- Jessie Johnsson     gusjohjefh@student.gu.se
+- Tehreen Asif        gusasite@student.gu.se
+- Elif Sayeed Yaqoud  gussayel@student.gu.se
 
 
 
