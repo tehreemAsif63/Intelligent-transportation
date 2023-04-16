@@ -57,9 +57,13 @@ Every project is different, so consider which of these sections apply to yours. 
 
 ## Description
 - In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
+
 - Intelligent transportation systems include three parts: Adaptive Traffic Light System(ATLS), Advanced Driving Assistance System(ADAS), and intelligent transportation application.
+
 - The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
+
 - With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
+
 - The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
 
 ## Badges
@@ -86,28 +90,30 @@ Every project is different, so consider which of these sections apply to yours. 
  - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
    Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
 
-- Requirements:
+**Requirements:**
   1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
   2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
   3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
 ## Usage
-- To user the Intelligent Transportation System, you will need to follow these steps:
-1. Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
-2. Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
-3. Compile and upload the code to the microcontroller
-4. Run Mosquitto message broker on your computer to facilitate communication between devices.
-5. Open Android Studio project for the Intelligent Transportation System.
-6. Build and run the Android application on your device.
-7. Use the app to control and monitor the features of the Intelligent Transportation System.
-- For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors. For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.
+- **To user the Intelligent Transportation System, you will need to follow these steps:**
+  1. Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
+  2. Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
+  3. Compile and upload the code to the microcontroller
+  4. Run Mosquitto message broker on your computer to facilitate communication between devices.
+  5. Open Android Studio project for the Intelligent Transportation System.
+  6. Build and run the Android application on your device.
+  7. Use the app to control and monitor the features of the Intelligent Transportation System.
+  
+- **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
+- **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
 
 
 ## Support
-- If you need help with the project, you can find support in the following ways:
-1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
+- **If you need help with the project, you can find support in the following ways:**
+ 1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
    https://discord.gg/KN5YJ7TU
-2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
+ 2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 
 
