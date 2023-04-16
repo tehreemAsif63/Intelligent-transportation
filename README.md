@@ -85,7 +85,7 @@ Start with forking the repository and create a new branch for the changes you wa
 Ensure the code does not break the project's guideline, after you make the changes
 Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
 Add comments and documentation if you needed to classify the changes
-Make a pull request to the projects main repository for the developers review.
+Make a pull request to the projects main repository for the developers review. 
 
 ## Authors and acknowledgment
 Yingchao Ji           gusjiyid@student.gu.se
@@ -93,7 +93,6 @@ Hassan Saleh          gussalhaf@student.gu.se
 Jessie Johnsson       gusjohjefh@student.gu.se
 Tehreen Asif          gusasite@student.gu.se
 Elif Sayeed Yaqoud    gussayel@student.gu.se
-
 
 
 ## License
