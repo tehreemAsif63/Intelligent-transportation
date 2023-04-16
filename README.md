@@ -61,6 +61,7 @@ Every project is different, so consider which of these sections apply to yours. 
 - The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
 - With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
 - The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
+
 ## Badges
 - /appveyor/tests/:user/:repo
 - /appveyor/tests/:user/:repo/:branch
@@ -73,7 +74,6 @@ Every project is different, so consider which of these sections apply to yours. 
 
 
 ## Installation
-
 1. Install Gitlab on your computer
  - You can download GitLab from the official website: https://about.gitlab.com/install/.
 2. Install the Arduino IDE
