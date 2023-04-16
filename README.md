@@ -126,19 +126,12 @@ Every project is different, so consider which of these sections apply to yours. 
 
 
 ## Contributing
-<<<<<<< HEAD
-Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
-Ensure the code does not break the project's guideline, after you make the changes
-Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
-Add comments and documentation if you needed to classify the changes
-Make a pull request to the projects main repository for the developers review. 
-=======
 - Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
 - Ensure the code does not break the project's guideline, after you make the changes
 - Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
 - Add comments and documentation if you needed to classify the changes
 - Make a pull request to the projects main repository for the developers review.
->>>>>>> 36525de23b797df3223c189563bb43c5fec5556b
+
 
 ## Authors and acknowledgment
 - Yingchao Ji         gusjiyid@student.gu.se
