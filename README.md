@@ -70,7 +70,7 @@ Use the built-in continuous integration in GitLab.
 
 ## System design diagram
 
-![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/readme/img/Intelligent%20transportation%20system%20design%20diagram.png)
+![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/img/Intelligent%20transportation%20system%20design%20diagram.png)
 
 
 ## Installation
