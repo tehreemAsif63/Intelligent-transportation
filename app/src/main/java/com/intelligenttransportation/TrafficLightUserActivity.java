@@ -4,36 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class TrafficLightUserActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_triffic_light_user);
 
-        Button viewLightButton = findViewById(R.id.button_view_light);
-        viewLightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                if (0 == 0){ // This part should change to if user.loginStatus == 0
-                    intent = new Intent(MainActivity.this, TrafficLightUserActivity.class);
-                }
-                if (0 == 1){ // This part should change to if user.loginStatus == 1
-                    intent = new Intent(MainActivity.this, TrafficLightAdminActivity.class);
-                }
-                startActivity(intent);
-            }
-        });
+
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
@@ -43,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = null;
                 switch (item.getItemId()){
                     case R.id.navigation_car_console:
-                        intent = new Intent(MainActivity.this, CarConsoleActivity.class);
+                        intent = new Intent(TrafficLightUserActivity.this, CarConsoleActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(MainActivity.this, UserActivity.class);
+                        intent = new Intent(TrafficLightUserActivity.this, UserActivity.class);
                         startActivity(intent);
                         break;
                 }
@@ -56,4 +42,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void goBack(View view){
+        Intent intent = new Intent(TrafficLightUserActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
