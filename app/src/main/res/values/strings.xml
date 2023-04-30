@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">IntelligentTransportation</string>
+    <string name="ic_traffic_light">&#xe6ec;</string>
+    <string name="ic_car_console">&#xe656;</string>
+    <string name="ic_user">&#xe660;</string>
+    <string name="title_traffic_light">Traffic</string>
+    <string name="title_car_console">Car</string>
+    <string name="title_user">User</string>
+
 </resources>
