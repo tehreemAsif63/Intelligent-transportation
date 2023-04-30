@@ -12,9 +12,6 @@
         android:theme="@style/Theme.IntelligentTransportation"
         tools:targetApi="31">
         <activity
-            android:name=".CarConsoleActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,6 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TrafficLightUserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TrafficLightAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CarConsoleActivity"
+            android:exported="true" />
         <activity android:name=".UserActivity"
             android:exported="true"/>
     </application>

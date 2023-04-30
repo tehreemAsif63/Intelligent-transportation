@@ -6,5 +6,10 @@
     <string name="title_traffic_light">Traffic</string>
     <string name="title_car_console">Car</string>
     <string name="title_user">User</string>
+    <string name="traffic_control">Traffic Control</string>
+    <string name="pedestrian_wait">Pedestrian Wait</string>
+    <string name="go">Go</string>
+    <string name="re">Re</string>
+    <string name="exch">Exch</string>
 
 </resources>
