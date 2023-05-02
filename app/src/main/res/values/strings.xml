@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">IntelligentTransportation</string>
+    <string name="go_back">Back</string>
+    <string name="information">car name:xxx,model:xxxx,size:xx,color:xx</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>
