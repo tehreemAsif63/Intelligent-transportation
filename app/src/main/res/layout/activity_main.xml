@@ -5,8 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D17D00"
-    android:backgroundTint="#D17D00"
+    android:background="#2196F3"
+    android:backgroundTint="#145978"
     android:paddingTop="?attr/actionBarSize">
 
     <SearchView
@@ -79,17 +79,18 @@
         android:id="@+id/imageView"
         android:layout_width="586dp"
         android:layout_height="561dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/map1"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/map1" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="87dp"
         android:layout_height="120dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
@@ -97,7 +98,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216"
         app:srcCompat="@drawable/stop_light_png_free_download"
-        android:contentDescription="TODO"
         tools:ignore="ContentDescription,HardcodedText" />
 
 
