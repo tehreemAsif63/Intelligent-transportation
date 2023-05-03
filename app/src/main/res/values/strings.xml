@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">IntelligentTransportation</string>
+    <string name="login">Login</string>
+    <string name="intelligent">Intelligent</string>
+    <string name="transportation">Transportation</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="enter_traffic_light">Enter traffic light</string>
+    <string name="automobile_console">Automobile console</string>
+    <string name="user">User</string>
+    <string name="traffic_light">Traffic Light</string>
+    <string name="todo">TODO</string>
 </resources>
