@@ -1,5 +1,15 @@
 package com.intelligenttransportation;
 
+<<<<<<< app/src/main/java/com/intelligenttransportation/MainActivity.java
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+=======
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +29,7 @@ import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
-public class MainActivity extends AppCompatActivity {
+    Button userB,autoMobileConsoleB,trafficLightB;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -27,6 +37,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button userB= findViewById(R.id.userButton);
+        Button autoMobileConsoleB= findViewById(R.id.autoMoConButton);
+        Button trafficLightB= findViewById(R.id.trafficLightButton);
+
+
+        //Create the users objects
+        Controller.addUser("Jessei","1234","Admin");
+        Controller.addUser("Elif","1234", "Admin");
+        Controller.addUser("Tehreem","1234","General user");
+        Controller.addUser("YenigChao","1234","General user");
+        Controller.addUser("Hasson","1234", "General user");
+
+        userB.setOnClickListener(this);
+        autoMobileConsoleB.setOnClickListener(this);
+        trafficLightB.setOnClickListener(this);
+    }
+    @Override
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.userButton:
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.autoMoConButton:
+                Intent intent2 = new Intent(this, UserActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.trafficLightButton:
+                Intent intent3 = new Intent(this, TrafficLightActivity.class);
+                startActivity(intent3);
+                break;
+
+
+        }
 
         Button viewLightButton = findViewById(R.id.button_view_light);
         viewLightButton.setOnClickListener(new View.OnClickListener() {
