@@ -5,21 +5,22 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class UserActivity extends AppCompatActivity {
+public class CarConsoleActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
-
+        setContentView(R.layout.activity_car_console);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -27,18 +28,17 @@ public class UserActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.navigation_traffic_light:
                         intent = new Intent();
-                        intent.setClass(UserActivity.this, MainActivity.class);
+                        intent.setClass(CarConsoleActivity.this, MainActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.navigation_car_console:
+                    case R.id.navigation_user:
                         intent = new Intent();
-                        intent.setClass(UserActivity.this, CarConsoleActivity.class);
+                        intent.setClass(CarConsoleActivity.this, UserActivity.class);
                         startActivity(intent);
                         break;
                 }
                 return true;
             }
         });
-
     }
 }
