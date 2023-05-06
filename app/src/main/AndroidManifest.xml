@@ -12,10 +12,7 @@
         android:theme="@style/Theme.IntelligentTransportation"
         tools:targetApi="31">
         <activity
-            android:name=".bindCar1"
-            android:exported="true" />
-        <activity
-            android:name=".bindCar"
+            android:name=".BindCar"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
