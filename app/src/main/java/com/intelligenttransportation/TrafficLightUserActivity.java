@@ -29,14 +29,18 @@ public class TrafficLightUserActivity extends AppCompatActivity {
 
         broker = new BrokerConnection(getApplicationContext());
         mqttClient = broker.getMqttClient();
-        broker.setConnectionMessage(findViewById(R.id.textView_west_east_number),
+        broker.setConnectionMessage(
+                findViewById(R.id.textView_west_east_number),
                 findViewById(R.id.textView_north_south_number),
                 findViewById(R.id.light_east),
                 findViewById(R.id.light_west),
                 findViewById(R.id.light_north),
                 findViewById(R.id.light_south),
                 findViewById(R.id.light_east_west),
-                findViewById(R.id.light_north_south));
+                findViewById(R.id.light_north_south),
+                findViewById(R.id.image_car_east),
+                findViewById(R.id.image_car_north)
+        );
         broker.connectToMqttBroker();
 
 

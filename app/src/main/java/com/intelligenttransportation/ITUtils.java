@@ -4,7 +4,7 @@ import android.graphics.Color;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DisplayUtils {
+public class ITUtils {
 
     public static TextView textView_east_number;
     public static TextView textView_north_number;
@@ -14,10 +14,12 @@ public class DisplayUtils {
     public static ImageView imageView_south;
     public static ImageView imageView_east_west;
     public static ImageView imageView_north_south;
+    public static ImageView imageView_car_east;
+    public static ImageView imageView_car_north;
 
     public static void setViewsID(TextView textView_east, TextView textView_north, ImageView light_east,
                                   ImageView light_west,ImageView light_north,ImageView light_south,
-                                  ImageView light_east_west,ImageView light_north_south){
+                                  ImageView light_east_west,ImageView light_north_south,ImageView car_east,ImageView car_north){
         textView_east_number = textView_east;
         textView_north_number = textView_north;
         imageView_east = light_east;
@@ -26,6 +28,8 @@ public class DisplayUtils {
         imageView_south = light_south;
         imageView_east_west = light_east_west;
         imageView_north_south = light_north_south;
+        imageView_car_east = car_east;
+        imageView_car_north = car_north;
     }
 
     public static void showDynamicPage(String str){

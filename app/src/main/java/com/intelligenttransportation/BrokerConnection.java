@@ -20,7 +20,7 @@ public class BrokerConnection extends AppCompatActivity {
     public static final String SUB_TOPIC = "group9_outTopic";
 
     public static final String LOCALHOST = "broker.emqx.io";
-    private static final String MQTT_SERVER = "tcp://" + LOCALHOST+ ":1883";
+    private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 0;
 
@@ -69,7 +69,7 @@ public class BrokerConnection extends AppCompatActivity {
                     String payload = new String(message.getPayload());
                     Log.d(CLIENT_ID, "Message received: " + payload);
                     Toast.makeText(context, "Message received: " + payload, Toast.LENGTH_SHORT).show();
-                    DisplayUtils.showDynamicPage(message.toString());
+                    ITUtils.showDynamicPage(message.toString());
 
                     if (topic.equals(SUB_TOPIC) || (connectionMessage != null)) {
                         String messageMQTT = message.toString();
@@ -80,6 +80,7 @@ public class BrokerConnection extends AppCompatActivity {
                         Log.i(CLIENT_ID, "[MQTT] Topic: " + topic + " | Message: " + message.toString());
                     }
                 }
+
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
                     Log.d(CLIENT_ID, "Message delivered");
@@ -93,15 +94,15 @@ public class BrokerConnection extends AppCompatActivity {
     }
 
     public void setConnectionMessage(TextView textView_east, TextView textView_north, ImageView light_east,
-                                     ImageView light_west,ImageView light_north,ImageView light_south,
-                                     ImageView light_east_west,ImageView light_north_south) {
-        DisplayUtils.setViewsID(textView_east, textView_north, light_east,light_west,light_north,light_south,light_east_west,light_north_south);
+                                     ImageView light_west, ImageView light_north, ImageView light_south,
+                                     ImageView light_east_west, ImageView light_north_south, ImageView car_east, ImageView car_north) {
+        ITUtils.setViewsID(textView_east, textView_north, light_east, light_west, light_north, light_south,
+                light_east_west, light_north_south, car_east, car_north);
     }
 
     public MqttClient getMqttClient() {
         return mqttClient;
     }
-
 
 
 }
