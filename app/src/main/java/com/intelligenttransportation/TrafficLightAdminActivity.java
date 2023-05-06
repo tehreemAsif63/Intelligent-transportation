@@ -55,6 +55,14 @@ public class TrafficLightAdminActivity extends AppCompatActivity {
             }
         });
 
+        Button renew = findViewById(R.id.button_renew);
+        renew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.renewAdmin, QOS, null);
+            }
+        });
+
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
