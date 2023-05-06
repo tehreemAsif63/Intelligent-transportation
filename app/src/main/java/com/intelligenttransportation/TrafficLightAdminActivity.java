@@ -47,6 +47,14 @@ public class TrafficLightAdminActivity extends AppCompatActivity {
             }
         });
 
+        Button northGo = findViewById(R.id.button_north_south);
+        northGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.northGoAdmin, QOS, null);
+            }
+        });
+
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
