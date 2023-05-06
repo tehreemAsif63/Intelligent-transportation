@@ -5,6 +5,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DisplayUtils {
+    //The control system uses "xxxx" four digits as a password to communicate with the Wio terminal.
+    // The four digits are represented:
+    //userType: 0 is no case; 1 is general user; 2 is admin user
+    //whichGo: 0 is no case; 1 is east-west; 2 is north-south
+    //isRenew: 1 is renew to original state
+    //isExchange: 1 is immediately change the traffic light status on both sides
+    public static final String eastGoUser = "1100";
+    public static final String northGoUser = "1200";
+    public static final String eastGoAdmin = "2100";
+    public static final String northGoAdmin = "2200";
+    public static final String renewAdmin = "2010";
+    public static final String exchangeAdmin = "2001";
+
 
     public static TextView textView_east_number;
     public static TextView textView_north_number;
