@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,7 +25,7 @@ public class TrafficLightUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_triffic_light_user);
+        setContentView(R.layout.activity_traffic_light_user);
 
         broker = new BrokerConnection(getApplicationContext());
         mqttClient = broker.getMqttClient();
