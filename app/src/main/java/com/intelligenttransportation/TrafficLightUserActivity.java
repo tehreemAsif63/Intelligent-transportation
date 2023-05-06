@@ -14,6 +14,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TrafficLightUserActivity extends AppCompatActivity {
 
+    public BrokerConnection broker;
+    public MqttClient mqttClient;
+    public static final String PUB_TOPIC = "group9_inTopic";
+
+    public static final String LOCALHOST = "broker.emqx.io";
+    private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
+    public static final String CLIENT_ID = "Android App";
+    public static final int QOS = 2;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -21,7 +29,17 @@ public class TrafficLightUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_triffic_light_user);
 
-
+        broker = new BrokerConnection(getApplicationContext());
+        mqttClient = broker.getMqttClient();
+        broker.setConnectionMessage(findViewById(R.id.textView_west_east_number),
+                findViewById(R.id.textView_north_south_number),
+                findViewById(R.id.light_east),
+                findViewById(R.id.light_west),
+                findViewById(R.id.light_north),
+                findViewById(R.id.light_south),
+                findViewById(R.id.light_east_west),
+                findViewById(R.id.light_north_south));
+        broker.connectToMqttBroker();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
