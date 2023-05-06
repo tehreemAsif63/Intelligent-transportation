@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">user</string>
     <string name="sign_in">Sign In</string>
-    <string name="username">Username</string>
+    <string name="full_name">Username</string>
     <string name="password">Password</string>
     <string name="simulated_map">Simulated Map</string>
     <string name="traffic_light">Traffic Light</string>
@@ -13,4 +13,6 @@
     <string name="user_type">User type:</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="login">Login</string>
+    <string name="phone_number">Phone number</string>
+    <string name="username">Username</string>
 </resources>

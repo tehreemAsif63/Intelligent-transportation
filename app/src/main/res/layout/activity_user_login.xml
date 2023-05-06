@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/play"
     tools:context=".UserLogin">
 
     <TextView
@@ -19,42 +19,79 @@
         android:gravity="center"
         tools:ignore="MissingConstraints" />
 
+
+    <EditText
+        android:id="@+id/createName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signIn"
+        android:layout_margin="40dp"
+        android:autofillHints=""
+        android:background="#60ffffff"
+        android:drawableStart="@drawable/baseline_person_outline_24"
+        android:drawablePadding="30dp"
+        android:hint="@string/full_name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints,VisualLintTextFieldSize,DuplicateSpeakableTextCheck"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+
+    <EditText
+        android:id="@+id/createNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signIn"
+        android:layout_margin="40dp"
+        android:autofillHints=""
+        android:background="#60ffffff"
+        android:drawableStart="@drawable/baseline_phone_24"
+        android:drawablePadding="30dp"
+        android:hint="@string/phone_number"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints,VisualLintTextFieldSize"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="200dp" />
+
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/signIn"
-        android:layout_margin="10dp"
+        android:layout_margin="40dp"
+        android:autofillHints=""
         android:background="#60ffffff"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="30dp"
         android:hint="@string/username"
-        android:padding="30dp"
+        android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:drawableStart="@drawable/baseline_person_24"
-        android:drawablePadding="20dp"
         tools:ignore="MissingConstraints,VisualLintTextFieldSize"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="120dp"
-        android:autofillHints="" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="280dp" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
-        android:layout_margin="10dp"
+        android:layout_margin="40dp"
+        android:autofillHints=""
         android:background="#60ffffff"
+        android:drawableStart="@drawable/baseline_password_24"
+        android:drawablePadding="30dp"
         android:hint="@string/password"
-        android:padding="30dp"
+        android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="20dp"
         tools:ignore="MissingConstraints,VisualLintTextFieldSize"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="230dp"
-        android:autofillHints="" />
-
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="360dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
@@ -65,24 +102,13 @@
         android:layout_margin="20dp"
         android:background="#60ffffff"
         android:drawableStart="@drawable/baseline_login_24"
-        android:text="@string/login"
+        android:text="@string/sign_in"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="485dp" />
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="590dp" />
 
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginButton"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:text="@string/forgot_password"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="553dp" />
+
 
     <TextView
         android:id="@+id/userType"
@@ -95,9 +121,7 @@
         android:textSize="25sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="370dp" />
-
-
+        tools:layout_editor_absoluteY="470dp" />
 
     <RadioGroup
         android:id="@+id/userTypeRadioGroup"
@@ -109,27 +133,33 @@
         tools:ignore="MissingConstraints">
 
 
-        <RadioButton
-            android:id="@+id/adminRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:text="@string/admin"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:padding="15dp"/>
-
-        <RadioButton
-            android:id="@+id/userRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:text="@string/userOption"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:padding="15dp"/>
-
     </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/adminRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:padding="15dp"
+        android:text="@string/admin"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="520dp"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/userRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:padding="15dp"
+        android:text="@string/userOption"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="520dp"
+        tools:ignore="MissingConstraints" />
 
 
 
