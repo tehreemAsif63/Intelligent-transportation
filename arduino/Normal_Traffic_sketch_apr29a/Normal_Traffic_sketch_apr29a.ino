@@ -18,9 +18,6 @@ const int redNorth = 6;
 const int yellowNorth = 4;
 const int greenNorth = 2;
 
-int nRedTimer=10;//for how long you want to keep north-south red light on
-int eRedTimer=10;//for how long you want to keep east-west red light on
-const char* zeroSecLeft= "Seconds left: 0"; 
 
 void setup() {
   // put your setup code here, to run once:
@@ -42,16 +39,12 @@ void loop() {
   digitalWrite(yellowEast, LOW);
   digitalWrite(redEast, HIGH);
   digitalWrite(greenNorth, HIGH);
-  for (int i = eRedTimer; i >= 0; i--) {
-       int countDown=i+1;
-       Serial.println("Seconds left: "+ String(countDown)); 
-       delay(1000);
-  } 
+  delay(1000);
+   
   //Signal on for north-south
   
   digitalWrite(greenNorth, LOW);
   digitalWrite(yellowNorth, HIGH);
-  Serial.println(zeroSecLeft); 
   delay(1000); // Wait for 1 second
   //READY FOR BOTH
  
@@ -59,17 +52,13 @@ void loop() {
   digitalWrite(redNorth, HIGH);
   digitalWrite(redEast, LOW);
   digitalWrite(greenEast, HIGH);  
-  for (int i=nRedTimer; i>=0; i--){
-       int countDown=i+1;
-       Serial.println("Seconds left: "+ String(countDown)); 
-       delay(1000);
-  }   
+  delay(1000);
+     
   //Signal on for EAST-WEST
 
   digitalWrite(greenEast, LOW);
   digitalWrite(yellowEast, HIGH);
-  Serial.println(zeroSecLeft); 
   delay(1000); // Wait for 1 second
   //READY FOR BOTH
-
 }
+
