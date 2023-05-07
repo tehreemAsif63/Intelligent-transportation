@@ -17,12 +17,13 @@ public class ITUtils {
     public static ImageView imageView_north_south;
     public static ImageView imageView_car_east1;
     public static ImageView imageView_car_east2;
-    public static ImageView imageView_car_north;
+    public static ImageView imageView_car_north1;
+    public static ImageView imageView_car_north2;
 
     public static void setViewsID(TextView textView_east, TextView textView_north, ImageView light_east,
                                   ImageView light_west, ImageView light_north, ImageView light_south,
                                   ImageView light_east_west, ImageView light_north_south, ImageView car_east1,
-                                  ImageView car_east2, ImageView car_north) {
+                                  ImageView car_east2, ImageView car_north1, ImageView car_north2) {
         textView_east_number = textView_east;
         textView_north_number = textView_north;
         imageView_east = light_east;
@@ -33,7 +34,8 @@ public class ITUtils {
         imageView_north_south = light_north_south;
         imageView_car_east1 = car_east1;
         imageView_car_east2 = car_east2;
-        imageView_car_north = car_north;
+        imageView_car_north1 = car_north1;
+        imageView_car_north2 = car_north2;
     }
 
     public static void showDynamicPage(String str) {
@@ -59,9 +61,14 @@ public class ITUtils {
                 imageView_west.setImageResource(R.drawable.green);
                 imageView_east_west.setImageResource(R.drawable.green);
                 imageView_car_east1.setVisibility(View.GONE);
+                imageView_car_east2.setVisibility(View.GONE);
                 break;
-            case "has":
-                imageView_car_east1.setVisibility(View.VISIBLE);
+            case "car":
+                if (eastData[2].equals("1")){
+                    imageView_car_east1.setVisibility(View.VISIBLE);
+                } else if (eastData[2].equals("2")) {
+                    imageView_car_east2.setVisibility(View.VISIBLE);
+                }
                 break;
         }
         textView_east_number.setText(eastData[2].length() < 2 ? "0" + eastData[2] : eastData[2]);
@@ -84,10 +91,10 @@ public class ITUtils {
                 imageView_north.setImageResource(R.drawable.green);
                 imageView_south.setImageResource(R.drawable.green);
                 imageView_north_south.setImageResource(R.drawable.green);
-                imageView_car_north.setVisibility(View.GONE);
+                imageView_car_north1.setVisibility(View.GONE);
                 break;
             case "has":
-                imageView_car_north.setVisibility(View.VISIBLE);
+                imageView_car_north1.setVisibility(View.VISIBLE);
                 break;
         }
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);

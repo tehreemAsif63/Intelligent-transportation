@@ -235,17 +235,30 @@
         app:layout_constraintVertical_bias="0.238" />
 
     <ImageView
-        android:id="@+id/image_car_north"
+        android:id="@+id/image_car_north1"
         android:layout_width="50dp"
-        android:layout_height="80dp"
-        android:src="@drawable/car_north"
+        android:layout_height="72dp"
+        android:src="@drawable/car_north1"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.115" />
+
+    <ImageView
+        android:id="@+id/image_car_north2"
+        android:layout_width="46dp"
+        android:layout_height="50dp"
+        android:src="@drawable/car_north2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

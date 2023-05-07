@@ -42,7 +42,8 @@ public class TrafficLightUserActivity extends AppCompatActivity {
                 findViewById(R.id.light_north_south),
                 findViewById(R.id.image_car_east1),
                 findViewById(R.id.image_car_east2),
-                findViewById(R.id.image_car_north)
+                findViewById(R.id.image_car_north1),
+                findViewById(R.id.image_car_north2)
         );
         broker.connectToMqttBroker();
 
