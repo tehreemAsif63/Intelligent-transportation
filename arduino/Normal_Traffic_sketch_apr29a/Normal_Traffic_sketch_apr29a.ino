@@ -35,32 +35,40 @@ void setup() {
 }
 
 void loop() {
-  
+ 
+if(flag < 17) {
+  digitalWrite(yellowNorth, LOW);
+  digitalWrite(redNorth, HIGH);
+  digitalWrite(redEast, LOW);
+  digitalWrite(greenEast, HIGH);  
+}
+
+  //Signal on for EAST-WEST
+
+if(flag >= 17 && flag < 20){
+  digitalWrite(greenEast, LOW);
+  digitalWrite(yellowEast, HIGH);
+}
+  //READY FOR BOTH
+
+if(flag >= 20 && flag < 37) {
   
   digitalWrite(redNorth, LOW);
   digitalWrite(yellowEast, LOW);
   digitalWrite(redEast, HIGH);
   digitalWrite(greenNorth, HIGH);
-  delay(1000);
-   
+}
   //Signal on for north-south
-  
+
+
+  if(flag >= 37 && flag < 40){
   digitalWrite(greenNorth, LOW);
   digitalWrite(yellowNorth, HIGH);
-  delay(1000); // Wait for 1 second
+  }
   //READY FOR BOTH
- 
-  digitalWrite(yellowNorth, LOW);
-  digitalWrite(redNorth, HIGH);
-  digitalWrite(redEast, LOW);
-  digitalWrite(greenEast, HIGH);  
-  delay(1000);
-     
-  //Signal on for EAST-WEST
 
-  digitalWrite(greenEast, LOW);
-  digitalWrite(yellowEast, HIGH);
-  delay(1000); // Wait for 1 second
-  //READY FOR BOTH
+delay(1000)
+flag++;
+
 }
 
