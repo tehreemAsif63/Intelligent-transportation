@@ -209,28 +209,43 @@
         app:layout_constraintVertical_bias="0.802" />
 
     <ImageView
-        android:id="@+id/image_car_east"
+        android:id="@+id/image_car_east1"
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:src="@drawable/car_east"
+        android:src="@drawable/car_east1"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.238" />
+
+    <ImageView
+        android:id="@+id/image_car_east2"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:src="@drawable/car_east2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
 
     <ImageView
         android:id="@+id/image_car_north"
         android:layout_width="50dp"
         android:layout_height="80dp"
         android:src="@drawable/car_north"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

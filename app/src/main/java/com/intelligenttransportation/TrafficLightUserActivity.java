@@ -3,6 +3,7 @@ package com.intelligenttransportation;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ public class TrafficLightUserActivity extends AppCompatActivity {
     public static final int QOS = 2;
     private BottomNavigationView bottomNavigationView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,8 @@ public class TrafficLightUserActivity extends AppCompatActivity {
                 findViewById(R.id.light_south),
                 findViewById(R.id.light_east_west),
                 findViewById(R.id.light_north_south),
-                findViewById(R.id.image_car_east),
+                findViewById(R.id.image_car_east1),
+                findViewById(R.id.image_car_east2),
                 findViewById(R.id.image_car_north)
         );
         broker.connectToMqttBroker();

@@ -1,6 +1,7 @@
 package com.intelligenttransportation;
 
 import android.graphics.Color;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,12 +15,14 @@ public class ITUtils {
     public static ImageView imageView_south;
     public static ImageView imageView_east_west;
     public static ImageView imageView_north_south;
-    public static ImageView imageView_car_east;
+    public static ImageView imageView_car_east1;
+    public static ImageView imageView_car_east2;
     public static ImageView imageView_car_north;
 
     public static void setViewsID(TextView textView_east, TextView textView_north, ImageView light_east,
-                                  ImageView light_west,ImageView light_north,ImageView light_south,
-                                  ImageView light_east_west,ImageView light_north_south,ImageView car_east,ImageView car_north){
+                                  ImageView light_west, ImageView light_north, ImageView light_south,
+                                  ImageView light_east_west, ImageView light_north_south, ImageView car_east1,
+                                  ImageView car_east2, ImageView car_north) {
         textView_east_number = textView_east;
         textView_north_number = textView_north;
         imageView_east = light_east;
@@ -28,15 +31,16 @@ public class ITUtils {
         imageView_south = light_south;
         imageView_east_west = light_east_west;
         imageView_north_south = light_north_south;
-        imageView_car_east = car_east;
+        imageView_car_east1 = car_east1;
+        imageView_car_east2 = car_east2;
         imageView_car_north = car_north;
     }
 
-    public static void showDynamicPage(String str){
+    public static void showDynamicPage(String str) {
         String[] messages = str.split(";");
         String[] eastData = messages[0].split(":");
         String[] northData = messages[1].split(":");
-        switch (eastData[1]){
+        switch (eastData[1]) {
             case "red":
                 textView_east_number.setTextColor(Color.RED);
                 imageView_east.setImageResource(R.drawable.red);
@@ -54,11 +58,15 @@ public class ITUtils {
                 imageView_east.setImageResource(R.drawable.green);
                 imageView_west.setImageResource(R.drawable.green);
                 imageView_east_west.setImageResource(R.drawable.green);
+                imageView_car_east1.setVisibility(View.GONE);
+                break;
+            case "has":
+                imageView_car_east1.setVisibility(View.VISIBLE);
                 break;
         }
         textView_east_number.setText(eastData[2].length() < 2 ? "0" + eastData[2] : eastData[2]);
 
-        switch (northData[1]){
+        switch (northData[1]) {
             case "red":
                 textView_north_number.setTextColor(Color.RED);
                 imageView_north.setImageResource(R.drawable.red);
@@ -76,6 +84,10 @@ public class ITUtils {
                 imageView_north.setImageResource(R.drawable.green);
                 imageView_south.setImageResource(R.drawable.green);
                 imageView_north_south.setImageResource(R.drawable.green);
+                imageView_car_north.setVisibility(View.GONE);
+                break;
+            case "has":
+                imageView_car_north.setVisibility(View.VISIBLE);
                 break;
         }
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
