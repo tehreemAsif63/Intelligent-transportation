@@ -35,6 +35,10 @@ void setup() {
 }
 
 void loop() {
+
+if(flag == 40){
+  	flag = 0;
+}
  
 if(flag < 17) {
   digitalWrite(yellowNorth, LOW);
