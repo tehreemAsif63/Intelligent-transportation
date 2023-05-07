@@ -1,4 +1,3 @@
-// Defining the pins for the LED lights
 
 //Defining the pins in Wio terminal
 //const int redEast = 2;
@@ -21,7 +20,6 @@ const int greenNorth = 2;
 int flag=0;
 
 void setup() {
-  // put your setup code here, to run once:
  
   pinMode(redEast, OUTPUT);
   pinMode(yellowEast, OUTPUT);
@@ -52,8 +50,6 @@ if(flag < 17) {
   Serial.println(20 - flag);
 }
 
-  //Signal on for EAST-WEST
-
 if(flag >= 17 && flag < 20){
   digitalWrite(greenEast, LOW);
   digitalWrite(yellowEast, HIGH);
@@ -63,8 +59,7 @@ if(flag >= 17 && flag < 20){
   Serial.print("Red light: ");
   Serial.println(20 - flag);
 }
-  //READY FOR BOTH
-
+  
 if(flag >= 20 && flag < 37) {
   digitalWrite(redNorth, LOW);
   digitalWrite(yellowEast, LOW);
@@ -76,8 +71,6 @@ if(flag >= 20 && flag < 37) {
   Serial.print("Green light: ");
   Serial.println(37 - flag);  
 }
-  //Signal on for north-south
-
 
   if(flag >= 37 && flag < 40){
   digitalWrite(greenNorth, LOW);
@@ -88,9 +81,8 @@ if(flag >= 20 && flag < 37) {
   Serial.print("Yellow light: ");
   Serial.println(40 - flag);
   }
-  //READY FOR BOTH
 
-delay(1000)
+delay(1000);
 flag++;
 
 }
