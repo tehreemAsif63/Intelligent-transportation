@@ -45,6 +45,11 @@ if(flag < 17) {
   digitalWrite(redNorth, HIGH);
   digitalWrite(redEast, LOW);
   digitalWrite(greenEast, HIGH);  
+
+  Serial.print("Green light: ");
+  Serial.println(17 - flag);
+  Serial.print("Red light: ");
+  Serial.println(20 - flag);
 }
 
   //Signal on for EAST-WEST
@@ -52,15 +57,24 @@ if(flag < 17) {
 if(flag >= 17 && flag < 20){
   digitalWrite(greenEast, LOW);
   digitalWrite(yellowEast, HIGH);
+
+  Serial.print("Yellow light: ");
+  Serial.println(20 - flag);
+  Serial.print("Red light: ");
+  Serial.println(20 - flag);
 }
   //READY FOR BOTH
 
 if(flag >= 20 && flag < 37) {
-  
   digitalWrite(redNorth, LOW);
   digitalWrite(yellowEast, LOW);
   digitalWrite(redEast, HIGH);
   digitalWrite(greenNorth, HIGH);
+   
+  Serial.print("Red light: ");
+  Serial.println(40 - flag);
+  Serial.print("Green light: ");
+  Serial.println(37 - flag);  
 }
   //Signal on for north-south
 
@@ -68,6 +82,11 @@ if(flag >= 20 && flag < 37) {
   if(flag >= 37 && flag < 40){
   digitalWrite(greenNorth, LOW);
   digitalWrite(yellowNorth, HIGH);
+    
+  Serial.print("Red light: ");
+  Serial.println(40 - flag);
+  Serial.print("Yellow light: ");
+  Serial.println(40 - flag);
   }
   //READY FOR BOTH
 
