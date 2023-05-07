@@ -18,6 +18,7 @@ const int redNorth = 6;
 const int yellowNorth = 4;
 const int greenNorth = 2;
 
+int flag=0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -34,6 +35,7 @@ void setup() {
 }
 
 void loop() {
+  
   
   digitalWrite(redNorth, LOW);
   digitalWrite(yellowEast, LOW);
