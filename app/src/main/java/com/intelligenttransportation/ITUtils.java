@@ -92,9 +92,14 @@ public class ITUtils {
                 imageView_south.setImageResource(R.drawable.green);
                 imageView_north_south.setImageResource(R.drawable.green);
                 imageView_car_north1.setVisibility(View.GONE);
+                imageView_car_north2.setVisibility(View.GONE);
                 break;
-            case "has":
-                imageView_car_north1.setVisibility(View.VISIBLE);
+            case "car":
+                if (northData[2].equals("1")){
+                    imageView_car_north1.setVisibility(View.VISIBLE);
+                } else if (northData[2].equals("2")) {
+                    imageView_car_north2.setVisibility(View.VISIBLE);
+                }
                 break;
         }
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
