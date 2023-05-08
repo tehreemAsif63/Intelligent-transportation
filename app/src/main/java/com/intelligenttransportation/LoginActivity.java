@@ -1,63 +1,91 @@
 package com.intelligenttransportation;
 
-import android.annotation.SuppressLint;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+import java.util.List;
+public class LoginActivity extends AppCompatActivity {
+    EditText usernameEditText;
+    EditText passwordEditText;
+    TextView errorTextView;
     private static final String TAG = "Login";
-    // Declare login button and EditTexts
-    String username, password;
-    EditText usernameInput;
-    EditText passwordInput;
 
-    @SuppressLint("ResourceAsColor")
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-        usernameInput = findViewById(R.id.userNameInput);
-        passwordInput = findViewById(R.id.passwordInput);
-        Button buttonLogin = findViewById(R.id.buttonLogin);
-        buttonLogin.setBackgroundColor(android.R.color.black);
-        buttonLogin.setTextColor(android.R.color.white);
-        buttonLogin.setOnClickListener(this);
-    }
-    @Override
-    public void onClick(View view) {
 
-        // Get the username and password from the EditTexts
-        String username = usernameInput.getText().toString();
-        String password = passwordInput.getText().toString();
-        boolean verifyGeneralUser=Controller.verifyUserCredentials(username, password,"General user");
-        boolean verifyAdmin=Controller.verifyAdminCredentials(username, password,"Admin");
-        if(verifyGeneralUser==true) {
-            add_information();
-            // Check if the username and password are correct
-            // If the user is an admin, start the AdminActivity
-            Intent intent = new Intent(LoginActivity.this, UserActivity.class);
-            startActivity(intent);
-        } else if (verifyAdmin == true) {
-            add_information();
-            Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
-            startActivity(intent);
-        } else{
-            final String wrongCredM = "Wrong Username or password!\n Try again!";
-            Log.w(TAG, wrongCredM);
-            Toast.makeText(getApplicationContext(), wrongCredM, Toast.LENGTH_SHORT).show();
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        Button loginButton = findViewById(R.id.loginButton);
+        errorTextView = findViewById(R.id.errorTextView);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+                if (verifyCredentials(username, password)) {
+                    // Go to the Account Information page
+                    Intent intent = new Intent(LoginActivity.this, AccountInformationActivity.class);
+                    intent.putExtra("username", username);
+                    startActivity(intent);
+                } else {
+                    final String wrongCredM = "Wrong Username or password!\n Try again!";
+                    Log.w(TAG, wrongCredM);
+                    Toast.makeText(getApplicationContext(), wrongCredM, Toast.LENGTH_SHORT).show();               }
+            }
+        });
+    }
+
+    private boolean verifyCredentials(String username, String password) {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(getAssets().open("Users.txt")));
+
+            StringBuilder jsonContent = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                jsonContent.append(line);
+            }
+
+            Type userListType = new TypeToken<List<User>>(){}.getType();
+            List<User> users = new Gson().fromJson(jsonContent.toString(), userListType);
+
+            for (User user : users) {
+                if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+        return false;
     }
-    public void add_information() {
-        Log.d("username", username);
-        Log.d("password", password);
-    }
-
 }
