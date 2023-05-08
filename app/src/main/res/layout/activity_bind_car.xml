@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bindCar"
+    tools:context=".BindCar"
     android:background="@drawable/play">
 
 
@@ -20,7 +20,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="10dp"
         android:singleLine="true"
-        android:text="@string/information"
+        android:text="@string/information_o"
         android:textColor="#8A8A8A"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
