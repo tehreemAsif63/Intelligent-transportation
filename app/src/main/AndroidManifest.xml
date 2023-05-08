@@ -36,10 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TrafficLightUserActivity"
-            android:exported="true" />
-        <activity
-            android:name=".TrafficLightAdminActivity"
+            android:name=".TrafficLightActivity"
             android:exported="true" />
         <activity
             android:name=".CarConsoleActivity"
