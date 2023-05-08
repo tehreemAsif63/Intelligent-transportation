@@ -20,23 +20,6 @@ public class ITUtils {
     public static ImageView imageView_car_north1;
     public static ImageView imageView_car_north2;
 
-    public static void setViewsID(TextView textView_east, TextView textView_north, ImageView light_east,
-                                  ImageView light_west, ImageView light_north, ImageView light_south,
-                                  ImageView light_east_west, ImageView light_north_south, ImageView car_east1,
-                                  ImageView car_east2, ImageView car_north1, ImageView car_north2) {
-        textView_east_number = textView_east;
-        textView_north_number = textView_north;
-        imageView_east = light_east;
-        imageView_west = light_west;
-        imageView_north = light_north;
-        imageView_south = light_south;
-        imageView_east_west = light_east_west;
-        imageView_north_south = light_north_south;
-        imageView_car_east1 = car_east1;
-        imageView_car_east2 = car_east2;
-        imageView_car_north1 = car_north1;
-        imageView_car_north2 = car_north2;
-    }
 
     public static void showDynamicPage(String str) {
         String[] messages = str.split(";");

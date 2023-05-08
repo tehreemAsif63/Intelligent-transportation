@@ -93,14 +93,6 @@ public class BrokerConnection extends AppCompatActivity {
         this.connectionMessage = textView;
     }
 
-    public void setConnectionMessage(TextView textView_east, TextView textView_north, ImageView light_east,
-                                     ImageView light_west, ImageView light_north, ImageView light_south,
-                                     ImageView light_east_west, ImageView light_north_south, ImageView car_east1,
-                                     ImageView car_east2, ImageView car_north1, ImageView car_north2) {
-        ITUtils.setViewsID(textView_east, textView_north, light_east, light_west, light_north, light_south,
-                light_east_west, light_north_south, car_east1, car_east2, car_north1, car_north2);
-    }
-
     public MqttClient getMqttClient() {
         return mqttClient;
     }

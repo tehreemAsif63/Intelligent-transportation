@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,20 +38,18 @@ public class TrafficLightActivity extends AppCompatActivity {
         }
 
         broker = new BrokerConnection(getApplicationContext());
-        broker.setConnectionMessage(
-                findViewById(R.id.textView_west_east_number),
-                findViewById(R.id.textView_north_south_number),
-                findViewById(R.id.light_east),
-                findViewById(R.id.light_west),
-                findViewById(R.id.light_north),
-                findViewById(R.id.light_south),
-                findViewById(R.id.light_east_west),
-                findViewById(R.id.light_north_south),
-                findViewById(R.id.image_car_east1),
-                findViewById(R.id.image_car_east2),
-                findViewById(R.id.image_car_north1),
-                findViewById(R.id.image_car_north2)
-        );
+        ITUtils.textView_east_number = findViewById(R.id.textView_west_east_number);
+        ITUtils.textView_north_number = findViewById(R.id.textView_north_south_number);
+        ITUtils.imageView_east = findViewById(R.id.light_east);
+        ITUtils.imageView_west = findViewById(R.id.light_west);
+        ITUtils.imageView_north = findViewById(R.id.light_north);
+        ITUtils.imageView_south = findViewById(R.id.light_south);
+        ITUtils.imageView_east_west = findViewById(R.id.light_east_west);
+        ITUtils.imageView_north_south = findViewById(R.id.light_north_south);
+        ITUtils.imageView_car_east1 = findViewById(R.id.image_car_east1);
+        ITUtils.imageView_car_east2 = findViewById(R.id.image_car_east2);
+        ITUtils.imageView_car_north1 = findViewById(R.id.image_car_north1);
+        ITUtils.imageView_car_north2 = findViewById(R.id.image_car_north2);
         broker.connectToMqttBroker();
 
 
