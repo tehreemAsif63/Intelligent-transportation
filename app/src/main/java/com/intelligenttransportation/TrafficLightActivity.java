@@ -8,10 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class TrafficLightAdminActivity extends AppCompatActivity {
+public class TrafficLightActivity extends AppCompatActivity {
 
     public BrokerConnection broker;
     public static final String SUB_TOPIC = "group9_outTopic";
@@ -22,11 +23,17 @@ public class TrafficLightAdminActivity extends AppCompatActivity {
     public static final int QOS = 0;
     private BottomNavigationView bottomNavigationView;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_traffic_light_admin);
+        setContentView(R.layout.activity_traffic_light);
+
+        if (0 == 0){ // If user is admin user
+            Button exchangeButton = findViewById(R.id.button_exchange);
+            exchangeButton.setVisibility(View.VISIBLE);
+            Button renewButton = findViewById(R.id.button_renew);
+            renewButton.setVisibility(View.VISIBLE);
+        }
 
         broker = new BrokerConnection(getApplicationContext());
         broker.setConnectionMessage(
@@ -55,11 +62,11 @@ public class TrafficLightAdminActivity extends AppCompatActivity {
                 Intent intent = null;
                 switch (item.getItemId()){
                     case R.id.navigation_car_console:
-                        intent = new Intent(TrafficLightAdminActivity.this, CarConsoleActivity.class);
+                        intent = new Intent(TrafficLightActivity.this, CarConsoleActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(TrafficLightAdminActivity.this, UserActivity.class);
+                        intent = new Intent(TrafficLightActivity.this, UserActivity.class);
                         startActivity(intent);
                         break;
                 }
@@ -70,7 +77,7 @@ public class TrafficLightAdminActivity extends AppCompatActivity {
     }
 
     public void goBack(View view){
-        Intent intent = new Intent(TrafficLightAdminActivity.this, MainActivity.class);
+        Intent intent = new Intent(TrafficLightActivity.this, MainActivity.class);
         startActivity(intent);
     }
 

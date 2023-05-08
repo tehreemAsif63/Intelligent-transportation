@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrafficLightUserActivity">
+    tools:context=".TrafficLightActivity">
 
 
     <ImageView
@@ -30,7 +30,6 @@
         app:layout_constraintVertical_bias="0.019" />
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
@@ -67,13 +66,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.464" />
 
-
-
     <TextView
-        android:id="@+id/textView_pedestrian_wait"
+        android:id="@+id/textView_traffic_control"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pedestrian_wait"
+        android:text="@string/traffic_control"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,8 +84,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="@string/go"
-        android:textSize="22sp"
-        android:backgroundTint="@color/purple_500"
+        android:textSize="25sp"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"
@@ -101,14 +98,44 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="@string/go"
-        android:textSize="22sp"
-        android:backgroundTint="@color/purple_500"
+        android:textSize="25sp"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.874"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.887" />
+
+    <Button
+        android:id="@+id/button_renew"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/re"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/image_traffic_light"
+        app:layout_constraintTop_toTopOf="@+id/image_traffic_light"
+        app:layout_constraintVertical_bias="0.887" />
+
+    <Button
+        android:id="@+id/button_exchange"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/exch"
+        android:textSize="22sp"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803" />
 
 
     <ImageView
@@ -191,10 +218,10 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.238" />
 
     <ImageView
         android:id="@+id/image_car_east2"

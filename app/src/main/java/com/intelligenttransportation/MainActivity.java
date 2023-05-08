@@ -24,13 +24,7 @@ public class MainActivity extends AppCompatActivity {
         viewLightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = null;
-                if (1 == 0) { // This part should change to if user.loginStatus == 0
-                    intent = new Intent(MainActivity.this, TrafficLightUserActivity.class);
-                }
-                if (1 == 1) { // This part should change to if user.loginStatus == 1
-                    intent = new Intent(MainActivity.this, TrafficLightAdminActivity.class);
-                }
+                Intent intent = new Intent(MainActivity.this, TrafficLightActivity.class);
                 startActivity(intent);
             }
         });
