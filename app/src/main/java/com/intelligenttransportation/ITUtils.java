@@ -23,8 +23,18 @@ public class ITUtils {
 
     public static void showDynamicPage(String str) {
         String[] messages = str.split(";");
-        String[] eastData = messages[0].split(":");
-        String[] northData = messages[1].split(":");
+        String[] firstData = messages[0].split(":");
+
+        if (firstData[0].equals("east")){
+            String[] eastData = messages[0].split(":");
+            String[] northData = messages[1].split(":");
+            showEastData(eastData);
+            showNorthData(northData);
+        }
+
+    }
+
+    public static void showEastData(String[] eastData){
         switch (eastData[1]) {
             case "red":
                 textView_east_number.setTextColor(Color.RED);
@@ -55,7 +65,9 @@ public class ITUtils {
                 break;
         }
         textView_east_number.setText(eastData[2].length() < 2 ? "0" + eastData[2] : eastData[2]);
+    }
 
+    public static void showNorthData(String[] northData){
         switch (northData[1]) {
             case "red":
                 textView_north_number.setTextColor(Color.RED);
@@ -86,6 +98,5 @@ public class ITUtils {
                 break;
         }
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
-
     }
 }
