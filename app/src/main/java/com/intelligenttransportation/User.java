@@ -1,74 +1,46 @@
 package com.intelligenttransportation;
 
-
 public class User {
-    private String userName;
-    private String passWord;
+    private String username;
+    private String password;
     private String type;
-    private int hasCar;
-    private String loginStatus;
-    protected Car aCar;
 
-
-    public Car getACar() {
-        return aCar;
-    }
-
-    public void setACar(Car aCar) {
-        this.aCar = aCar;
-    }
-
-    public User(String userName, String passWord, String type) {
-        this.userName = userName;
-        this.passWord = passWord;
-        this.hasCar = hasCar;
+    public User(String username, String password, String type) {
+        this.username = username;
+        this.password = password;
         this.type = type;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public int getHasCar() {
-        return hasCar;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setHasCar(int hasCar) {
-        this.hasCar = hasCar;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getLoginStatus() {
-        return loginStatus;
+    public Object getUserName() {
+        return null;
     }
 
-    public void setLoginStatus(String loginStatus) {
-        this.loginStatus = loginStatus;
+    public Object getPassWord() {
+        return null;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                ", userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
-                ", Car ='" + hasCar + '\'' +
-                ", login ='" + loginStatus + '\'' +
-                ", type ='" + type + '\'' +
-                '}';
-    }
 }
