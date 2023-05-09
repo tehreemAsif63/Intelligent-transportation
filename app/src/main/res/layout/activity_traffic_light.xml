@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrafficLightUserActivity">
+    tools:context=".TrafficLightActivity">
 
 
     <ImageView
@@ -85,7 +85,7 @@
         android:layout_height="50dp"
         android:text="@string/go"
         android:textSize="25sp"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"
@@ -99,7 +99,7 @@
         android:layout_height="50dp"
         android:text="@string/go"
         android:textSize="25sp"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.874"
@@ -113,7 +113,8 @@
         android:layout_height="50dp"
         android:text="@string/re"
         android:textSize="25sp"
-        android:backgroundTint="@color/purple_500"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -127,7 +128,8 @@
         android:layout_height="50dp"
         android:text="@string/exch"
         android:textSize="22sp"
-        android:backgroundTint="@color/purple_500"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -207,6 +209,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_traffic_light"
         app:layout_constraintVertical_bias="0.802" />
+
+    <ImageView
+        android:id="@+id/image_car_east1"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:src="@drawable/car_east1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <ImageView
+        android:id="@+id/image_car_east2"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:src="@drawable/car_east2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <ImageView
+        android:id="@+id/image_car_north1"
+        android:layout_width="50dp"
+        android:layout_height="72dp"
+        android:src="@drawable/car_north1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <ImageView
+        android:id="@+id/image_car_north2"
+        android:layout_width="46dp"
+        android:layout_height="50dp"
+        android:src="@drawable/car_north2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

@@ -23,6 +23,9 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
+            android:name=".BindCar"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -32,10 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TrafficLightUserActivity"
-            android:exported="true" />
-        <activity
-            android:name=".TrafficLightAdminActivity"
+            android:name=".TrafficLightActivity"
             android:exported="true" />
         <activity
             android:name=".CarConsoleActivity"
