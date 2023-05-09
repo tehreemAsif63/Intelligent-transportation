@@ -45,7 +45,7 @@ public class CarConsoleActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_user:
                         intent = new Intent();
-                        intent.setClass(CarConsoleActivity.this, UserActivity.class);
+                        intent.setClass(CarConsoleActivity.this, LoginActivity.class);
                         startActivity(intent);
                         break;
                 }
