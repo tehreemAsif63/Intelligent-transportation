@@ -6,24 +6,45 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AccountActivity extends AppCompatActivity {
-    TextView welcomeTextView;
-    private BottomNavigationView bottomNavigationView;
 
+    private BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        welcomeTextView = findViewById(R.id.welcomeTextView);
+        Button buttonBack = findViewById(R.id.button_back);
+        Button buttonBind = findViewById(R.id.button_bind);
+        Button buttonLogout = findViewById(R.id.button_logout);
 
-        String username = getIntent().getStringExtra("username");
-        welcomeTextView.setText("Welcome, " + username);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
 
+
+        buttonBind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccountActivity.this,BindCar.class);
+                startActivity(intent);
+            }
+        });
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(user_infor.this,bindCar1.class);
+                startActivity(intent);*/
+
+            }
+        });
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

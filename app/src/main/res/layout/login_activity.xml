@@ -36,7 +36,7 @@
         android:id="@+id/textView4"
         android:layout_width="245dp"
         android:layout_height="41dp"
-        android:text="Your Password"
+        android:text="Password"
         android:textColor="@color/material_dynamic_neutral50"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
         android:id="@+id/textView3"
         android:layout_width="245dp"
         android:layout_height="41dp"
-        android:text="Your Name"
+        android:text="Username"
         android:textColor="@color/material_dynamic_neutral50"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,15 +64,15 @@
     <TextView
         android:id="@+id/appsName"
         android:layout_width="300dp"
-        android:layout_height="57dp"
+        android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="50dp"
         android:alpha="0.8"
         android:gravity="center"
-        android:text="@string/transportation"
+        android:text="@string/login"
         android:textColor="#A8A8A8"
-        android:textSize="38sp"
+        android:textSize="60sp"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,25 +82,6 @@
         app:layout_constraintVertical_bias="0.167"
        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="57dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="50dp"
-        android:alpha="0.8"
-        android:gravity="center"
-        android:text="@string/intelligent"
-        android:textColor="#A8A8A8"
-        android:textSize="38sp"
-        app:autoSizeTextType="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
 
     <EditText
         android:id="@+id/usernameEditText"
@@ -142,10 +123,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintVertical_bias="0.756" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

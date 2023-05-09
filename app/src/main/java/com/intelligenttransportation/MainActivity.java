@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(MainActivity.this, LoginActivity.class);
+                        intent = new Intent(MainActivity.this, AccountActivity.class);
                         startActivity(intent);
                         break;
                 }

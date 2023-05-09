@@ -98,7 +98,7 @@ public class TrafficLightActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(TrafficLightActivity.this, UserActivity.class);
+                        intent = new Intent(TrafficLightActivity.this, LoginActivity.class);
                         startActivity(intent);
                         break;
                 }
