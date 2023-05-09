@@ -18,7 +18,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class TrafficLightActivity extends AppCompatActivity {
 
     public BrokerConnection broker;
-    public static final String SUB_TOPIC = "group9_outTopic";
+    public MqttClient mqttClient;
+    public static final String PUB_TOPIC = "group9_inTopic";
 
     public static final String LOCALHOST = "broker.emqx.io";
     private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
@@ -58,7 +59,7 @@ public class TrafficLightActivity extends AppCompatActivity {
         eastGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mqttClient.publish(PUB_TOPIC, DisplayUtils.eastGoAdmin, QOS, null);
+                mqttClient.publish(PUB_TOPIC, ITUtils.eastGoAdmin, QOS, null);
             }
         });
 
@@ -66,7 +67,7 @@ public class TrafficLightActivity extends AppCompatActivity {
         northGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, DisplayUtils.northGoAdmin, QOS, null);
+                mqttClient.publish(PUB_TOPIC, ITUtils.northGoAdmin, QOS, null);
             }
         });
 
@@ -74,7 +75,7 @@ public class TrafficLightActivity extends AppCompatActivity {
         renew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, DisplayUtils.renewAdmin, QOS, null);
+                mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
             }
         });
 
@@ -82,7 +83,7 @@ public class TrafficLightActivity extends AppCompatActivity {
         exchange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, DisplayUtils.exchangeAdmin, QOS, null);
+                mqttClient.publish(PUB_TOPIC, ITUtils.exchangeAdmin, QOS, null);
             }
         });
 
