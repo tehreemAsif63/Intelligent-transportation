@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Traffic"
+        android:id="@+id/navigation_traffic_light"
+        android:icon="@drawable/ic_light"/>
+
+    <item android:title="@string/title_car_console"
+        android:id="@+id/navigation_car_console"
+        android:icon="@drawable/ic_car"/>
+
+    <item android:title="@string/title_user"
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_user"/>
+</menu>
