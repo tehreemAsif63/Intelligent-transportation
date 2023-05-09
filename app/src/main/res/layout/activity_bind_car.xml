@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BindCar"
+    tools:context=".BindCarActivity"
     android:background="@drawable/play">
 
 
@@ -32,7 +32,7 @@
 
     <requestFocus/>
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_bind"
         android:layout_width="240dp"
         android:layout_height="75dp"
         android:background="@drawable/button_shape"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.867" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_back"
         android:layout_width="86dp"
         android:layout_height="54dp"
         android:onClick="Check"
@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_next"
         android:layout_width="86dp"
         android:layout_height="54dp"
         android:alpha="0.6"

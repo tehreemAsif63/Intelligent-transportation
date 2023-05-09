@@ -19,29 +19,21 @@ public class AccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        Button buttonBack = findViewById(R.id.button_back);
-        Button buttonBind = findViewById(R.id.button_bind);
+        Button buttonBind = findViewById(R.id.button_bind_car);
         Button buttonLogout = findViewById(R.id.button_logout);
-
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
-
 
         buttonBind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AccountActivity.this,BindCar.class);
+                Intent intent = new Intent(AccountActivity.this, BindCarActivity.class);
                 startActivity(intent);
             }
         });
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(user_infor.this,bindCar1.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(AccountActivity.this,LoginActivity.class);
+                startActivity(intent);
 
             }
         });

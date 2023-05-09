@@ -1,40 +1,12 @@
 [
   {
-    "username": "GeneralUser",
+    "username": "General",
     "password": "123456",
-    "type": "general"
-    "cars": [
-        {
-          "id": "1",
-          "name": "Volvo",
-          "imageSrc": "@mipmap/image_car1"
-        },
-        {
-          "id": "2",
-          "name": "Polestar",
-          "imageSrc": "@mipmap/image_car2"
-        }
-    ]
-    "isLogged": "false";
-    "isBoundCar": "false";
+    "type": "general user"
   },
   {
-    "username": "TrafficPolice",
+    "username": "Police",
     "password": "123456",
     "type": "admin"
-    "cars": [
-       {
-         "id": "1",
-         "name": "Volvo",
-         "imageSrc": "@mipmap/image_car1"
-       },
-       {
-          "id": "2",
-          "name": "Polestar",
-          "imageSrc": "@mipmap/image_car2"
-       }
-    ]
-    "isLogged": "false";
-    "isBoundCar": "false";
   }
 ]
