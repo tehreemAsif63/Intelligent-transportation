@@ -4,14 +4,14 @@ package com.intelligenttransportation;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,11 +23,9 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity {
     EditText usernameEditText;
     EditText passwordEditText;
-    TextView errorTextView;
-    private static final String TAG = "Login";
 
 
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         Button loginButton = findViewById(R.id.loginButton);
-        errorTextView = findViewById(R.id.errorTextView);
+       // errorTextView = findViewById(R.id.errorTextView);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,9 +47,13 @@ public class LoginActivity extends AppCompatActivity {
                     intent.putExtra("username", username);
                     startActivity(intent);
                 } else {
-                    final String wrongCredM = "Wrong Username or password!\n Try again!";
-                    Log.w(TAG, wrongCredM);
-                    Toast.makeText(getApplicationContext(), wrongCredM, Toast.LENGTH_SHORT).show();               }
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                    builder.setTitle("Error")
+                            .setMessage("Incorrect username or password")
+                            .setPositiveButton("OK", null)
+                            .setCancelable(true)
+                            .create()
+                            .show();               }
             }
         });
     }
