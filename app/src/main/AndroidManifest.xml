@@ -17,7 +17,7 @@
         android:theme="@style/Theme.IntelligentTransportation"
         tools:targetApi="31" >
         <activity
-            android:name=".AccountInformationActivity"
+            android:name=".AccountActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
