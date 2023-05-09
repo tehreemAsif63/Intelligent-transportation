@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -22,7 +23,7 @@ public class TrafficLightActivity extends AppCompatActivity {
     public static final String LOCALHOST = "broker.emqx.io";
     private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
     public static final String CLIENT_ID = "Android App";
-    public static final int QOS = 0;
+    public static final int QOS = 2;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -50,10 +51,40 @@ public class TrafficLightActivity extends AppCompatActivity {
         ITUtils.imageView_car_east2 = findViewById(R.id.image_car_east2);
         ITUtils.imageView_car_north1 = findViewById(R.id.image_car_north1);
         ITUtils.imageView_car_north2 = findViewById(R.id.image_car_north2);
+        mqttClient = broker.getMqttClient();
         broker.connectToMqttBroker();
 
+        Button eastGo = findViewById(R.id.button_west_east);
+        eastGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.eastGoAdmin, QOS, null);
+            }
+        });
 
+        Button northGo = findViewById(R.id.button_north_south);
+        northGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.northGoAdmin, QOS, null);
+            }
+        });
 
+        Button renew = findViewById(R.id.button_renew);
+        renew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.renewAdmin, QOS, null);
+            }
+        });
+
+        Button exchange = findViewById(R.id.button_exchange);
+        exchange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, DisplayUtils.exchangeAdmin, QOS, null);
+            }
+        });
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
