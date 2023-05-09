@@ -32,12 +32,31 @@ public class ITUtils {
     public static ImageView imageView_car_east2;
     public static ImageView imageView_car_north1;
     public static ImageView imageView_car_north2;
+    public static TextView textView_front_distance;
+    public static TextView textView_back_distance;
 
 
     public static void showDynamicPage(String str) {
         String[] messages = str.split(";");
-        String[] eastData = messages[0].split(":");
-        String[] northData = messages[1].split(":");
+        String[] firstData = messages[0].split(":");
+
+        if (firstData[0].equals("east")){
+            String[] eastData = messages[0].split(":");
+            String[] northData = messages[1].split(":");
+            showEastData(eastData);
+            showNorthData(northData);
+        } else if (firstData[0].equals("distance")) {
+            String[] frontDistance = messages[0].split(":");
+            String[] backDistance = messages[1].split(":");
+            showFrontDistance(frontDistance);
+            showBackDistance(backDistance);
+        }
+
+    }
+
+
+
+    public static void showEastData(String[] eastData){
         switch (eastData[1]) {
             case "red":
                 textView_east_number.setTextColor(Color.RED);
@@ -68,7 +87,9 @@ public class ITUtils {
                 break;
         }
         textView_east_number.setText(eastData[2].length() < 2 ? "0" + eastData[2] : eastData[2]);
+    }
 
+    public static void showNorthData(String[] northData){
         switch (northData[1]) {
             case "red":
                 textView_north_number.setTextColor(Color.RED);
@@ -99,6 +120,14 @@ public class ITUtils {
                 break;
         }
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
-
     }
+
+    private static void showFrontDistance(String[] frontDistance) {
+        textView_front_distance.setText(frontDistance[2]);
+    }
+    private static void showBackDistance(String[] backDistance) {
+        textView_back_distance.setText(backDistance[2]);
+    }
+
+
 }
