@@ -30,10 +30,10 @@ public class BindCar extends AppCompatActivity {
                 i ++;
 
                 if (i % 2 == 0) {
-                    imageView.setImageResource(R.mipmap.origion);
+                    imageView.setImageResource(R.mipmap.image_car1);
                     textView.setText(R.string.information_o);
                 } else {
-                    imageView.setImageResource(R.mipmap.white_car1);
+                    imageView.setImageResource(R.mipmap.image_car2);
                     textView.setText(R.string.information_w);
                 }
 
