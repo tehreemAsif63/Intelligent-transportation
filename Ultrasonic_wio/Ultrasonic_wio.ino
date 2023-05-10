@@ -14,7 +14,6 @@ void setup() {
   pinMode(WIO_BUZZER, OUTPUT);
 
 }
-
 void loop() {
 
   spr.fillSprite(TFT_BLACK);
@@ -32,6 +31,5 @@ void loop() {
     tone(WIO_BUZZER, 1000, 100);
     delay(distance * 20);
   }
-
   spr.pushSprite(0,0);
 }
