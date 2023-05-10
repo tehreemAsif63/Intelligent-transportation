@@ -1,20 +1,23 @@
 //initialising pins
 //tinkercad pins
-int buzzer = 7;
+int buzzerPin = 7;
 
 void setup() {
-  pinMode(buzzer, OUTPUT);
+  pinMode(buzzerPin, OUTPUT);
 }
 
 void loop() {
-  // Play different alarm sounds
-
-  tone(buzzer, 1000);
-  delay(1000);
+  // Play police siren tone
   
-  tone(buzzer, 2000);
-  delay(1000);
+  tone(buzzerPin, 1000); 
+  delay(150); 
+  noTone(buzzerPin); 
+  delay(150);
 
-  noTone(buzzer);
-  delay(1000);
+  tone(buzzerPin, 2000); 
+  delay(150); 
+  noTone(buzzerPin); 
+  delay(150); 
 }
+  
+ 

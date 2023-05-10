@@ -23,7 +23,7 @@ public class CarConsoleActivity extends AppCompatActivity {
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 0;
     private BottomNavigationView bottomNavigationView;
-    private boolean isBuzzerOn = false;
+    private boolean isBuzzerOn;
 
 
     @Override
@@ -40,16 +40,20 @@ public class CarConsoleActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
+            boolean isBuzzerOn = false;
             @Override
             public void onClick(View view) {
-                // code to publish message to MQTT broker
                 String topic = "Find my Car";
                 if (isBuzzerOn) {
+                    // code to stop the buzzer
+                    String topic = "Find My Car";
                     String payload = "stop_buzzer";
                     int qos = CarConsoleActivity.QOS;
                     broker.publishMessage(topic, payload, qos);
                     isBuzzerOn = false;
                 } else {
+                    // code to start the buzzer
+                    String topic = "Find My Car";
                     String payload = "start_buzzer";
                     int qos = CarConsoleActivity.QOS;
                     broker.publishMessage(topic, payload, qos);
