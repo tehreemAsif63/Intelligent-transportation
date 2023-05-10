@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import android.view.View;
 import android.widget.Button;
 
 public class CarConsoleActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class CarConsoleActivity extends AppCompatActivity {
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 0;
     private BottomNavigationView bottomNavigationView;
+    private boolean isBuzzerOn = false;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,10 +43,18 @@ public class CarConsoleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // code to publish message to MQTT broker
-                String topic = "your_topic_here";
-                String payload = "your_payload_here";
-                int qos = CarConsoleActivity.QOS;
-                broker.publishMessage(topic, payload, qos);
+                String topic = "Find my Car";
+                if (isBuzzerOn) {
+                    String payload = "stop_buzzer";
+                    int qos = CarConsoleActivity.QOS;
+                    broker.publishMessage(topic, payload, qos);
+                    isBuzzerOn = false;
+                } else {
+                    String payload = "start_buzzer";
+                    int qos = CarConsoleActivity.QOS;
+                    broker.publishMessage(topic, payload, qos);
+                    isBuzzerOn = true;
+                }
             }
         });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
