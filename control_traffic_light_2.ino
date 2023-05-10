@@ -45,4 +45,11 @@ void adminControl(){
       }
       flag = 20;
     }
+     if(isExchange){
+      flag += 20;
+      if(flag >= 20 && flag < 40){
+        flag = 20;
+      }
+      isExchange = false;
+    }
 } 
