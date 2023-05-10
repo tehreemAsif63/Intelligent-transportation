@@ -39,4 +39,10 @@ void adminControl(){
       }
       flag = 0;
     }
+    if(whichGo == 2){
+      if(tempFlag == -1){
+          tempFlag = flag;
+      }
+      flag = 20;
+    }
 } 
