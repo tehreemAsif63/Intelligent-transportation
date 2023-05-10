@@ -8,6 +8,7 @@ void setup() {
 
 void loop() {
 userControl();
+adminControl();
 }
 
 void userControl(){
@@ -22,3 +23,20 @@ void userControl(){
     }
   }
 }
+
+void adminControl(){
+  if(userType == 2){
+    if(isRenew){
+      whichGo = 0;
+      flag = tempFlag;
+      isRenew = !isRenew;
+    }
+  }
+  Serial.println("Is operation");
+    if(whichGo == 1){
+      if(tempFlag == -1){
+          tempFlag = flag;
+      }
+      flag = 0;
+    }
+} 
