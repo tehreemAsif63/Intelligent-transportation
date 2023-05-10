@@ -39,4 +39,8 @@
     <string name="go">Go</string>
     <string name="re">Re</string>
     <string name="exch">Exch</string>
+    <string name="high_traffic_drive_slowly">HIGH TRAFFIC DRIVE SLOWLY</string>
+    <string name="velocity">velocity:</string>
+    <string name="_0_0">0.0</string>
+    <string name="_0_cm">0 cm</string>
 </resources>

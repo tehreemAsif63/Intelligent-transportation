@@ -1,5 +1,6 @@
 package com.intelligenttransportation;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,6 +37,8 @@ public class ITUtils {
     public static TextView textView_back_distance;
     public static ImageView imageView;
     public static double distance;
+    public TextView warningText;
+
 
 
     public static void showDynamicPage(String str) {
@@ -132,14 +135,17 @@ public class ITUtils {
     }
 
     private void updateImage() {
+
         if (distance > 20) {
             imageView.setImageResource(R.drawable.car); //regular
         } else if (distance < 20 && distance > 10) {
             imageView.setImageResource(R.drawable.car); //green
         } else if (distance < 10 && distance > 5) {
             imageView.setImageResource(R.drawable.car); //yellow
+            warningText.setVisibility(View.VISIBLE);
         } else {
             imageView.setImageResource(R.drawable.car); //red
+            warningText.setVisibility(View.VISIBLE);
         }
     }
 
