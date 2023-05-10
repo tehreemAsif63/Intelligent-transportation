@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.widget.Button;
 
 public class CarConsoleActivity extends AppCompatActivity {
 
@@ -33,6 +34,17 @@ public class CarConsoleActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
 
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // code to publish message to MQTT broker
+                String topic = "your_topic_here";
+                String payload = "your_payload_here";
+                int qos = CarConsoleActivity.QOS;
+                broker.publishMessage(topic, payload, qos);
+            }
+        });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
