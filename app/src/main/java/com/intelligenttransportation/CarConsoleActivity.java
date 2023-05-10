@@ -46,15 +46,13 @@ public class CarConsoleActivity extends AppCompatActivity {
                 String topic = "Find my Car";
                 if (isBuzzerOn) {
                     // code to stop the buzzer
-                    String topic = "Find My Car";
-                    String payload = "stop_buzzer";
+                    String payload = "s"; //means stop
                     int qos = CarConsoleActivity.QOS;
                     broker.publishMessage(topic, payload, qos);
                     isBuzzerOn = false;
                 } else {
                     // code to start the buzzer
-                    String topic = "Find My Car";
-                    String payload = "start_buzzer";
+                    String payload = "p"; //means play
                     int qos = CarConsoleActivity.QOS;
                     broker.publishMessage(topic, payload, qos);
                     isBuzzerOn = true;
