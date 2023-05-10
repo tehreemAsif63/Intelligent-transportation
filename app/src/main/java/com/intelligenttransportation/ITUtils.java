@@ -34,6 +34,8 @@ public class ITUtils {
     public static ImageView imageView_car_north2;
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
+    public static ImageView imageView;
+    public static double distance;
 
 
     public static void showDynamicPage(String str) {
@@ -129,5 +131,16 @@ public class ITUtils {
         textView_back_distance.setText(backDistance[2]);
     }
 
+    private void updateImage() {
+        if (distance > 20) {
+            imageView.setImageResource(R.drawable.car); //regular
+        } else if (distance < 20 && distance > 10) {
+            imageView.setImageResource(R.drawable.car); //green
+        } else if (distance < 10 && distance > 5) {
+            imageView.setImageResource(R.drawable.car); //yellow
+        } else {
+            imageView.setImageResource(R.drawable.car); //red
+        }
+    }
 
 }
