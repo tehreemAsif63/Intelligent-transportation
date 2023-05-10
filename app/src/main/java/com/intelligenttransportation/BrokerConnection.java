@@ -43,7 +43,7 @@ public class BrokerConnection extends AppCompatActivity {
                     isConnected = true;
                     final String successfulConnection = "Connected to MQTT broker";
                     Log.i(CLIENT_ID, successfulConnection);
-                    Toast.makeText(context, successfulConnection, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, successfulConnection, Toast.LENGTH_LONG).show();
                     mqttClient.subscribe(SUB_TOPIC, QOS, null);
                 }
 
@@ -51,7 +51,7 @@ public class BrokerConnection extends AppCompatActivity {
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
                     final String failedConnection = "Failed to connect to MQTT broker";
                     Log.e(CLIENT_ID, failedConnection);
-                    Toast.makeText(context, failedConnection, Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(context, failedConnection, Toast.LENGTH_SHORT).show();
                 }
             }, new MqttCallback() {
                 @Override
@@ -60,14 +60,14 @@ public class BrokerConnection extends AppCompatActivity {
 
                     final String connectionLost = "Connection to MQTT broker lost";
                     Log.w(CLIENT_ID, connectionLost);
-                    Toast.makeText(context, connectionLost, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, connectionLost, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     String payload = new String(message.getPayload());
                     Log.d(CLIENT_ID, "Message received: " + payload);
-                    Toast.makeText(context, "Message received: " + payload, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "Message received: " + payload, Toast.LENGTH_SHORT).show();
                     ITUtils.showDynamicPage(message.toString());
 
                     if (topic.equals(SUB_TOPIC) || (connectionMessage != null)) {
