@@ -67,7 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:drawableStart="@drawable/baseline_warning_amber_24"
         android:gravity="center"
         android:minHeight="48dp"
         android:text="@string/high_traffic_drive_slowly"
@@ -76,7 +75,8 @@
         android:visibility="gone"
         tools:layout_editor_absoluteX="49dp"
         tools:layout_editor_absoluteY="44dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:drawableStartCompat="@drawable/baseline_warning_amber_24" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

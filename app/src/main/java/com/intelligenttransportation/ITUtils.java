@@ -1,6 +1,5 @@
 package com.intelligenttransportation;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,7 +35,8 @@ public class ITUtils {
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
     public static ImageView imageView;
-    public static double distance;
+    public static double distanceFront;
+    public static double distanceBack;
     public TextView warningText;
 
 
@@ -136,15 +136,29 @@ public class ITUtils {
 
     private void updateImage() {
 
-        if (distance > 20) {
+        if (distanceFront > 20 && distanceBack > 20) {
             imageView.setImageResource(R.drawable.car); //regular
-        } else if (distance < 20 && distance > 10) {
-            imageView.setImageResource(R.drawable.car); //green
-        } else if (distance < 10 && distance > 5) {
-            imageView.setImageResource(R.drawable.car); //yellow
+        } else if (distanceFront < 20 && distanceFront > 10) {  //All possible conditions for the green sensor
+            imageView.setImageResource(R.drawable.car_green_front);
+        } else if (distanceBack < 20 && distanceBack >  10) {
+            imageView.setImageResource(R.drawable.car_green_back);
+        } else if (distanceFront <= 20 && distanceFront >= 10 && distanceBack <= 20 && distanceBack >=  10) {
+            imageView.setImageResource(R.drawable.car_green_both);
+        } else if (distanceFront < 10 && distanceFront > 5) {  //All possible conditions for the yellow sensor
+            imageView.setImageResource(R.drawable.car_yellow_front);
             warningText.setVisibility(View.VISIBLE);
-        } else {
-            imageView.setImageResource(R.drawable.car); //red
+        } else if (distanceBack < 10 && distanceBack > 5) {
+            imageView.setImageResource(R.drawable.car_yellow_back);
+        } else if (distanceFront <= 10 && distanceFront >= 5 && distanceBack <= 10 && distanceBack >= 5) {
+            imageView.setImageResource(R.drawable.car_yellow_both);
+        } else if (distanceFront < 5) {
+            imageView.setImageResource(R.drawable.car_red_front);  //All possible conditions for the red sensor
+            warningText.setVisibility(View.VISIBLE);
+        } else if (distanceBack < 5) {
+            imageView.setImageResource(R.drawable.car_red_back);
+            warningText.setVisibility(View.VISIBLE);
+        } else  {
+            imageView.setImageResource(R.drawable.car_red_both);
             warningText.setVisibility(View.VISIBLE);
         }
     }
