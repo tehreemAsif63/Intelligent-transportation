@@ -35,9 +35,8 @@ public class ITUtils {
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
     public static ImageView imageView;
-    public static double distanceFront;
-    public static double distanceBack;
     public TextView warningText;
+    public static ImageView imageView_car_background;
 
 
 
@@ -53,8 +52,11 @@ public class ITUtils {
         } else if (firstData[0].equals("distance")) {
             String[] frontDistance = messages[0].split(":");
             String[] backDistance = messages[1].split(":");
-            showFrontDistance(frontDistance);
-            showBackDistance(backDistance);
+            String fdStr = frontDistance[2];
+            String bdStr = backDistance[2];
+            showFrontDistance(fdStr);
+            showBackDistance(bdStr);
+            changeBackGround(fdStr, bdStr);
         }
 
     }
@@ -127,40 +129,13 @@ public class ITUtils {
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
     }
 
-    private static void showFrontDistance(String[] frontDistance) {
-        textView_front_distance.setText(frontDistance[2]);
+    private static void showFrontDistance(String fdStr) {
+        textView_front_distance.setText(fdStr);
+
     }
-    private static void showBackDistance(String[] backDistance) {
-        textView_back_distance.setText(backDistance[2]);
+    private static void showBackDistance(String bdStr) {
+        textView_back_distance.setText(bdStr);
     }
 
-    private void updateImage() {
-
-        if (distanceFront > 20 && distanceBack > 20) {
-            imageView.setImageResource(R.drawable.car); //regular
-        } else if (distanceFront < 20 && distanceFront > 10) {  //All possible conditions for the green sensor
-            imageView.setImageResource(R.drawable.car_green_front);
-        } else if (distanceBack < 20 && distanceBack >  10) {
-            imageView.setImageResource(R.drawable.car_green_back);
-        } else if (distanceFront <= 20 && distanceFront >= 10 && distanceBack <= 20 && distanceBack >=  10) {
-            imageView.setImageResource(R.drawable.car_green_both);
-        } else if (distanceFront < 10 && distanceFront > 5) {  //All possible conditions for the yellow sensor
-            imageView.setImageResource(R.drawable.car_yellow_front);
-            warningText.setVisibility(View.VISIBLE);
-        } else if (distanceBack < 10 && distanceBack > 5) {
-            imageView.setImageResource(R.drawable.car_yellow_back);
-        } else if (distanceFront <= 10 && distanceFront >= 5 && distanceBack <= 10 && distanceBack >= 5) {
-            imageView.setImageResource(R.drawable.car_yellow_both);
-        } else if (distanceFront < 5) {
-            imageView.setImageResource(R.drawable.car_red_front);  //All possible conditions for the red sensor
-            warningText.setVisibility(View.VISIBLE);
-        } else if (distanceBack < 5) {
-            imageView.setImageResource(R.drawable.car_red_back);
-            warningText.setVisibility(View.VISIBLE);
-        } else  {
-            imageView.setImageResource(R.drawable.car_red_both);
-            warningText.setVisibility(View.VISIBLE);
-        }
-    }
 
 }
