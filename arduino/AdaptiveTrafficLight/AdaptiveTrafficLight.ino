@@ -10,8 +10,16 @@ const int redNorth = 5;
 const int yellowNorth = 6;
 const int greenNorth = 7;
 
+// Defining the pins for the ultrasonic sensors
+int ultraEast = 8;
+int ultraNorth = 1;
+
 int maxFlag = 40;
 int flag = 0;
+int countEastCar = 0;
+int countNorthCar = 0;
+bool isNewCarEast = false; //To avoid duplicate counting
+bool isNewCarNorth = false; //To avoid duplicate counting
 
 //print on Wio terminal
 TFT_eSPI tft;
@@ -28,6 +36,8 @@ void setup() {
   pinMode(yellowNorth, OUTPUT);
   pinMode(greenNorth, OUTPUT);
   
+  pinMode(WIO_BUZZER, OUTPUT);
+
   Serial.begin(9600); 
 
   tft.begin();
@@ -41,6 +51,9 @@ void loop() {
   if(flag >= maxFlag){
       flag = 0;
   }
+
+  carOnEast();
+  carOnNorth();
 
   trafficLight();
   
@@ -62,12 +75,14 @@ void trafficLight(){
     digitalWrite(yellowNorth, LOW);
     digitalWrite(greenNorth, LOW);
 
+    countEastCar = 0;
+
     spr.setTextColor(TFT_GREEN);
     spr.drawString("East:  Green light: ",20,50);
-    spr.drawNumber(17 - flag,260,50);
+    spr.drawNumber(maxFlag / 2 - 3 - flag,260,50);
     spr.setTextColor(TFT_RED);
     spr.drawString("North: Red light: ",20,75);
-    spr.drawNumber(20 - flag,260,75);
+    spr.drawNumber(maxFlag / 2 - flag,260,75);
 
   }
   
@@ -82,10 +97,10 @@ void trafficLight(){
 
     spr.setTextColor(TFT_YELLOW);
     spr.drawString("East:  Yellow light:",20,50);
-    spr.drawNumber(20 - flag,260,50);
+    spr.drawNumber(maxFlag / 2 - flag,260,50);
     spr.setTextColor(TFT_RED);
     spr.drawString("North: Red light: ",20,75);
-    spr.drawNumber(20 - flag,260,75);
+    spr.drawNumber(maxFlag / 2 - flag,260,75);
 
   }
   
@@ -98,12 +113,14 @@ void trafficLight(){
     digitalWrite(yellowNorth, LOW);
     digitalWrite(greenNorth, HIGH);
 
+    countNorthCar = 0;
+
     spr.setTextColor(TFT_RED);
     spr.drawString("East:  Red light: ",20,50);
-    spr.drawNumber(40 - flag,260,50);
+    spr.drawNumber(maxFlag - flag,260,50);
     spr.setTextColor(TFT_GREEN);
     spr.drawString("North: Green light: ",20,75);
-    spr.drawNumber(37 - flag,260,75);
+    spr.drawNumber(maxFlag - 3 - flag,260,75);
   }
   
   if(flag >= maxFlag - 3 && flag < maxFlag){
@@ -117,11 +134,74 @@ void trafficLight(){
 
     spr.setTextColor(TFT_RED);
     spr.drawString("East:  Red light: ",20,50);
-    spr.drawNumber(40 - flag,260,50);
+    spr.drawNumber(maxFlag - flag,260,50);
     spr.setTextColor(TFT_YELLOW);
     spr.drawString("North: Yellow light: ",20,75);
-    spr.drawNumber(40 - flag,260,75);
+    spr.drawNumber(maxFlag - flag,260,75);
+  }
+}
+
+void carOnEast(){
+	if(flag >= maxFlag / 2 && flag < maxFlag - 3){
+    double distance = 0.01723 * readUltrasonicDuration(ultraEast, ultraEast);
+  	if(distance < 10){ 
+      if(!isNewCarEast){ //To avoid duplicate counting
+          isNewCarEast = true;
+          tone(WIO_BUZZER, 100, 1000);
+          countEastCar ++;
+          flag += 4;
+          if(flag > maxFlag - 3){
+          	flag = maxFlag - 3;
+          }
+      }
+      spr.drawString("Car Come from the east.",20,100);
+    }else{
+    	isNewCarEast = false;
+    }
+  }
+}
+
+void carOnNorth(){
+	if(flag >= 0 && flag < maxFlag / 2 - 3){
+    double distance = 0.01723 * readUltrasonicDuration(ultraNorth, ultraNorth);
+  	if(distance < 10){ //To avoid duplicate counting
+      if(!isNewCarNorth){
+        isNewCarNorth = true;
+        tone(WIO_BUZZER, 100, 1000);
+        countNorthCar ++;
+        spr.drawString("Car Come from the north.",20,100);
+        flag += 5;
+        if(flag > maxFlag / 2 - 3 && flag < maxFlag - 3){
+          flag = maxFlag / 2 - 3;
+        }
+      }
+      spr.drawString("Car Come from the north.",20,100);
+    }else{
+    	isNewCarNorth = false;
+    }
   }
 }
 
 
+long readUltrasonicDuration(int triggerPin, int echoPin){
+  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigger pin to HIGH state for 10 microseconds
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  pinMode(echoPin, INPUT);
+  // Reads the echo pin, and returns the sound wave travel time in microseconds
+  return pulseIn(echoPin, HIGH);
+}
+
+void printTitleOnWioTerminal() {
+  
+  spr.fillSprite(TFT_BLACK);
+  spr.setTextSize(2);
+  spr.setTextColor(TFT_WHITE);
+  spr.drawString("Traffic Light Time",55,10);
+  spr.drawFastHLine(40,35,240,TFT_DARKGREY);
+
+}
