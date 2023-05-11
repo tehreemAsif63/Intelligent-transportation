@@ -16,10 +16,16 @@ int ultraNorth = 1;
 
 int maxFlag = 40;
 int flag = 0;
+int tempFlag = -1;
 int countEastCar = 0;
 int countNorthCar = 0;
 bool isNewCarEast = false; //To avoid duplicate counting
 bool isNewCarNorth = false; //To avoid duplicate counting
+
+int userType = 0; //0 is no case; 1 is general user; 2 is admin user
+int whichGo = 0; // 0 is no case; 1 is east-west; 2 is north-south
+bool isRenew = false; // true is renew to original state
+bool isExchange = false; // true is immediately change the traffic light status on both sides
 
 //print on Wio terminal
 TFT_eSPI tft;
@@ -54,6 +60,9 @@ void loop() {
 
   carOnEast();
   carOnNorth();
+
+  userControl();
+  adminControl();
 
   trafficLight();
   
@@ -178,6 +187,49 @@ void carOnNorth(){
       spr.drawString("Car Come from the north.",20,100);
     }else{
     	isNewCarNorth = false;
+    }
+  }
+}
+
+void userControl(){
+  if(userType < 2){
+    flag += 3;
+    userType = 0;
+    if(flag > maxFlag / 2 - 3 && flag < maxFlag -3){
+      flag = maxFlag / 2 - 3;
+    }
+    if(flag > maxFlag - 3){
+      flag = maxFlag - 3;
+    }
+  }
+}
+void adminControl(){
+  if(userType == 2){
+    if(isRenew){
+      whichGo = 0;
+      flag = tempFlag;
+      isRenew = !isRenew;
+    }
+    if(whichGo == 1){
+      if(tempFlag == -1){
+          tempFlag = flag;
+      }
+      flag = 0;
+    }
+
+    if(whichGo == 2){
+      if(tempFlag == -1){
+          tempFlag = flag;
+      }
+      flag = maxFlag / 2;
+    }
+
+    if(isExchange){
+      flag += maxFlag / 2;
+      if(flag >= maxFlag / 2 && flag < maxFlag){
+        flag = maxFlag / 2;
+      }
+      isExchange = false;
     }
   }
 }
