@@ -3,13 +3,13 @@
 #include <PubSubClient.h>
 
 // Update these with values suitable for your network.
-const char *ssid = "";      // your network SSID
-const char *password = ""; // your network password
+const char *ssid = "LAPTOP-G8QUC1FI 5152";      // your network SSID
+const char *password = "488H1i1"; // your network password
 
-const char *ID = "";  // Name of our device, must be unique
-const char *TOPIC = "";  // Topic to subcribe to
-const char *subTopic = "";  // Topic to subcribe to
-const char *server = ""; // Server URL
+const char *ID = "Wio-Terminal-Client";  // Name of our device, must be unique
+const char *TOPIC = "group9_outTopic";  // Topic to subcribe to
+const char *subTopic = "group9_inTopic";  // Topic to subcribe to
+const char *server = "broker.emqx.io"; // Server URL
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
@@ -64,7 +64,10 @@ void loop() {
     tone(WIO_BUZZER, 1000, 100);
     delay(distanceFront * 20);
   }
-  
+  if (client.connect(ID)) {
+      String data = "distance:front:" + String(distanceFront) + " cm;distance:back:" + String(distanceBack) + " cm";
+      client.publish(TOPIC, data.c_str());
+    }
   spr.pushSprite(0,0);
 }
 
