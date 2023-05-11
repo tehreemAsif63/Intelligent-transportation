@@ -214,20 +214,25 @@ void adminControl(){
       if(tempFlag == -1){
           tempFlag = flag;
       }
-      flag = 0;
+      flag = maxFlag - 3;
+      whichGo = 0;
     }
 
     if(whichGo == 2){
       if(tempFlag == -1){
           tempFlag = flag;
       }
-      flag = maxFlag / 2;
+      flag = maxFlag / 2 -3;
+      whichGo = 0;
     }
 
     if(isExchange){
       flag += maxFlag / 2;
-      if(flag >= maxFlag / 2 && flag < maxFlag){
-        flag = maxFlag / 2;
+      if(flag >= maxFlag / 2 - 3 && flag < maxFlag - 3){
+        flag = maxFlag / 2 - 3;
+      }
+      if(flag >= 37 ){
+        flag  = 37;
       }
       isExchange = false;
     }
