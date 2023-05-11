@@ -48,8 +48,10 @@ public class ITUtils {
         } else if (firstData[0].equals("distance")) {
             String[] frontDistance = messages[0].split(":");
             String[] backDistance = messages[1].split(":");
-            showFrontDistance(frontDistance);
-            showBackDistance(backDistance);
+            String fdStr = frontDistance[2];
+            String bdStr = backDistance[2];
+            showFrontDistance(fdStr);
+            showBackDistance(bdStr);
         }
 
     }
@@ -122,11 +124,12 @@ public class ITUtils {
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
     }
 
-    private static void showFrontDistance(String[] frontDistance) {
-        textView_front_distance.setText(frontDistance[2]);
+    private static void showFrontDistance(String fdStr) {
+        textView_front_distance.setText(fdStr);
+
     }
-    private static void showBackDistance(String[] backDistance) {
-        textView_back_distance.setText(backDistance[2]);
+    private static void showBackDistance(String bdStr) {
+        textView_back_distance.setText(bdStr);
     }
 
 
