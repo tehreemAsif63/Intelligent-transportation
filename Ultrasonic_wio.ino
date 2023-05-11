@@ -64,10 +64,6 @@ void loop() {
     tone(WIO_BUZZER, 1000, 100);
     delay(distanceFront * 20);
   }
-  if (client.connect(ID)) {
-      String data = "distance:front:" + String(distanceFront) + " cm;distance:back:" + String(distanceBack) + " cm";
-      client.publish(TOPIC, data.c_str());
-    }
   spr.pushSprite(0,0);
 }
 
