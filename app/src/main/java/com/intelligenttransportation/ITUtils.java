@@ -154,6 +154,24 @@ public class ITUtils {
                 imageView_car_background.setImageResource(R.drawable.car_red_front);
             }
         }
+        if (fdInt >= 15 && fdInt <= 30){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_red_yellow);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_both);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_green);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_front);
+            }
+        }
     }
 
 }
+
+
+
+
