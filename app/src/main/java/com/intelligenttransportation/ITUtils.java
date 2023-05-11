@@ -137,5 +137,23 @@ public class ITUtils {
         textView_back_distance.setText(bdStr);
     }
 
+    private static void changeBackGround(String fdStr, String bdStr) {
+        int fdInt = Integer.parseInt(fdStr.substring(0, fdStr.length() - 3));
+        int bdInt = Integer.parseInt(bdStr.substring(0, bdStr.length() - 3));
+        if (fdInt > 0 && fdInt < 15){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_red_both);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_red_yellow);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_red_green);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car_red_front);
+            }
+        }
+    }
 
 }
