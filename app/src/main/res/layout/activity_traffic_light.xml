@@ -123,10 +123,10 @@
         app:layout_constraintVertical_bias="0.887" />
 
     <Button
-        android:id="@+id/button_exchange"
+        android:id="@+id/button_pause"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="@string/exch"
+        android:text="@string/pause"
         android:textSize="22sp"
         android:visibility="gone"
         android:backgroundTint="@color/teal_700"

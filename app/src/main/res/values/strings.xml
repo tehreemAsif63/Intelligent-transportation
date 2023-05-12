@@ -40,4 +40,5 @@
     <string name="re">Re</string>
     <string name="exch">Exch</string>
     <string name="traffic">Traffic</string>
+    <string name="pause">Pause</string>
 </resources>

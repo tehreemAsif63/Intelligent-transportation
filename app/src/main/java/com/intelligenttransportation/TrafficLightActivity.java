@@ -3,14 +3,10 @@ package com.intelligenttransportation;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -32,13 +28,6 @@ public class TrafficLightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traffic_light);
 
-        if (0 == 0){ // If user is admin user
-            Button exchangeButton = findViewById(R.id.button_exchange);
-            exchangeButton.setVisibility(View.VISIBLE);
-            Button renewButton = findViewById(R.id.button_renew);
-            renewButton.setVisibility(View.VISIBLE);
-        }
-
         broker = new BrokerConnection(getApplicationContext());
         ITUtils.textView_east_number = findViewById(R.id.textView_west_east_number);
         ITUtils.textView_north_number = findViewById(R.id.textView_north_south_number);
@@ -55,37 +44,62 @@ public class TrafficLightActivity extends AppCompatActivity {
         mqttClient = broker.getMqttClient();
         broker.connectToMqttBroker();
 
-        Button eastGo = findViewById(R.id.button_west_east);
-        eastGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mqttClient.publish(PUB_TOPIC, ITUtils.eastGoAdmin, QOS, null);
-            }
-        });
+        if (0 == 1){ // if User is general user
+            Button eastGo = findViewById(R.id.button_west_east);
+            eastGo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.eastGoUser, QOS, null);
+                }
+            });
 
-        Button northGo = findViewById(R.id.button_north_south);
-        northGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, ITUtils.northGoAdmin, QOS, null);
-            }
-        });
+            Button northGo = findViewById(R.id.button_north_south);
+            northGo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.northGoUser, QOS, null);
+                }
+            });
+        }
 
-        Button renew = findViewById(R.id.button_renew);
-        renew.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
-            }
-        });
+        if (0 == 0){ // If user is admin user
+            Button pauseButton = findViewById(R.id.button_pause);
+            pauseButton.setVisibility(View.VISIBLE);
+            Button renewButton = findViewById(R.id.button_renew);
+            renewButton.setVisibility(View.VISIBLE);
+            Button eastGo = findViewById(R.id.button_west_east);
+            eastGo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.eastGoAdmin, QOS, null);
+                }
+            });
 
-        Button exchange = findViewById(R.id.button_exchange);
-        exchange.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mqttClient.publish(PUB_TOPIC, ITUtils.exchangeAdmin, QOS, null);
-            }
-        });
+            Button northGo = findViewById(R.id.button_north_south);
+            northGo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.northGoAdmin, QOS, null);
+                }
+            });
+
+            Button renew = findViewById(R.id.button_renew);
+            renew.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
+                }
+            });
+
+            Button pause = findViewById(R.id.button_pause);
+            pause.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mqttClient.publish(PUB_TOPIC, ITUtils.pauseAdmin, QOS, null);
+                }
+            });
+        }
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
