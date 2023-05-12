@@ -34,8 +34,6 @@ public class ITUtils {
     public static ImageView imageView_car_north2;
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
-    public static ImageView imageView;
-    public TextView warningText;
     public static ImageView imageView_car_background;
 
 

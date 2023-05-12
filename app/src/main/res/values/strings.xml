@@ -38,7 +38,6 @@
     <string name="pedestrian_wait">Pedestrian Wait</string>
     <string name="go">Go</string>
     <string name="re">Re</string>
-    <string name="exch">Exch</string>
     <string name="traffic">Traffic</string>
     <string name="pause">Pause</string>
 </resources>

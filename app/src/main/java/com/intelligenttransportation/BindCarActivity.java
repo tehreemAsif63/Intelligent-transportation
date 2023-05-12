@@ -39,7 +39,6 @@ public class BindCarActivity extends AppCompatActivity {
 
             public void onClick(View view) {
                 i ++;
-
                 if (i % 2 == 0) {
                     imageView.setImageResource(R.mipmap.image_car1);
                     textView.setText(R.string.information_o);
@@ -47,24 +46,7 @@ public class BindCarActivity extends AppCompatActivity {
                     imageView.setImageResource(R.mipmap.image_car2);
                     textView.setText(R.string.information_w);
                 }
-
-
             }
-                /*switch (i) {
-                    case 0:
-                        imageView.setImageResource(R.mipmap.origion);
-                        textView.setText(R.string.information_o);
-                        i++;
-                        break;
-                    case 0:
-                        imageView.setImageResource(R.mipmap.white_car1);
-                        textView.setText(R.string.information_w);
-                        Toast.makeText(bindCar.this, "This is last one!", Toast.LENGTH_SHORT).show();
-                        i++;
-                        break;
-                    case 2:
-                        Toast.makeText(bindCar.this, "This is last one!", Toast.LENGTH_SHORT).show();
-                }*/
 
         });
 

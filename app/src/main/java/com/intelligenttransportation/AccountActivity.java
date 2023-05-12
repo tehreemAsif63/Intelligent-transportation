@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,6 +22,17 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         user = (User) getIntent().getSerializableExtra("user");
+        if (user.getType().equals("general")){
+            ImageView headImage = findViewById(R.id.imageView_head);
+            headImage.setImageResource(R.drawable.general_user);
+            TextView nameText = findViewById(R.id.textView_username);
+            nameText.setText("General User");
+        } else if (user.getType().equals("admin")) {
+            ImageView headImage = findViewById(R.id.imageView_head);
+            headImage.setImageResource(R.drawable.police);
+            TextView nameText = findViewById(R.id.textView_username);
+            nameText.setText("Traffic Police");
+        }
 
         Button buttonBind = findViewById(R.id.button_bind_car);
         Button buttonLogout = findViewById(R.id.button_logout);
@@ -53,14 +66,16 @@ public class AccountActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Intent intent = null;
-                switch (item.getItemId()) {
-                    case R.id.navigation_car_console:
-                        intent = new Intent(AccountActivity.this, CarConsoleActivity.class);
+                switch (item.getItemId()){
+                    case R.id.navigation_traffic_light:
+                        intent = new Intent();
+                        intent.setClass(AccountActivity.this, MainActivity.class);
                         intent.putExtra("user", user);
                         startActivity(intent);
                         break;
-                    case R.id.navigation_user:
-                        intent = new Intent(AccountActivity.this, LoginActivity.class);
+                    case R.id.navigation_car_console:
+                        intent = new Intent();
+                        intent.setClass(AccountActivity.this, CarConsoleActivity.class);
                         intent.putExtra("user", user);
                         startActivity(intent);
                         break;

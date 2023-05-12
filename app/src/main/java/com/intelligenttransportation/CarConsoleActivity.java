@@ -49,7 +49,11 @@ public class CarConsoleActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(CarConsoleActivity.this, LoginActivity.class);
+                        if (user == null){
+                            intent = new Intent(CarConsoleActivity.this, LoginActivity.class);
+                        }else {
+                            intent = new Intent(CarConsoleActivity.this, AccountActivity.class);
+                        }
                         intent.putExtra("user", user);
                         startActivity(intent);
                         break;

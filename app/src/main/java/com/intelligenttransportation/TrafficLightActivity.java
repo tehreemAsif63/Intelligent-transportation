@@ -125,7 +125,11 @@ public class TrafficLightActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent(TrafficLightActivity.this, LoginActivity.class);
+                        if (user == null){
+                            intent = new Intent(TrafficLightActivity.this, LoginActivity.class);
+                        }else {
+                            intent = new Intent(TrafficLightActivity.this, AccountActivity.class);
+                        }
                         intent.putExtra("user", user);
                         startActivity(intent);
                         break;
