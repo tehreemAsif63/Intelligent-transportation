@@ -3,18 +3,7 @@
     "username": "General",
     "password": "general",
     "type": "general",
-    "cars": [
-            {
-              "id": 001,
-              "name": "Volvo",
-              "imageSrc": "@mipmap/image_car1"
-            },
-            {
-              "id": 002,
-              "name": "Polestar",
-              "imageSrc": "@mipmap/image_car2"
-            }
-    ],
+    "car": {},
     "isLogged": false,
     "isBoundCar": false
 
@@ -23,18 +12,7 @@
     "username": "Police",
     "password": "police",
     "type": "admin",
-    "cars": [
-           {
-             "id": 001,
-             "name": "Volvo",
-             "imageSrc": "@mipmap/image_car1"
-           },
-           {
-              "id": 002,
-              "name": "Polestar",
-              "imageSrc": "@mipmap/image_car2"
-           }
-    ],
+    "car": {},
     "isLogged": false,
     "isBoundCar": false
 

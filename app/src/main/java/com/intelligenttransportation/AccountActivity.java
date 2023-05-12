@@ -26,12 +26,22 @@ public class AccountActivity extends AppCompatActivity {
             ImageView headImage = findViewById(R.id.imageView_head);
             headImage.setImageResource(R.drawable.general_user);
             TextView nameText = findViewById(R.id.textView_username);
-            nameText.setText("General User");
+            nameText.setText(R.string.general_user);
         } else if (user.getType().equals("admin")) {
             ImageView headImage = findViewById(R.id.imageView_head);
             headImage.setImageResource(R.drawable.police);
             TextView nameText = findViewById(R.id.textView_username);
-            nameText.setText("Traffic Police");
+            nameText.setText(R.string.traffic_police);
+        }
+        TextView bindCarText = findViewById(R.id.textView_bind_car);
+        ImageView carImage = findViewById(R.id.imageView_bound_car);
+        if (user.isBoundCar()){
+            bindCarText.setVisibility(View.GONE);
+            carImage.setImageResource(user.getCar().getImageSrc());
+            carImage.setVisibility(View.VISIBLE);
+        } else {
+            carImage.setVisibility(View.GONE);
+            bindCarText.setVisibility(View.VISIBLE);
         }
 
         Button buttonBind = findViewById(R.id.button_bind_car);

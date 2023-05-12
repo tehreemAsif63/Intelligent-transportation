@@ -8,7 +8,7 @@ public class User implements Serializable {
     private String password;
     private String type;
 
-    private List<Car> cars;
+    private Car car;
     private boolean isLogged;
     private boolean isBoundCar;
 
@@ -16,11 +16,11 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password, String type, List<Car> cars, boolean isLogged, boolean isBoundCar) {
+    public User(String username, String password, String type, Car car, boolean isLogged, boolean isBoundCar) {
         this.username = username;
         this.password = password;
         this.type = type;
-        this.cars = cars;
+        this.car = car;
         this.isLogged = isLogged;
         this.isBoundCar = isBoundCar;
     }
@@ -57,12 +57,12 @@ public class User implements Serializable {
         return null;
     }
 
-    public List<Car> getCars() {
-        return cars;
+    public Car getCar() {
+        return car;
     }
 
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
+    public void setCar(Car car) {
+        this.car = car;
     }
 
     public boolean isLogged() {
