@@ -1,12 +1,14 @@
 package com.intelligenttransportation;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,14 +28,36 @@ public class CarConsoleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_console);
 
-        broker = new BrokerConnection(getApplicationContext());
-        ITUtils.textView_front_distance = findViewById(R.id.textView_distance_front);
-        ITUtils.textView_back_distance = findViewById(R.id.textView_distance_back);
-        ITUtils.imageView_car_background = findViewById(R.id.image_car);
-        broker.connectToMqttBroker();
-
         user = (User) getIntent().getSerializableExtra("user");
-        bottomNavigation();
+        if (user == null || !user.isBoundCar()){
+            AlertDialog.Builder builder = new AlertDialog.Builder(CarConsoleActivity.this);
+            builder.setTitle("Information")
+                    .setMessage("You must bind a car in your account.")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = null;
+                            if (user == null){
+                                intent = new Intent(CarConsoleActivity.this, LoginActivity.class);
+                            }else {
+                                intent = new Intent(CarConsoleActivity.this, AccountActivity.class);
+                            }
+                            intent.putExtra("user", user);
+                            startActivity(intent);
+                        }
+                    })
+                    .setCancelable(false)
+                    .create()
+                    .show();
+        }else {
+            broker = new BrokerConnection(getApplicationContext());
+            ITUtils.textView_front_distance = findViewById(R.id.textView_distance_front);
+            ITUtils.textView_back_distance = findViewById(R.id.textView_distance_back);
+            ITUtils.imageView_car_background = findViewById(R.id.image_car);
+            broker.connectToMqttBroker();
+
+            bottomNavigation();
+        }
     }
 
     public void bottomNavigation(){

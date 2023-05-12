@@ -43,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (verifyCredentials(username, password)) {
                     // Go to the Account Information page
                     Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
-                    user.setLogged(true);
                     intent.putExtra("user", user);
                     startActivity(intent);
                 } else {
