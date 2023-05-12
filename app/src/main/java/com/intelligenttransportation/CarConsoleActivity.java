@@ -29,9 +29,9 @@ public class CarConsoleActivity extends AppCompatActivity {
         broker = new BrokerConnection(getApplicationContext());
         ITUtils.textView_front_distance = findViewById(R.id.textView_distance_front);
         ITUtils.textView_back_distance = findViewById(R.id.textView_distance_back);
+        ITUtils.imageView_car_background = findViewById(R.id.image_car);
         broker.connectToMqttBroker();
 
-        ITUtils.imageView = findViewById(R.id.image_car);
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
