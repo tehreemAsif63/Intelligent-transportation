@@ -14,12 +14,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class CarConsoleActivity extends AppCompatActivity {
 
     public BrokerConnection broker;
+    private User user;
 
     public static final String LOCALHOST = "broker.emqx.io";
     private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 0;
-    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,21 +32,25 @@ public class CarConsoleActivity extends AppCompatActivity {
         ITUtils.imageView_car_background = findViewById(R.id.image_car);
         broker.connectToMqttBroker();
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        user = (User) getIntent().getSerializableExtra("user");
+        bottomNavigation();
+    }
 
+    public void bottomNavigation(){
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Intent intent = null;
                 switch (item.getItemId()){
                     case R.id.navigation_traffic_light:
-                        intent = new Intent();
-                        intent.setClass(CarConsoleActivity.this, MainActivity.class);
+                        intent = new Intent(CarConsoleActivity.this, MainActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
-                        intent = new Intent();
-                        intent.setClass(CarConsoleActivity.this, LoginActivity.class);
+                        intent = new Intent(CarConsoleActivity.this, LoginActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                 }

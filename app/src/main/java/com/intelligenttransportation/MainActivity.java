@@ -11,12 +11,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        User user = (User) getIntent().getSerializableExtra("user");
+        user = (User) getIntent().getSerializableExtra("user");
         Button viewLightButton = findViewById(R.id.button_view_light);
         viewLightButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        bottomNavigation();
+    }
 
+    public void bottomNavigation(){
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -48,6 +52,5 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 }

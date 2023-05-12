@@ -25,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private User user;
-    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (verifyCredentials(username, password)) {
                     // Go to the Account Information page
                     Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
+                    user.setLogged(true);
                     intent.putExtra("user", user);
                     startActivity(intent);
                 } else {
@@ -53,32 +53,12 @@ public class LoginActivity extends AppCompatActivity {
                             .setPositiveButton("OK", null)
                             .setCancelable(true)
                             .create()
-                            .show();               }
+                            .show();
+                }
             }
         });
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Intent intent = null;
-                switch (item.getItemId()){
-                    case R.id.navigation_traffic_light:
-                        intent = new Intent();
-                        intent.setClass(LoginActivity.this, MainActivity.class);
-                        intent.putExtra("user", user);
-                        startActivity(intent);
-                        break;
-                    case R.id.navigation_car_console:
-                        intent = new Intent();
-                        intent.setClass(LoginActivity.this, CarConsoleActivity.class);
-                        intent.putExtra("user", user);
-                        startActivity(intent);
-                        break;
-                }
-                return true;
-            }
-        });
+        bottomNavigation();
     }
 
     private boolean verifyCredentials(String username, String password) {
@@ -113,5 +93,30 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
         return false;
+    }
+
+    public void bottomNavigation(){
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent = null;
+                switch (item.getItemId()){
+                    case R.id.navigation_traffic_light:
+                        intent = new Intent();
+                        intent.setClass(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_car_console:
+                        intent = new Intent();
+                        intent.setClass(LoginActivity.this, CarConsoleActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }

@@ -21,7 +21,7 @@ public class TrafficLightActivity extends AppCompatActivity {
     private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 2;
-    private BottomNavigationView bottomNavigationView;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,64 +44,76 @@ public class TrafficLightActivity extends AppCompatActivity {
         mqttClient = broker.getMqttClient();
         broker.connectToMqttBroker();
 
-        if (0 == 1){ // if User is general user
-            Button eastGo = findViewById(R.id.button_west_east);
-            eastGo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.eastGoUser, QOS, null);
-                }
-            });
+        user = (User) getIntent().getSerializableExtra("user");
 
-            Button northGo = findViewById(R.id.button_north_south);
-            northGo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.northGoUser, QOS, null);
-                }
-            });
+        if (user == null || user.getType().equals("general")){ // if User is general user
+            generalUser();
+        } else if (user.getType().equals("admin")){ // If user is admin user
+            adminUser();
         }
 
-        if (0 == 0){ // If user is admin user
-            Button pauseButton = findViewById(R.id.button_pause);
-            pauseButton.setVisibility(View.VISIBLE);
-            Button renewButton = findViewById(R.id.button_renew);
-            renewButton.setVisibility(View.VISIBLE);
-            Button eastGo = findViewById(R.id.button_west_east);
-            eastGo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.eastGoAdmin, QOS, null);
-                }
-            });
+        bottomNavigation();
 
-            Button northGo = findViewById(R.id.button_north_south);
-            northGo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.northGoAdmin, QOS, null);
-                }
-            });
+    }
 
-            Button renew = findViewById(R.id.button_renew);
-            renew.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
-                }
-            });
+    public void generalUser(){
+        Button eastGo = findViewById(R.id.button_west_east);
+        eastGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.eastGoUser, QOS, null);
+            }
+        });
 
-            Button pause = findViewById(R.id.button_pause);
-            pause.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mqttClient.publish(PUB_TOPIC, ITUtils.pauseAdmin, QOS, null);
-                }
-            });
-        }
+        Button northGo = findViewById(R.id.button_north_south);
+        northGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.northGoUser, QOS, null);
+            }
+        });
+    }
 
+    public void adminUser(){
+        Button pauseButton = findViewById(R.id.button_pause);
+        pauseButton.setVisibility(View.VISIBLE);
+        Button renewButton = findViewById(R.id.button_renew);
+        renewButton.setVisibility(View.VISIBLE);
+        Button eastGo = findViewById(R.id.button_west_east);
+        eastGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.eastGoAdmin, QOS, null);
+            }
+        });
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        Button northGo = findViewById(R.id.button_north_south);
+        northGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.northGoAdmin, QOS, null);
+            }
+        });
+
+        Button renew = findViewById(R.id.button_renew);
+        renew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
+            }
+        });
+
+        Button pause = findViewById(R.id.button_pause);
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mqttClient.publish(PUB_TOPIC, ITUtils.pauseAdmin, QOS, null);
+            }
+        });
+    }
+
+    public void bottomNavigation(){
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -109,21 +121,22 @@ public class TrafficLightActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.navigation_car_console:
                         intent = new Intent(TrafficLightActivity.this, CarConsoleActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                     case R.id.navigation_user:
                         intent = new Intent(TrafficLightActivity.this, LoginActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                 }
                 return true;
             }
         });
-
     }
-
     public void goBack(View view){
         Intent intent = new Intent(TrafficLightActivity.this, MainActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 

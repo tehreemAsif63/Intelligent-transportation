@@ -1,20 +1,27 @@
 package com.intelligenttransportation;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class BindCarActivity extends AppCompatActivity {
 
+    private User user;
     int i =0;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bind_car);
+
+        user = (User) getIntent().getSerializableExtra("user");
         final ImageView imageView = findViewById(R.id.imageView);
         final TextView textView = findViewById(R.id.textView);
         Button backButton = findViewById(R.id.button_back);
@@ -23,6 +30,7 @@ public class BindCarActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(BindCarActivity.this, AccountActivity.class);
+                intent.putExtra("user", user);
                 startActivity(intent);
             }
         });
@@ -63,10 +71,37 @@ public class BindCarActivity extends AppCompatActivity {
         bindButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(BindCarActivity.this, AccountActivity.class);
+                intent.putExtra("user", user);
                 startActivity(intent);
             }
         });
+
+        bottomNavigation();
     }
 
+    public void bottomNavigation(){
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent = null;
+                switch (item.getItemId()){
+                    case R.id.navigation_traffic_light:
+                        intent = new Intent();
+                        intent.setClass(BindCarActivity.this, MainActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_car_console:
+                        intent = new Intent();
+                        intent.setClass(BindCarActivity.this, CarConsoleActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        });
+    }
 
 }
