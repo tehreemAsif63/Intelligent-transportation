@@ -22,8 +22,9 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
 public class LoginActivity extends AppCompatActivity {
-    EditText usernameEditText;
-    EditText passwordEditText;
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private User user;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (verifyCredentials(username, password)) {
                     // Go to the Account Information page
                     Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
-                    intent.putExtra("username", username);
+                    intent.putExtra("user", user);
                     startActivity(intent);
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
@@ -65,11 +66,13 @@ public class LoginActivity extends AppCompatActivity {
                     case R.id.navigation_traffic_light:
                         intent = new Intent();
                         intent.setClass(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                     case R.id.navigation_car_console:
                         intent = new Intent();
                         intent.setClass(LoginActivity.this, CarConsoleActivity.class);
+                        intent.putExtra("user", user);
                         startActivity(intent);
                         break;
                 }
@@ -94,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
             for (User user : users) {
                 if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                    this.user = user;
                     return true;
                 }
             }
