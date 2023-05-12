@@ -34,6 +34,10 @@ public class ITUtils {
     public static ImageView imageView_car_north2;
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
+    public static ImageView imageView;
+    public TextView warningText;
+    public static ImageView imageView_car_background;
+
 
 
     public static void showDynamicPage(String str) {
@@ -52,6 +56,7 @@ public class ITUtils {
             String bdStr = backDistance[2];
             showFrontDistance(fdStr);
             showBackDistance(bdStr);
+            changeBackGround(fdStr, bdStr);
         }
 
     }
@@ -132,5 +137,71 @@ public class ITUtils {
         textView_back_distance.setText(bdStr);
     }
 
-
+    private static void changeBackGround(String fdStr, String bdStr) {
+        int fdInt = Integer.parseInt(fdStr.substring(0, fdStr.length() - 3));
+        int bdInt = Integer.parseInt(bdStr.substring(0, bdStr.length() - 3));
+        if (fdInt > 0 && fdInt < 15){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_red_both);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_red_yellow);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_red_green);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car_red_front);
+            }
+        }
+        if (fdInt >= 15 && fdInt <= 30){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_red_yellow);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_both);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_green);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_front);
+            }
+        }
+        if (fdInt > 30 && fdInt <= 50){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_green_red);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_green_yellow);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_green_both);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car_green_front);
+            }
+        }
+        if (fdInt > 50){
+            if (bdInt > 0 && bdInt < 15){
+                imageView_car_background.setImageResource(R.drawable.car_red_back);
+            }
+            if (bdInt >= 15 && bdInt <= 30){
+                imageView_car_background.setImageResource(R.drawable.car_yellow_back);
+            }
+            if (bdInt > 30 && bdInt <= 50){
+                imageView_car_background.setImageResource(R.drawable.car_green_back);
+            }
+            if (bdInt > 50){
+                imageView_car_background.setImageResource(R.drawable.car);
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
