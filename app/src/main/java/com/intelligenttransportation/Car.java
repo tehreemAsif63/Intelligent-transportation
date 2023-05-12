@@ -1,16 +1,16 @@
 package com.intelligenttransportation;
 
-import android.widget.ImageView;
+import java.io.Serializable;
 
-public class Car {
+public class Car implements Serializable {
     private int id;
-    private String name;
-    private String imageSrc;
+    private int name;
+    private int imageSrc;
 
     public Car() {
     }
 
-    public Car(int id, String name, String imageSrc) {
+    public Car(int id, int name, int imageSrc) {
         this.id = id;
         this.name = name;
         this.imageSrc = imageSrc;
@@ -24,19 +24,19 @@ public class Car {
         this.id = id;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
-    public String getImageSrc() {
+    public int getImageSrc() {
         return imageSrc;
     }
 
-    public void setImageSrc(String imageSrc) {
+    public void setImageSrc(int imageSrc) {
         this.imageSrc = imageSrc;
     }
 

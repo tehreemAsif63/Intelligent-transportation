@@ -22,9 +22,9 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
 public class LoginActivity extends AppCompatActivity {
-    EditText usernameEditText;
-    EditText passwordEditText;
-    private BottomNavigationView bottomNavigationView;
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (verifyCredentials(username, password)) {
                     // Go to the Account Information page
                     Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
-                    intent.putExtra("username", username);
+                    intent.putExtra("user", user);
                     startActivity(intent);
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
@@ -52,30 +52,12 @@ public class LoginActivity extends AppCompatActivity {
                             .setPositiveButton("OK", null)
                             .setCancelable(true)
                             .create()
-                            .show();               }
+                            .show();
+                }
             }
         });
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Intent intent = null;
-                switch (item.getItemId()){
-                    case R.id.navigation_traffic_light:
-                        intent = new Intent();
-                        intent.setClass(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        break;
-                    case R.id.navigation_car_console:
-                        intent = new Intent();
-                        intent.setClass(LoginActivity.this, CarConsoleActivity.class);
-                        startActivity(intent);
-                        break;
-                }
-                return true;
-            }
-        });
+        bottomNavigation();
     }
 
     private boolean verifyCredentials(String username, String password) {
@@ -94,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
 
             for (User user : users) {
                 if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                    this.user = user;
                     return true;
                 }
             }
@@ -109,5 +92,30 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
         return false;
+    }
+
+    public void bottomNavigation(){
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent = null;
+                switch (item.getItemId()){
+                    case R.id.navigation_traffic_light:
+                        intent = new Intent();
+                        intent.setClass(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_car_console:
+                        intent = new Intent();
+                        intent.setClass(LoginActivity.this, CarConsoleActivity.class);
+                        intent.putExtra("user", user);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }

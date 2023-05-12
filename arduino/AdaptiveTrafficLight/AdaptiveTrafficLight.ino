@@ -11,8 +11,8 @@ const int yellowNorth = 6;
 const int greenNorth = 7;
 
 // Defining the pins for the ultrasonic sensors
-int ultraEast = 8;
-int ultraNorth = 1;
+int ultraEast = 1;
+int ultraNorth = 8;
 
 int maxFlag = 40;
 int flag = 0;
@@ -25,7 +25,7 @@ bool isNewCarNorth = false; //To avoid duplicate counting
 int userType = 0; //0 is no case; 1 is general user; 2 is admin user
 int whichGo = 0; // 0 is no case; 1 is east-west; 2 is north-south
 bool isRenew = false; // true is renew to original state
-bool isExchange = false; // true is immediately change the traffic light status on both sides
+bool isPause = false; // true is immediately pause the traffic light status on both sides
 
 //print on Wio terminal
 TFT_eSPI tft;
@@ -33,7 +33,7 @@ TFT_eSprite spr = TFT_eSprite(&tft);
 
 
 void setup() {
-  
+
   pinMode(redEast, OUTPUT);
   pinMode(yellowEast, OUTPUT);
   pinMode(greenEast, OUTPUT);
@@ -41,10 +41,10 @@ void setup() {
   pinMode(redNorth, OUTPUT);
   pinMode(yellowNorth, OUTPUT);
   pinMode(greenNorth, OUTPUT);
-  
+
   pinMode(WIO_BUZZER, OUTPUT);
 
-  Serial.begin(9600); 
+  Serial.begin(9600);
 
   tft.begin();
   tft.setRotation(3);
@@ -65,7 +65,7 @@ void loop() {
   adminControl();
 
   trafficLight();
-  
+
   delay(1000);
   flag++;
 
@@ -94,7 +94,7 @@ void trafficLight(){
     spr.drawNumber(maxFlag / 2 - flag,260,75);
 
   }
-  
+
   if(flag >= maxFlag / 2 - 3 && flag < maxFlag / 2){
     digitalWrite(redEast, LOW);
     digitalWrite(yellowEast, HIGH);
@@ -112,7 +112,7 @@ void trafficLight(){
     spr.drawNumber(maxFlag / 2 - flag,260,75);
 
   }
-  
+
   if(flag >= maxFlag / 2 && flag < maxFlag - 3){
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
@@ -131,7 +131,7 @@ void trafficLight(){
     spr.drawString("North: Green light: ",20,75);
     spr.drawNumber(maxFlag - 3 - flag,260,75);
   }
-  
+
   if(flag >= maxFlag - 3 && flag < maxFlag){
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
@@ -153,7 +153,7 @@ void trafficLight(){
 void carOnEast(){
 	if(flag >= maxFlag / 2 && flag < maxFlag - 3){
     double distance = 0.01723 * readUltrasonicDuration(ultraEast, ultraEast);
-  	if(distance < 10){ 
+  	if(distance < 10){
       if(!isNewCarEast){ //To avoid duplicate counting
           isNewCarEast = true;
           tone(WIO_BUZZER, 100, 1000);
@@ -206,35 +206,21 @@ void userControl(){
 void adminControl(){
   if(userType == 2){
     if(isRenew){
-      whichGo = 0;
-      flag = tempFlag;
-      isRenew = !isRenew;
+      isPause = false;
+      isRenew = false;
     }
     if(whichGo == 1){
-      if(tempFlag == -1){
-          tempFlag = flag;
-      }
       flag = maxFlag - 3;
       whichGo = 0;
     }
 
     if(whichGo == 2){
-      if(tempFlag == -1){
-          tempFlag = flag;
-      }
       flag = maxFlag / 2 -3;
       whichGo = 0;
     }
 
-    if(isExchange){
-      flag += maxFlag / 2;
-      if(flag >= maxFlag / 2 - 3 && flag < maxFlag - 3){
-        flag = maxFlag / 2 - 3;
-      }
-      if(flag >= 37 ){
-        flag  = 37;
-      }
-      isExchange = false;
+    if(isPause){
+      flag --;
     }
   }
 }

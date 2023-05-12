@@ -7,47 +7,19 @@
     android:background="@drawable/play"
     tools:context=".AccountActivity">
 
-    <Button
-        android:id="@+id/button_bind_car"
-        android:layout_width="280dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="202dp"
+    <ImageView
+        android:id="@+id/imageView_head"
+        android:layout_width="160dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="34dp"
         android:alpha="0.7"
-        android:background="@drawable/button_shape"
-        android:backgroundTint="@color/button_color_selector"
-        android:onClick="Check"
-        android:text="bind car"
-        android:textColor="#FF000000"
-        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_username"
-        app:layout_constraintVertical_bias="0.979" />
-
-    <Button
-        android:id="@+id/button_logout"
-        android:layout_width="280dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="87dp"
-        android:alpha="0.8"
-        android:background="@drawable/button_broder"
-        android:backgroundTint="@color/button_color_selector"
-        android:onClick="Check"
-        android:text="LOG Out"
-        android:textColor="#353434"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_bind_car"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@drawable/police" />
 
 
     <TextView
@@ -59,23 +31,75 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
+        app:layout_constraintVertical_bias="0.284" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/textView_bind_car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:alpha="0.7"
+        android:text="@string/please_bind_your_car"
+        android:textColor="#706C6C"
+        android:textSize="30sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/police" />
+        app:layout_constraintVertical_bias="0.433" />
+
+    <ImageView
+        android:id="@+id/imageView_bound_car"
+        android:layout_width="260dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="34dp"
+        android:visibility="gone"
+        android:alpha="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471"
+        app:srcCompat="@drawable/image_police_car" />
+
+    <Button
+        android:id="@+id/button_bind_car"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="65dp"
+        android:alpha="0.7"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/button_color_selector"
+        android:onClick="Check"
+        android:text="bind car"
+        android:textColor="#FF000000"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:alpha="0.8"
+        android:background="@drawable/button_broder"
+        android:backgroundTint="@color/button_color_selector"
+        android:onClick="Check"
+        android:text="LOG Out"
+        android:textColor="#353434"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

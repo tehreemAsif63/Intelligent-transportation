@@ -10,8 +10,8 @@
     <string name="phone_number">Phone number</string>
     <string name="app_name">IntelligentTransportation</string>
     <string name="go_back">Back</string>
-    <string name="information_o">car name:Porsche,model:918,color:Orange</string>
-    <string name="information_w">car name:Buggati,model:Chiron,color:White</string>
+    <string name="police_car">Police Car</string>
+    <string name="ferrari">Ferrari</string>
     <string name="title_activity_text">TextActivity</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="first_fragment_label">First Fragment</string>
@@ -38,6 +38,9 @@
     <string name="pedestrian_wait">Pedestrian Wait</string>
     <string name="go">Go</string>
     <string name="re">Re</string>
-    <string name="exch">Exch</string>
     <string name="traffic">Traffic</string>
+    <string name="pause">Pause</string>
+    <string name="general_user">General User</string>
+    <string name="traffic_police">Traffic Police</string>
+    <string name="please_bind_your_car">Please bind your car</string>
 </resources>

@@ -18,7 +18,7 @@ public class ITUtils {
     public static final String eastGoAdmin = "2100";
     public static final String northGoAdmin = "2200";
     public static final String renewAdmin = "2010";
-    public static final String exchangeAdmin = "2001";
+    public static final String pauseAdmin = "2001";
 
     public static TextView textView_east_number;
     public static TextView textView_north_number;
@@ -34,8 +34,6 @@ public class ITUtils {
     public static ImageView imageView_car_north2;
     public static TextView textView_front_distance;
     public static TextView textView_back_distance;
-    public static ImageView imageView;
-    public TextView warningText;
     public static ImageView imageView_car_background;
 
 

@@ -1,26 +1,24 @@
 package com.intelligenttransportation;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
     private String username;
     private String password;
     private String type;
-
-    private List<Car> cars;
-    private boolean isLogged;
+    private Car car;
     private boolean isBoundCar;
 
 
     public User() {
     }
 
-    public User(String username, String password, String type, List<Car> cars, boolean isLogged, boolean isBoundCar) {
+    public User(String username, String password, String type, Car car,  boolean isBoundCar) {
         this.username = username;
         this.password = password;
         this.type = type;
-        this.cars = cars;
-        this.isLogged = isLogged;
+        this.car = car;
         this.isBoundCar = isBoundCar;
     }
 
@@ -56,21 +54,14 @@ public class User {
         return null;
     }
 
-    public List<Car> getCars() {
-        return cars;
+    public Car getCar() {
+        return car;
     }
 
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
+    public void setCar(Car car) {
+        this.car = car;
     }
 
-    public boolean isLogged() {
-        return isLogged;
-    }
-
-    public void setLogged(boolean logged) {
-        isLogged = logged;
-    }
 
     public boolean isBoundCar() {
         return isBoundCar;
