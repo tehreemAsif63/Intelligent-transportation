@@ -34,6 +34,7 @@ void setup() {
 
   client.setServer(server, 1883);
   client.setCallback(callback);
+  client.connect(ID);
 
   pinMode(buzzer, OUTPUT);
  
@@ -118,14 +119,14 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.println(message);
   
   // Check if message is "stopbuzzer"
-  if (strcmp(message, "stopbuzzer") == 0) {
+  if (strcmp(message, "stopBuzzer") == 0) {
     // Set buzzer state to 0 (buzzer is not playing)
     buzzerState = 0;
     play();
   }
   
   // Check if message is "playbuzzer"
-  else if (strcmp(message, "playbuzzer") == 0) {
+  else if (strcmp(message, "playBuzzer") == 0) {
     // Set buzzer state to 1 (buzzer is playing)
     buzzerState = 1;
     play();

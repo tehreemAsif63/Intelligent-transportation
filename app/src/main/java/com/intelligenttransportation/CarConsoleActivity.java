@@ -14,6 +14,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.view.View;
 import android.widget.Button;
 
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+
 public class CarConsoleActivity extends AppCompatActivity {
 
     public BrokerConnection broker;
@@ -38,23 +40,25 @@ public class CarConsoleActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
 
-        Button button = findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
+
         button.setOnClickListener(new View.OnClickListener() {
             boolean isBuzzerOn = false;
             @Override
             public void onClick(View view) {
-                String topic = "Find my Car";
+                String pubTopic = "BuzzerButtonCommand";
+                String subTopic = "BuzzerButtonStatus";
                 if (isBuzzerOn) {
                     // code to stop the buzzer
-                    String payload = "s"; //means stop
+                    String payload = "stopBuzzer"; //means stop
                     int qos = CarConsoleActivity.QOS;
-                    broker.publishMessage(topic, payload, qos);
+                    MqttClient.publish(pubTopic, payload, qos, null);
                     isBuzzerOn = false;
                 } else {
                     // code to start the buzzer
-                    String payload = "p"; //means play
+                    String payload = "playBuzzer"; //means play
                     int qos = CarConsoleActivity.QOS;
-                    broker.publishMessage(topic, payload, qos);
+                    MqttClient.publish(pubTopic, payload, qos, null);
                     isBuzzerOn = true;
                 }
             }

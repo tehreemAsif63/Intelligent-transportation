@@ -11,6 +11,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class MqttClient {
 
     private MqttAndroidClient mMqttAndroidClient;
+    private SerialPort mSerialPort; // Add a serial port object for communicating with the Arduino
 
     public MqttClient(Context context, String serverUrl, String clientId) {
         mMqttAndroidClient = new MqttAndroidClient(context, serverUrl, clientId);
@@ -56,7 +57,7 @@ public class MqttClient {
         }
     }
     // send message
-    public void publish(String topic, String message, int qos, IMqttActionListener publishCallback) {
+    public static void publish(String topic, String message, int qos, IMqttActionListener publishCallback) {
         MqttMessage mqttMessage = new MqttMessage();
         mqttMessage.setPayload(message.getBytes());
         mqttMessage.setQos(qos);
