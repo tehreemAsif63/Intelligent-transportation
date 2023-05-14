@@ -55,6 +55,17 @@ Every project is different, so consider which of these sections apply to yours. 
 
 - ### Intelligent Transportation
 
+## Table of Content
+- Item
+- Item
+- Item
+
+## Overview
+
+## Features
+
+## Purpose & Benefits
+
 ## Description
 - In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
 
@@ -108,6 +119,7 @@ Every project is different, so consider which of these sections apply to yours. 
 - **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
 - **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
 
+## User manual
 
 ## Support
 - **If you need help with the project, you can find support in the following ways:**
