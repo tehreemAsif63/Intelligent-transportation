@@ -51,18 +51,28 @@ When you're ready to make this README your own, just edit this file and use the 
 ## Suggestions for a good README
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
-
-- ### Intelligent Transportation
+# Intelligent Transportation
 
 ## Table of Content
-- Item
-- Item
-- Item
+- [Overview](#overview)
+- [Features](#features)
+- [Purpose & Benefits](#purpose-&-benefits)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [User Manual](#user-manual)
+- [Contributing](#contributing)
+- [License](#license)
+- [Authors and acknowledgment](#authors-and-acknowledgment)
 
 ## Overview
 
 ## Features
+
+| Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occurs|
+| Control traffic light | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
+| Car finding |The vehicle makes a buzzer sound when the user is unable to find the vehicle|
+| Warning display |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
 
 ## Purpose & Benefits
 
@@ -89,8 +99,8 @@ Every project is different, so consider which of these sections apply to yours. 
 
 
 ## Installation
-1. Install Gitlab on your computer
- - You can download GitLab from the official website: https://about.gitlab.com/install/.
+1. Install Gitlab on your computer 
+* You can download GitLab from the official website: https://about.gitlab.com/install/.
 2. Install the Arduino IDE
  - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
 3. Install Mosquitto
@@ -118,6 +128,8 @@ Every project is different, so consider which of these sections apply to yours. 
   
 - **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
 - **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
+
+## Configuration
 
 ## User manual
 
@@ -152,9 +164,8 @@ Every project is different, so consider which of these sections apply to yours. 
 - Tehreen Asif        gusasite@student.gu.se
 - Elif Sayeed Yaqoud  gussayel@student.gu.se
 
-
-
 ## License
 This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
+
 ## Project status
 The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
