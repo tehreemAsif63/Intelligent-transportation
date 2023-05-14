@@ -19,13 +19,13 @@ import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 public class CarConsoleActivity extends AppCompatActivity {
 
     public BrokerConnection broker;
-
     public static final String LOCALHOST = "broker.emqx.io";
     private static final String MQTT_SERVER = "tcp://" + LOCALHOST + ":1883";
     public static final String CLIENT_ID = "Android App";
     public static final int QOS = 0;
     private BottomNavigationView bottomNavigationView;
-    private boolean isBuzzerOn;
+    public MqttClient mqttClient;
+
 
 
     @Override
@@ -37,10 +37,11 @@ public class CarConsoleActivity extends AppCompatActivity {
         ITUtils.textView_front_distance = findViewById(R.id.textView_distance_front);
         ITUtils.textView_back_distance = findViewById(R.id.textView_distance_back);
         broker.connectToMqttBroker();
-
         bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        mqttClient = broker.getMqttClient();
+        broker.connectToMqttBroker();
 
-        Button button = (Button) findViewById(R.id.button);
+        Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             boolean isBuzzerOn = false;
@@ -51,13 +52,13 @@ public class CarConsoleActivity extends AppCompatActivity {
                     // code to stop the buzzer
                     String payload = "stopBuzzer"; //means stop
                     int qos = CarConsoleActivity.QOS;
-                    MqttClient.publish(pubTopic, payload, qos, null);
+                    mqttClient.publish(pubTopic, payload, qos, null);
                     isBuzzerOn = false;
                 } else {
                     // code to start the buzzer
                     String payload = "playBuzzer"; //means play
                     int qos = CarConsoleActivity.QOS;
-                    MqttClient.publish(pubTopic, payload, qos, null);
+                    mqttClient.publish(pubTopic, payload, qos, null);
                     isBuzzerOn = true;
                 }
             }
