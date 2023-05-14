@@ -47,7 +47,6 @@ public class CarConsoleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String pubTopic = "BuzzerButtonCommand";
-                String subTopic = "BuzzerButtonStatus";
                 if (isBuzzerOn) {
                     // code to stop the buzzer
                     String payload = "stopBuzzer"; //means stop
