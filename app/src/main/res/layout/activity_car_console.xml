@@ -11,11 +11,10 @@
         android:id="@+id/image_car"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/car"
         android:scaleType="fitXY"
+        android:src="@drawable/car"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
-
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/textView_distance_front"
@@ -42,6 +41,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_car"
         app:layout_constraintVertical_bias="0.861" />
+
+    <Button
+        android:id="@+id/button_alarm"
+        android:layout_width="86dp"
+        android:layout_height="231dp"
+        android:textSize="25sp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_car"
+        app:layout_constraintVertical_bias="0.552" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_menu"

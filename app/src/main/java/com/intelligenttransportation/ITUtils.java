@@ -19,6 +19,7 @@ public class ITUtils {
     public static final String northGoAdmin = "2200";
     public static final String renewAdmin = "2010";
     public static final String pauseAdmin = "2001";
+    public static final String policeAlarm = "2900";
 
     public static TextView textView_east_number;
     public static TextView textView_north_number;
