@@ -61,9 +61,9 @@ Every project is different, so consider which of these sections apply to yours. 
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [User Manual](#user-manual)
-- [Contributing](#contributing)
-- [License](#license)
+- [Contribute](#contribute)
 - [Authors and acknowledgment](#authors-and-acknowledgment)
+- [License](#license)
 
 ## Overview
 
@@ -71,7 +71,7 @@ Every project is different, so consider which of these sections apply to yours. 
 
 | Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occur|
 | Control traffic light | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
-| Car finding |The vehicle makes a buzzer sound when the user is unable to find the vehicle|
+| Car finding |The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
 | Warning display |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
 
 ## Purpose & Benefits
@@ -147,14 +147,6 @@ Every project is different, so consider which of these sections apply to yours. 
 
 ## User manual
 
-## Support
-- **If you need help with the project, you can find support in the following ways:**
- 1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
-   https://discord.gg/KN5YJ7TU
- 2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
-
-
-
 ## Roadmap
 - **As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:**
  1. Integration with more sensor types: Currently, the project relies on a limited set of sensors to gather information about the environment. In future releases, we plan to expand the range of sensors that can be used, such as adding cameras or lidar sensors.
@@ -163,12 +155,39 @@ Every project is different, so consider which of these sections apply to yours. 
  4. Expansion of ADAS features: The Advanced Driving Assistance System (ADAS) currently includes basic distance sensing technology. In future releases, we plan to expand the range of features to include other safety features, such as lane departure warnings and automatic emergency braking.
 
 
-## Contributing
-- Start with forking the repository and create a new branch for the changes you want to make. You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
-- Ensure the code does not break the project's guideline, after you make the changes
-- Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
-- Add comments and documentation if you needed to classify the changes
-- Make a pull request to the projects main repository for the developers review.
+## Contribute
+- We value and appreciate contributions from the open-source community to enhance our project. Your involvement can make a significant difference by improving functionality, introducing new features, and enhancing the overall user experience.
+- To contribute, we kindly ask you to follow the guidelines outlined below:
+
+#### Code Guidelines 
+- To ensure consistency and readability throughout the project, we kindly ask you to adhere to our coding guidelines when submitting your code contributions. These guidelines encompass the following best practices:
+* Use meaningful and descriptive variable and function names to enhance code clarity.
+* Include necessary comments where the code is complex to aid in understanding.
+* Follow proper indentation practices for improved code readability.
+* Provide clear and concise commit messages that describe the purpose of your changes.
+* As a precaution, push your code to your own branch to prevent any potential errors and bugs from affecting the main codebase.
+
+#### Pull request
+- We encourage you to contribute code to the project by submitting a pull request. Your contributions can have a direct impact on the project's growth and success. To submit a pull request, please follow these steps:
+* Start with forking the repository and create a new branch for the changes you want to make.
+* You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
+* Ensure the code does not break the project's guideline, after you make the changes
+* Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
+* Add comments and documentation if you needed to classify the changes
+* Write clear and concise commit messages
+* Submit a pull request to the project's main branch in the repository for the developers to review.
+
+#### Communication
+- If you have any questions, feedback, or require assistance, please don't hesitate to reach out to us. You can contact one of our developers directly via email which is provided below in Author and acknowledgement or join our Discord community. We highly value your input and assure you that we will respond promptly to address any queries or concerns you may have.
+- Discord Community: [Click here](https://discord.gg/PbDeME76)
+- We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
+
+
+## Support
+- **If you need help with the project, you can find support in the following ways:**
+1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
+   https://discord.gg/KN5YJ7TU
+2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 
 ## Authors and acknowledgment
