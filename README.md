@@ -51,7 +51,7 @@ When you're ready to make this README your own, just edit this file and use the 
 ## Suggestions for a good README
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-# Intelligent Transportation
+# **Intelligent Transportation**
 
 ## Table of Content
 - [Overview](#overview)
@@ -69,12 +69,24 @@ Every project is different, so consider which of these sections apply to yours. 
 
 ## Features
 
-| Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occurs|
+| Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occur|
 | Control traffic light | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
 | Car finding |The vehicle makes a buzzer sound when the user is unable to find the vehicle|
 | Warning display |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
 
 ## Purpose & Benefits
+- Intelligent Transportation is a practical solution to the everyday challenges faced in traffic situations. It addresses the issues of congestion, accidents, and time management that occur on a daily basis.
+- Our project focuses on leveraging intelligent transportation systems and cutting-edge technology to achieve several key objectives. Firstly, we aim to enhance the efficiency of traffic operations, ensuring smoother flow and minimizing congestion. By incorporating advanced algorithms, adaptive traffic light systems, and an intuitive Android application, we strive to optimize traffic management processes.
+- Furthermore, our project places a strong emphasis on improving traffic safety. Through the integration of intelligent systems and real-time monitoring, we aim to reduce the occurrence of accidents and mitigate potential risks on the road.
+- Ultimately, our overarching goal is to create a transportation network that is both highly efficient and significantly safer. By enhancing the overall commuting experience for drivers, passengers, and traffic administrators, we aim to contribute to a more sustainable and enjoyable urban environment.
+
+- **Intelligent Transportation offers numerous benefits that significantly improve various aspects of transportation systems:**
+- Improved Traffic Flow: Implementation of intelligent transportation systems, including adaptive traffic light adjustment, aims to enhance traffic flow and alleviate congestion. This results in smoother and more efficient travel experiences for drivers, reducing delays and frustrations commonly associated with heavy traffic.
+- Enhanced Safety: By incorporating the Advanced Driving Assistance System (ADAS) and real-time alerts into the Android application, our project prioritizes road safety. The ADAS provides drivers with distance sensing and early warning systems, effectively reducing the risk of collisions and accidents. Additionally, real-time alerts keep users informed about potential hazards, road conditions, and other safety-related information, further enhancing overall safety.
+- Optimized Resource Utilization: The project focuses on intelligent traffic management and prioritization to maximize the utilization of transportation resources. By minimizing congestion and improving traffic flow efficiency, our system contributes to reduced fuel consumption, lower emissions, and a more sustainable and environmentally friendly transportation system.
+- User-Friendly Interface: The Android application developed as part of the project boasts a user-friendly interface. Notable features, such as the intuitive car console, convenient sign-up and login pages, provide users with seamless access to relevant functionalities. This user-friendly design enhances the overall user experience and facilitates easy interaction with the transportation system.
+- Collaborative Approach: Our project adopts a collaborative approach, where team members actively contribute to both Arduino code and Android app development. This fosters a holistic understanding of the project, promotes knowledge sharing, skill development, and effective teamwork. By leveraging the collective expertise of the team members, we ensure a comprehensive and robust implementation of the intelligent transportation system.
+- Overall, Intelligent Transportation brings forth a host of benefits, including improved traffic flow, enhanced safety measures, optimized resource utilization, a user-friendly interface, and a collaborative development approach. These advancements collectively contribute to an efficient, safe, and sustainable transportation ecosystem.
 
 ## Description
 - In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
@@ -83,7 +95,7 @@ Every project is different, so consider which of these sections apply to yours. 
 
 - The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
 
-- With regards to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
+- In regard to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
 
 - The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
 
@@ -158,11 +170,20 @@ Every project is different, so consider which of these sections apply to yours. 
 
 
 ## Authors and acknowledgment
-- Yingchao Ji         gusjiyid@student.gu.se
-- Hassan Saleh        gussalhaf@student.gu.se
-- Jessie Johnsson     gusjohjefh@student.gu.se
-- Tehreen Asif        gusasite@student.gu.se
-- Elif Sayeed Yaqoud  gussayel@student.gu.se
+- The project was a sophisticated undertaking that required significant team effort to complete. Every group member contributed to various aspects of the project,leveraging their diverse skills in design, coding, and development.
+- Each team member had the opportunity to work on Arduino code, Android app development, and documentation, ensuring a well-rounded understanding of the project. This approach fostered a collaborative environment where members could leverage their diverse skills and knowledge to contribute effectively.
+- This collaborative approach allowed for a well-rounded execution of the project, with every member actively involved in Android Studio code development, Arduino code development, and documentation. To ensure comprehensive coverage, the project was divided into two main areas of focus: Arduino code and Android Studio code.
+- Hassan Saleh and Elif Sayeed Yaqoud played pivotal roles as the main developers for the Android app. Their contributions focused on designing a visually appealing and highly functional user interface. They created key features such as the car console, sign-up page, and login pages for users and traffic administrators, enhancing the overall user experience.
+- Yingchao Ji, Jessie Johnsson, and Tehreen Asif took charge of the Arduino code development and MQTT connection. Each member actively participated in writing the Arduino code, ensuring the proper functioning and integration of different components. Their collective efforts resulted in a robust system that seamlessly combined the Arduino-based functionalities with the project infrastructure.
+- Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
+
+
+- **Project members**
+- Yingchao Ji                      <gusjiyid@student.gu.se>
+- Hassan Saleh                     <gussalhaf@student.gu.se>
+- Jessie Johnsson                  <gusjohjefh@student.gu.se>
+- Tehreen Asif                     <gusasite@student.gu.se>
+- Elif Sayeed Yaqoud               <gussayel@student.gu.se>
 
 ## License
 This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
