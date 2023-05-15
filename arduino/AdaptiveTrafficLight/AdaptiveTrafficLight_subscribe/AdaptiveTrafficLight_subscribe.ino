@@ -50,8 +50,7 @@ bool isPause = false; // true is immediately pause the traffic light status on b
 void setup() {
   WiFi.begin(ssid, password);
   // attempt to connect to Wifi network:
-  while (WiFi.status() != WL_CONNECTED)
-  {
+  while (WiFi.status() != WL_CONNECTED){
     Serial.print(".");
     WiFi.begin(ssid, password);
     // wait 1 second for re-trying
@@ -59,6 +58,7 @@ void setup() {
   }
 
   client.setServer(server, 1883);
+  client.setCallback(callback);
 
   pinMode(redEast, OUTPUT);
   pinMode(yellowEast, OUTPUT);
@@ -81,6 +81,7 @@ void setup() {
 void loop() {
 
   client.loop();
+  client.subscribe(subTopic);
 
   if(flag >= maxFlag){
       flag = 0;
@@ -253,6 +254,30 @@ void adminControl(){
   }
 }
 
+void callback(char* topic, byte* payload, unsigned int length) {
+  for (int i=0;i<length;i++) {
+    Serial.print((char)payload[i]);
+  }
+  Serial.println();
+  
+  if(payload[0]-48 == 1){ //payload[0]-48 is to make char to int
+    userType = payload[0]-48;
+    userControl();
+  }
+  if(payload[0]-48 == 2){
+    userType = 2;
+    whichGo = payload[1] - 48;
+    
+    if(payload[2]-48 == 1){
+      isRenew = true;
+    }
+    if(payload[3]-48 == 1){
+      isPause = true;
+    }
+    adminControl();
+  }
+  
+}
 
 long readUltrasonicDuration(int triggerPin, int echoPin){
   pinMode(triggerPin, OUTPUT);  // Clear the trigger
