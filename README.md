@@ -89,15 +89,17 @@ Every project is different, so consider which of these sections apply to yours. 
 - Overall, Intelligent Transportation brings forth a host of benefits, including improved traffic flow, enhanced safety measures, optimized resource utilization, a user-friendly interface, and a collaborative development approach. These advancements collectively contribute to an efficient, safe, and sustainable transportation ecosystem.
 
 ## Description
-- In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
+- Traffic management can pose significant challenges, especially in today's society where the number of vehicles on the roads has exponentially increased. Intelligent transportation, with its sophisticated algorithms and advanced management systems, offers a solution to this pressing issue. By incorporating various functionalities, it effectively aids in traffic management, accident prevention, and overall vehicle efficiency.
 
-- Intelligent transportation systems include three parts: Adaptive Traffic Light System(ATLS), Advanced Driving Assistance System(ADAS), and intelligent transportation application.
+- The Adaptive Traffic Light System is a pivotal component that adjusts traffic lights based on real-time road conditions and congestion levels. By prioritizing areas with high congestion, it optimizes traffic flow and minimizes time wasted during peak hours.
 
-- The ATLS is to implement adaptive traffic light adjustment that senses traffic congestion and gives priority to vehicles in the direction of congestion. This can enhance the efficiency of road traffic and reduce congestion.
+- The Control Traffic Light functionality provides a more flexible approach, allowing traffic administrators to manually adjust traffic light settings when congestion reaches critical levels. While general users can view the traffic flow, administrators have the authority to modify it, ensuring smoother traffic management.
 
-- In regard to ADAS, distance sensing technology, by detecting surrounding vehicles or objects, can be implemented to help drivers better assess their surroundings. Ideally, early warning systems can be put in place to alert drivers of potential collisions during the driving process, thereby reducing the incidence of traffic accidents and improving driving safety.
+- To enhance driving safety, the Warning Display feature employs sensors to detect potential accidents. When a vehicle approaches a hazardous distance, an audible warning is triggered, accompanied by a color change in the app, indicating the level of danger based on proximity to other objects and vehicles.
 
-- The intelligent transportation app is an application developed based on the Android platform. Users can view the remaining time of the current traffic light, distance sensing information, and real-time alarm information of the car through the APP. Traffic administrator users can use the app to control the current traffic lights.
+- In large parking lots, finding a misplaced vehicle can be a daunting task. However, the Car Finding functionality simplifies the process. With just a single button press on the Android application, a sound is emitted, guiding the user towards their vehicle's location.
+
+- These comprehensive features of the intelligent transportation system demonstrate its effectiveness in addressing traffic management challenges, promoting safety, and facilitating efficient vehicle navigation.
 
 ## Badges
 - /appveyor/tests/:user/:repo
