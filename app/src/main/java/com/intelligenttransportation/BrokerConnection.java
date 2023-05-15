@@ -96,5 +96,4 @@ public class BrokerConnection extends AppCompatActivity {
         return mqttClient;
     }
 
-
 }

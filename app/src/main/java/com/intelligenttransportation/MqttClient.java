@@ -11,6 +11,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class MqttClient {
 
     private MqttAndroidClient mMqttAndroidClient;
+   // private SerialPort mSerialPort; // Add a serial port object for communicating with the Arduino
 
     public MqttClient(Context context, String serverUrl, String clientId) {
         mMqttAndroidClient = new MqttAndroidClient(context, serverUrl, clientId);
