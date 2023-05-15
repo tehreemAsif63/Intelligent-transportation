@@ -114,6 +114,7 @@
         android:text="@string/re"
         android:textSize="25sp"
         android:visibility="gone"
+        android:enabled="false"
         android:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

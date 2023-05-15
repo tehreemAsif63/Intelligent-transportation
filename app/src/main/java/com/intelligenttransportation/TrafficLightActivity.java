@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -57,15 +58,17 @@ public class TrafficLightActivity extends AppCompatActivity {
     }
 
     public void generalUser(){
+        TextView textView = findViewById(R.id.textView_traffic_control);
+        textView.setText(R.string.pedestrian_wait);
+
         Button eastGo = findViewById(R.id.button_west_east);
+        Button northGo = findViewById(R.id.button_north_south);
         eastGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mqttClient.publish(PUB_TOPIC, ITUtils.eastGoUser, QOS, null);
             }
         });
-
-        Button northGo = findViewById(R.id.button_north_south);
         northGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +78,9 @@ public class TrafficLightActivity extends AppCompatActivity {
     }
 
     public void adminUser(){
+        TextView textView = findViewById(R.id.textView_traffic_control);
+        textView.setText(R.string.traffic_control);
+
         Button pauseButton = findViewById(R.id.button_pause);
         pauseButton.setVisibility(View.VISIBLE);
         Button renewButton = findViewById(R.id.button_renew);
@@ -96,18 +102,22 @@ public class TrafficLightActivity extends AppCompatActivity {
         });
 
         Button renew = findViewById(R.id.button_renew);
+        Button pause = findViewById(R.id.button_pause);
         renew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mqttClient.publish(PUB_TOPIC, ITUtils.renewAdmin, QOS, null);
+                pause.setEnabled(true);
+                renew.setEnabled(false);
             }
         });
 
-        Button pause = findViewById(R.id.button_pause);
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mqttClient.publish(PUB_TOPIC, ITUtils.pauseAdmin, QOS, null);
+                pause.setEnabled(false);
+                renew.setEnabled(true);
             }
         });
     }

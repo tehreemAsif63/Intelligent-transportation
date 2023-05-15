@@ -24,9 +24,9 @@ public class AccountActivity extends AppCompatActivity {
         user = (User) getIntent().getSerializableExtra("user");
         if (user.getType().equals("general")){
             ImageView headImage = findViewById(R.id.imageView_head);
-            headImage.setImageResource(R.drawable.general_user);
+            headImage.setImageResource(R.drawable.tom);
             TextView nameText = findViewById(R.id.textView_username);
-            nameText.setText(R.string.general_user);
+            nameText.setText(R.string.tom_cat);
         } else if (user.getType().equals("admin")) {
             ImageView headImage = findViewById(R.id.imageView_head);
             headImage.setImageResource(R.drawable.police);

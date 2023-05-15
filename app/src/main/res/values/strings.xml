@@ -41,6 +41,7 @@
     <string name="traffic">Traffic</string>
     <string name="pause">Pause</string>
     <string name="general_user">General User</string>
+    <string name="tom_cat">Tom Cat</string>
     <string name="traffic_police">Traffic Police</string>
     <string name="please_bind_your_car">Please bind your car</string>
 </resources>

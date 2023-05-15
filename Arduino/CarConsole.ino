@@ -3,8 +3,8 @@
 #include <PubSubClient.h>
 
 // Update these with values suitable for your network.
-const char *ssid = "LAPTOP-G8QUC1FI 5152";      // your network SSID
-const char *password = "488H1i1"; // your network password
+const char *ssid = "SSID";      // your network SSID
+const char *password = "password"; // your network password
 
 const char *ID = "Wio-Terminal-Client";  // Name of our device, must be unique
 const char *TOPIC = "group9_outTopic";  // Topic to subcribe to
@@ -14,6 +14,7 @@ const char *server = "broker.emqx.io"; // Server URL
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
+int buzzer = 0;
 int ultrasonicFront = 8;
 int ultrasonicBack = 1;
 
@@ -35,6 +36,7 @@ void setup() {
   }
 
   client.setServer(server, 1883);
+  pinMode(buzzer, OUTPUT);
   pinMode(WIO_BUZZER, OUTPUT);
 
   tft.begin();
@@ -45,7 +47,7 @@ void setup() {
 }
 
 void loop() {
-  
+
   spr.fillSprite(TFT_BLACK);
   spr.setTextSize(2);
   spr.setTextColor(TFT_YELLOW);
@@ -60,14 +62,24 @@ void loop() {
   Serial.println(distanceFront);
   Serial.println(distanceBack);
 
-  if(distanceFront < 50){
-    tone(WIO_BUZZER, 1000, 100);
-    delay(distanceFront * 20);
-  }
+
   if (client.connect(ID)) {
       String data = "distance:front:" + String(distanceFront) + " cm;distance:back:" + String(distanceBack) + " cm";
       client.publish(TOPIC, data.c_str());
     }
+
+  int distance = 0;
+  if(distanceFront <= distanceBack){
+    distance = distanceFront;
+  }else{
+    distance = distanceBack;
+  }
+
+  if(distance < 50){
+    tone(WIO_BUZZER, 1000, 100);
+    delay(distance * 20);
+  }
+
   spr.pushSprite(0,0);
 }
 
@@ -84,5 +96,3 @@ long readUltrasonicDuration(int triggerPin, int echoPin)
   // Reads the echo pin, and returns the sound wave travel time in microseconds
   return pulseIn(echoPin, HIGH);
 }
-
-
