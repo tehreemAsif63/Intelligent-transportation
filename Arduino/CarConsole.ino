@@ -21,7 +21,7 @@ int ultrasonicBack = 1;
 TFT_eSPI tft;
 TFT_eSprite spr = TFT_eSprite(&tft);
 
-
+bool isPlayAlarm = false;
 
 void setup() {
   WiFi.begin(ssid, password);
@@ -36,6 +36,8 @@ void setup() {
   }
 
   client.setServer(server, 1883);
+  client.setCallback(callback);
+
   pinMode(buzzer, OUTPUT);
   pinMode(WIO_BUZZER, OUTPUT);
 
@@ -47,6 +49,27 @@ void setup() {
 }
 
 void loop() {
+
+  client.loop();
+  client.subscribe(subTopic);
+
+
+  int distance = getMinDistance();
+
+  if(isPlayAlarm){
+      playAlarm();
+  }else{
+    if(distance < 50){
+      tone(WIO_BUZZER, 1000, 100);
+      delay(distance * 20);
+    }
+  }
+
+
+  spr.pushSprite(0,0);
+}
+
+int getMinDistance(){
 
   spr.fillSprite(TFT_BLACK);
   spr.setTextSize(2);
@@ -62,25 +85,37 @@ void loop() {
   Serial.println(distanceFront);
   Serial.println(distanceBack);
 
-
   if (client.connect(ID)) {
-      String data = "distance:front:" + String(distanceFront) + " cm;distance:back:" + String(distanceBack) + " cm";
-      client.publish(TOPIC, data.c_str());
-    }
+    String data = "distance:front:" + String(distanceFront) + " cm;distance:back:" + String(distanceBack) + " cm";
+    client.publish(TOPIC, data.c_str());
+  }
 
-  int distance = 0;
   if(distanceFront <= distanceBack){
-    distance = distanceFront;
+    return distanceFront;
   }else{
-    distance = distanceBack;
+    return distanceBack;
   }
+}
 
-  if(distance < 50){
-    tone(WIO_BUZZER, 1000, 100);
-    delay(distance * 20);
+void callback(char* topic, byte* payload, unsigned int length) {
+  for (int i=0;i<length;i++) {
+    Serial.print((char)payload[i]);
   }
+  Serial.println();
 
-  spr.pushSprite(0,0);
+  if(payload[0]-48 == 2 && payload[1]-48 == 9){ //payload[0]-48 is to make char to int
+    isPlayAlarm = true;
+  }
+}
+
+void playAlarm(){
+  for (int i = 0; i < 10; i++) {
+    digitalWrite(buzzer, HIGH);
+    delay(100);
+    digitalWrite(buzzer, LOW);
+    delay(100);
+  }
+  isPlayAlarm = false;
 }
 
 long readUltrasonicDuration(int triggerPin, int echoPin)

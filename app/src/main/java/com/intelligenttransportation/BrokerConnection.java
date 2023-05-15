@@ -14,6 +14,8 @@ import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+//References to documents from MqttWorkshop shared by Nicole Quinstedt in lecture:
+// https://github.com/Quinstedt/DIT113MqttWorkshop
 public class BrokerConnection extends AppCompatActivity {
 
     public static final String SUB_TOPIC = "group9_outTopic";

@@ -8,6 +8,9 @@ import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+
+//References to documents from MqttWorkshop shared by Nicole Quinstedt in lecture:
+// https://github.com/Quinstedt/DIT113MqttWorkshop
 public class MqttClient {
 
     private MqttAndroidClient mMqttAndroidClient;
