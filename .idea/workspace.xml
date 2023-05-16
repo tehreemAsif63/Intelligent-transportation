@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42db3280-c5ce-432f-88d3-e4b0b8cef102" name="Changes" comment="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="readme" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2O69Z3w0KyMwEq88CsATNItXRzj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hassa/OneDrive/Desktop/Intelij IDEA Projects/GUI&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42db3280-c5ce-432f-88d3-e4b0b8cef102" name="Changes" comment="" />
+      <created>1680870217181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680870217181</updated>
+      <workItem from="1680870218869" duration="6615000" />
+      <workItem from="1681656197408" duration="526000" />
+      <workItem from="1681897016058" duration="63000" />
+      <workItem from="1684074352782" duration="13490000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;">
+      <created>1681302496528</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681302496528</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
+  </component>
+</project>
