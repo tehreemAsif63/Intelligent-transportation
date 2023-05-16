@@ -64,7 +64,7 @@ Every project is different, so consider which of these sections apply to yours. 
 - [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [Authors and acknowledgment](#authors-and-acknowledgment)
-- [License](#license)
+- [License](#License)
 - [Project status](#project-status)
   
 ## Features
