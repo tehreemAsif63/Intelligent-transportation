@@ -54,19 +54,19 @@ Every project is different, so consider which of these sections apply to yours. 
 # **Intelligent Transportation**
 
 ## Table of Content
-- [Overview](#overview)
 - [Features](#features)
 - [Purpose & Benefits](#purpose-&-benefits)
+- [Description](#description)
+- [Badges](#badges)
+- [Visuals](#visuals)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [User Manual](#user-manual)
+- [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [Authors and acknowledgment](#authors-and-acknowledgment)
 - [License](#license)
-
-## Overview
-
+- [Project status](#project-status)
+  
 ## Features
 
 | Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occur|
@@ -143,10 +143,6 @@ Every project is different, so consider which of these sections apply to yours. 
 - **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
 - **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
 
-## Configuration
-
-## User manual
-
 ## Roadmap
 - **As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:**
  1. Integration with more sensor types: Currently, the project relies on a limited set of sensors to gather information about the environment. In future releases, we plan to expand the range of sensors that can be used, such as adding cameras or lidar sensors.
@@ -210,4 +206,4 @@ Every project is different, so consider which of these sections apply to yours. 
 This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
 
 ## Project status
-The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
+- The project has reached its completion, with all developers working diligently and efficiently to deliver the system.
