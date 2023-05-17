@@ -6,7 +6,7 @@
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#contribute)!
 
 ## Add your files
 
@@ -52,21 +52,22 @@ Use the built-in continuous integration in GitLab.
 - [Purpose & Benefits](#purpose-&-benefits)
 - [Description](#description)
 - [Badges](#badges)
-- [Visuals](#visuals)
+- [Visuals](#system-design-diagram)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [Authors and acknowledgment](#authors-and-acknowledgment)
-- [License](#License)
+- [License](#license)
 - [Project status](#project-status)
   
 ## Features
 
-| Adaptive traffic light | General traffic system that changes light automatically through sensors when congestions occur|
-| Control traffic light | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
-| Car finding |The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
-| Warning display |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
+- | Normal traffic light     | General traffic light system that changes light automatically just like normal|
+- | Adaptive traffic light   | Traffic light system that adapts to the traffic light flow and changes lights when congestions happen|
+- | Control traffic light    | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
+- | Car finding              |The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
+- | Warning display          |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
 
 ## Purpose & Benefits
 - Intelligent Transportation is a practical solution to the everyday challenges faced in traffic situations. It addresses the issues of congestion, accidents, and time management that occur on a daily basis.
@@ -171,7 +172,9 @@ Use the built-in continuous integration in GitLab.
 
 #### Communication
 - If you have any questions, feedback, or require assistance, please don't hesitate to reach out to us. You can contact one of our developers directly via email which is provided below in Author and acknowledgement or join our Discord community. We highly value your input and assure you that we will respond promptly to address any queries or concerns you may have.
+
 - Discord Community: [Click here](https://discord.gg/PbDeME76)
+
 - We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
 
 
