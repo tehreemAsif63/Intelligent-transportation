@@ -66,16 +66,18 @@ Use the built-in continuous integration in GitLab.
 - | Normal traffic light     | General traffic light system that changes light automatically just like normal|
 - | Adaptive traffic light   | Traffic light system that adapts to the traffic light flow and changes lights when congestions happen|
 - | Control traffic light    | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
-- | Car finding              |The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
-- | Warning display          |Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
+- | Car finding              | The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
+- | Warning display          | Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
 
 ## Purpose & Benefits
+- **Purpose**
 - Intelligent Transportation is a practical solution to the everyday challenges faced in traffic situations. It addresses the issues of congestion, accidents, and time management that occur on a daily basis.
 - Our project focuses on leveraging intelligent transportation systems and cutting-edge technology to achieve several key objectives. Firstly, we aim to enhance the efficiency of traffic operations, ensuring smoother flow and minimizing congestion. By incorporating advanced algorithms, adaptive traffic light systems, and an intuitive Android application, we strive to optimize traffic management processes.
 - Furthermore, our project places a strong emphasis on improving traffic safety. Through the integration of intelligent systems and real-time monitoring, we aim to reduce the occurrence of accidents and mitigate potential risks on the road.
 - Ultimately, our overarching goal is to create a transportation network that is both highly efficient and significantly safer. By enhancing the overall commuting experience for drivers, passengers, and traffic administrators, we aim to contribute to a more sustainable and enjoyable urban environment.
 
-- **Intelligent Transportation offers numerous benefits that significantly improve various aspects of transportation systems:**
+- **Benefits**
+- Intelligent Transportation offers numerous benefits that significantly improve various aspects of transportation systems:
 - Improved Traffic Flow: Implementation of intelligent transportation systems, including adaptive traffic light adjustment, aims to enhance traffic flow and alleviate congestion. This results in smoother and more efficient travel experiences for drivers, reducing delays and frustrations commonly associated with heavy traffic.
 - Enhanced Safety: By incorporating the Advanced Driving Assistance System (ADAS) and real-time alerts into the Android application, our project prioritizes road safety. The ADAS provides drivers with distance sensing and early warning systems, effectively reducing the risk of collisions and accidents. Additionally, real-time alerts keep users informed about potential hazards, road conditions, and other safety-related information, further enhancing overall safety.
 - Optimized Resource Utilization: The project focuses on intelligent traffic management and prioritization to maximize the utilization of transportation resources. By minimizing congestion and improving traffic flow efficiency, our system contributes to reduced fuel consumption, lower emissions, and a more sustainable and environmentally friendly transportation system.
@@ -176,13 +178,6 @@ Use the built-in continuous integration in GitLab.
 - Discord Community: [Click here](https://discord.gg/PbDeME76)
 
 - We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
-
-
-## Support
-- **If you need help with the project, you can find support in the following ways:**
-1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
-   https://discord.gg/KN5YJ7TU
-2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 
 ## Authors and acknowledgment
