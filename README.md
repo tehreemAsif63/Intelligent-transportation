@@ -184,8 +184,13 @@ Use the built-in continuous integration in GitLab.
 - The project was a sophisticated undertaking that required significant team effort to complete. Every group member contributed to various aspects of the project,leveraging their diverse skills in design, coding, and development.
 - Each team member had the opportunity to work on Arduino code, Android app development, and documentation, ensuring a well-rounded understanding of the project. This approach fostered a collaborative environment where members could leverage their diverse skills and knowledge to contribute effectively.
 - This collaborative approach allowed for a well-rounded execution of the project, with every member actively involved in Android Studio code development, Arduino code development, and documentation. To ensure comprehensive coverage, the project was divided into two main areas of focus: Arduino code and Android Studio code.
-- Hassan Saleh and Elif Sayeed Yaqoud played pivotal roles as the main developers for the Android app. Their contributions focused on designing a visually appealing and highly functional user interface. They created key features such as the car console, sign-up page, and login pages for users and traffic administrators, enhancing the overall user experience.
-- Yingchao Ji, Jessie Johnsson, and Tehreen Asif took charge of the Arduino code development and MQTT connection. Each member actively participated in writing the Arduino code, ensuring the proper functioning and integration of different components. Their collective efforts resulted in a robust system that seamlessly combined the Arduino-based functionalities with the project infrastructure.
+
+- Yingchao Ji: 
+- Hassan Saleh: Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
+- Jessie Johnsson:
+- Tehreen Asif:
+- Elif Sayeed Yaqoud:
+
 - Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
 
 
