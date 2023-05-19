@@ -1,15 +1,26 @@
-# Intelligent transportation
+# **Intelligent Transportation**
 
-
+## Table of Content
+- [Getting started](#getting-started)
+- [Description](#description)
+- [Features](#features)
+- [Purpose & Benefits](#purpose-&-benefits)
+- [Badges](#badges)
+- [Visuals](#system-design-diagram)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contribute](#contribute)
+- [Authors and acknowledgment](#authors-&-acknowledgment)
+- [License](#license)
+- [Project status](#project-status)
 
 ## Getting started
+- To begin working on Intelligent Transportation, it is essential to have access to GitLab. If you don't have an account already, please create one by following the recommended steps to gain access.
+- If you are already experienced in this field, feel free to customize and modify this README.md file according to your needs. Make sure to document all the changes you make for reference.
+- To simplify the process, you can utilize the template provided below:
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#contribute)!
-
-## Add your files
-
+#### Add your files
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
 - [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
@@ -20,20 +31,17 @@ git branch -M main
 git push -uf origin main
 ```
 
-## Integrate with your tools
-
+#### Integrate with your tools
 - [ ] [Set up project integrations](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/settings/integrations)
 
-## Collaborate with your team
-
+#### Collaborate with your team
 - [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
 - [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
 - [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
 - [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
 - [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Test and Deploy
-
+#### Test and Deploy
 Use the built-in continuous integration in GitLab.
 
 - [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
@@ -44,23 +52,19 @@ Use the built-in continuous integration in GitLab.
 
 ***
 
+## Description
+- Traffic management can pose significant challenges, especially in today's society where the number of vehicles on the roads has exponentially increased. Intelligent transportation, with its sophisticated algorithms and advanced management systems, offers a solution to this pressing issue. By incorporating various functionalities, it effectively aids in traffic management, accident prevention, and overall vehicle efficiency.
 
-# **Intelligent Transportation**
+- The Adaptive Traffic Light System is a pivotal component that adjusts traffic lights based on real-time road conditions and congestion levels. By prioritizing areas with high congestion, it optimizes traffic flow and minimizes time wasted during peak hours.
 
-## Table of Content
-- [Features](#features)
-- [Purpose & Benefits](#purpose-&-benefits)
-- [Description](#description)
-- [Badges](#badges)
-- [Visuals](#system-design-diagram)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contribute](#contribute)
-- [Authors and acknowledgment](#authors-and-acknowledgment)
-- [License](#license)
-- [Project status](#project-status)
-  
+- The Control Traffic Light functionality provides a more flexible approach, allowing traffic administrators to manually adjust traffic light settings when congestion reaches critical levels. While general users can view the traffic flow, administrators have the authority to modify it, ensuring smoother traffic management.
+
+- To enhance driving safety, the Warning Display feature employs sensors to detect potential accidents. When a vehicle approaches a hazardous distance, an audible warning is triggered, accompanied by a color change in the app, indicating the level of danger based on proximity to other objects and vehicles.
+
+- In large parking lots, finding a misplaced vehicle can be a daunting task. However, the Car Finding functionality simplifies the process. With just a single button press on the Android application, a sound is emitted, guiding the user towards their vehicle's location.
+
+- These comprehensive features of the intelligent transportation system demonstrate its effectiveness in addressing traffic management challenges, promoting safety, and facilitating efficient vehicle navigation.
+
 ## Features
 
 - | Normal traffic light     | General traffic light system that changes light automatically just like normal|
@@ -84,19 +88,6 @@ Use the built-in continuous integration in GitLab.
 - User-Friendly Interface: The Android application developed as part of the project boasts a user-friendly interface. Notable features, such as the intuitive car console, convenient sign-up and login pages, provide users with seamless access to relevant functionalities. This user-friendly design enhances the overall user experience and facilitates easy interaction with the transportation system.
 - Collaborative Approach: Our project adopts a collaborative approach, where team members actively contribute to both Arduino code and Android app development. This fosters a holistic understanding of the project, promotes knowledge sharing, skill development, and effective teamwork. By leveraging the collective expertise of the team members, we ensure a comprehensive and robust implementation of the intelligent transportation system.
 - Overall, Intelligent Transportation brings forth a host of benefits, including improved traffic flow, enhanced safety measures, optimized resource utilization, a user-friendly interface, and a collaborative development approach. These advancements collectively contribute to an efficient, safe, and sustainable transportation ecosystem.
-
-## Description
-- Traffic management can pose significant challenges, especially in today's society where the number of vehicles on the roads has exponentially increased. Intelligent transportation, with its sophisticated algorithms and advanced management systems, offers a solution to this pressing issue. By incorporating various functionalities, it effectively aids in traffic management, accident prevention, and overall vehicle efficiency.
-
-- The Adaptive Traffic Light System is a pivotal component that adjusts traffic lights based on real-time road conditions and congestion levels. By prioritizing areas with high congestion, it optimizes traffic flow and minimizes time wasted during peak hours.
-
-- The Control Traffic Light functionality provides a more flexible approach, allowing traffic administrators to manually adjust traffic light settings when congestion reaches critical levels. While general users can view the traffic flow, administrators have the authority to modify it, ensuring smoother traffic management.
-
-- To enhance driving safety, the Warning Display feature employs sensors to detect potential accidents. When a vehicle approaches a hazardous distance, an audible warning is triggered, accompanied by a color change in the app, indicating the level of danger based on proximity to other objects and vehicles.
-
-- In large parking lots, finding a misplaced vehicle can be a daunting task. However, the Car Finding functionality simplifies the process. With just a single button press on the Android application, a sound is emitted, guiding the user towards their vehicle's location.
-
-- These comprehensive features of the intelligent transportation system demonstrate its effectiveness in addressing traffic management challenges, promoting safety, and facilitating efficient vehicle navigation.
 
 ## Badges
 - /appveyor/tests/:user/:repo
@@ -180,7 +171,7 @@ Use the built-in continuous integration in GitLab.
 - We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
 
 
-## Authors and acknowledgment
+## Authors & acknowledgment
 - The project was a sophisticated undertaking that required significant team effort to complete. Every group member contributed to various aspects of the project,leveraging their diverse skills in design, coding, and development.
 - Each team member had the opportunity to work on Arduino code, Android app development, and documentation, ensuring a well-rounded understanding of the project. This approach fostered a collaborative environment where members could leverage their diverse skills and knowledge to contribute effectively.
 - This collaborative approach allowed for a well-rounded execution of the project, with every member actively involved in Android Studio code development, Arduino code development, and documentation. To ensure comprehensive coverage, the project was divided into two main areas of focus: Arduino code and Android Studio code.
