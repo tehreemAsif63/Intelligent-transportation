@@ -155,7 +155,7 @@ public class ITUtils {
         }
         if (fdInt >= 15 && fdInt <= 30){
             if (bdInt > 0 && bdInt < 15){
-                imageView_car_background.setImageResource(R.drawable.car_red_yellow);
+                imageView_car_background.setImageResource(R.drawable.car_yellow_red);
             }
             if (bdInt >= 15 && bdInt <= 30){
                 imageView_car_background.setImageResource(R.drawable.car_yellow_both);
