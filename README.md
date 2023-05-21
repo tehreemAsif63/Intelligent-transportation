@@ -119,6 +119,11 @@ Use the built-in continuous integration in GitLab.
   1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
   2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
   3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
+## User Manual
+ **8. Using intelligent transportation app**
+    - Click on this link to access the instructions for using the app:
+      https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/User-Manual
+
 
 ## Usage
 - **To user the Intelligent Transportation System, you will need to follow these steps:**
@@ -197,3 +202,5 @@ This system is complex when it comes to the traffic lights and the driving assis
 
 ## Project status
 - The project has reached its completion, with all developers working diligently and efficiently to deliver the system.
+
+
