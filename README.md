@@ -170,6 +170,8 @@ Use the built-in continuous integration in GitLab.
 
 
 ## License
-This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
+This projects is licensed under the University of Gothenburg and Chalmers License
+Feel free to modify and adapt the Intelligent Transportation System to suit your needs.Contributions are welcome, and any issues or suggestions can be reported in the issue tracker.
+
 ## Project status
 The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
