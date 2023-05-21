@@ -189,7 +189,7 @@ Use the built-in continuous integration in GitLab.
 - Yingchao Ji                      <gusjiyid@student.gu.se>
 - Hassan Saleh                     <gussalhaf@student.gu.se>
 - Jessie Johnsson                  <gusjohjefh@student.gu.se>
-- Tehreen Asif                     <gusasite@student.gu.se>
+- Tehreem Asif                     <gusasite@student.gu.se>
 - Elif Sayeed Yaqoud               <gussayel@student.gu.se>
 
 ## License
