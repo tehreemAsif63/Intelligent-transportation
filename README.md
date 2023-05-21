@@ -68,6 +68,9 @@ Use the built-in continuous integration in GitLab.
 - /amo/stars/:addonId
 - /bugzilla/:bugNumber
 
+## Demo Video
+   - https://www.youtube.com/watch?v=IZmz6ns-CH4
+
 ## System design diagram
 
 ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SystemDiagram.png)
@@ -100,9 +103,9 @@ Use the built-in continuous integration in GitLab.
      - https://mqttx.app/
 
  **Requirements:**
-  1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
-  2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
-  3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
+   1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
+   2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
+   3. The Intelligent Transportation System is designed to run on Android applications.
 
 ## User Manual
   **To user the Intelligent Transportation System, you will need to follow these steps:**
@@ -208,9 +211,9 @@ Use the built-in continuous integration in GitLab.
 
 ## Support
 - **If you need help with the project, you can find support in the following ways:**
- 1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
-   https://discord.gg/KN5YJ7TU
- 2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
+     1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers
+      - https://discord.gg/KN5YJ7TU
+     2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 
 
@@ -264,8 +267,8 @@ Use the built-in continuous integration in GitLab.
 
 
 ## License
-This projects is licensed under the University of Gothenburg and Chalmers License
-Feel free to modify and adapt the Intelligent Transportation System to suit your needs.Contributions are welcome, and any issues or suggestions can be reported in the issue tracker.
+ - This projects is licensed under the **University of Gothenburg and Chalmers** License
+ - Feel free to modify and adapt the Intelligent Transportation System to suit your needs.Contributions are welcome, and any issues or suggestions can be reported in the issue tracker.
 
 ## Project status
-The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
+- The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
