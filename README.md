@@ -47,7 +47,7 @@ Use the built-in continuous integration in GitLab.
 
 ## Name
 
-- ### Intelligent Transportation
+- # Intelligent Transportation
 
 ## Description
 - In contemporary society, with the increasing number of cars on the road, the demand for transportation intelligence is also on the rise. Intelligent transportation is designed to leverage technology and algorithms to improve traffic operation efficiency, reduce congestion and improve traffic safety.
@@ -75,9 +75,9 @@ Use the built-in continuous integration in GitLab.
 
 ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SystemDiagram.png)
 
-### Get started
+# Get started
 
-# Installation
+## Installation
 
    **1. Install Gitlab on your computer**
    - You can download GitLab from the official website
@@ -108,7 +108,7 @@ Use the built-in continuous integration in GitLab.
    2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
    3. The Intelligent Transportation System is designed to run on Android applications.
 
-# Usage
+## Usage
   **To user the Intelligent Transportation System, you will need to follow these steps:**
    **1.Hardware Setup:**
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
