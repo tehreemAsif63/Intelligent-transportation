@@ -166,17 +166,17 @@ Use the built-in continuous integration in GitLab.
       - Add the following libraries to your project:
 
 
-        **org.eclipse.paho.android.service-1.1.1.jar**
-        **org.eclipse.paho.client.mqttv3-1.2.5.jar**
+        org.eclipse.paho.android.service-1.1.1.jar
+        org.eclipse.paho.client.mqttv3-1.2.5.jar
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/librs.png)
           Define build configuration by following these:
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/Configuration.png)
      - Add Paho repository,Click **settings.gradle** add
 
-           **maven {**
-            **url "https://repo.eclipse.org/content/repositories/paho-snapshots/"**
-           **}**
+           maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"**
+           }
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoRepository.png)
      - In order to enable App to bind to Paho Android Service, the following information needs to be added in **AndroidManifest.xml**
@@ -190,7 +190,7 @@ Use the built-in continuous integration in GitLab.
    - Declare the following services in **AndroidManifest.xml**
 
 
-     **<service android:name="org.eclipse.paho.android.service.MqttService" />**
+     <service android:name="org.eclipse.paho.android.service.MqttService" />
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
    - For used of  the Paho allowing  the MQTT connection
@@ -200,7 +200,7 @@ Use the built-in continuous integration in GitLab.
    **6. Build and run the Android application on your device or emulator.**
 
    **7. Control and Monitoring**
-      - Once the Android application is running on your device, you can use it to control and monitor the features of the intelligent Transportation System.The application provides an intuitive interface for sending commands,receiving data, and visualizing sensor readings.
+   - Once the Android application is running on your device, you can use it to control and monitor the features of the intelligent Transportation System.The application provides an intuitive interface for sending commands,receiving data, and visualizing sensor readings.
 
 
 ## Support
