@@ -121,11 +121,35 @@ Use the built-in continuous integration in GitLab.
 
 
 ## Roadmap
-- **As of now we focus on releasing and improving the Intelligent Transportation project but the developers have come up with future releases and features. We welcome feedback and suggestions from the community, and we will continue to work towards improving and expanding the functionality of the Intelligent Transportation system. Here is the following list:**
- 1. Integration with more sensor types: Currently, the project relies on a limited set of sensors to gather information about the environment. In future releases, we plan to expand the range of sensors that can be used, such as adding cameras or lidar sensors.
- 2. Improved machine learning algorithms: The project currently uses machine learning algorithms to analyze traffic data and make predictions about traffic patterns. In future releases, we plan to refine these algorithms and integrate more advanced techniques to improve accuracy and efficiency. 
- 3. Integration with smart city infrastructure: To fully realize the potential of intelligent transportation, it is important to integrate the project with other smart city infrastructure, such as traffic cameras, traffic management systems, and public transportation systems. In future releases, we plan to work towards this goal and enable seamless integration with these systems.
- 4. Expansion of ADAS features: The Advanced Driving Assistance System (ADAS) currently includes basic distance sensing technology. In future releases, we plan to expand the range of features to include other safety features, such as lane departure warnings and automatic emergency braking.
+
+ **Research and Planning:**
+  - Conduct a comprehensive analysis of traffic patterns,congestion hotspots,and existing transportation infrastructure.identify key goals and objectives for the intelligent transportation system implementation.
+  - Evaluate available technologies,sensors, and communication protocols suitable for the system.
+
+ **Set Up GitLab:**
+  - Set up a GitLab repository for version control and collaboration.
+  - Create a WiKi pages in the gitlab repository to document project information and procedures.
+  - Utilize Gitlab’sMilestones feature to track project progress
+  - Create Issues in GitLab to track and manage tasks,bugs,and feature requests.
+  - Assign team members to specific Issues and track their progress.
+  - Every two weeks update the Wiki pages with relevant project documentation, progress of project, and project updates.
+  - User Gitlab’s collaboration features,such as merge requests and code reviews, to censure code quality and collaboration among team members
+  - Manage the gitlab repository, addressing any issues or conflicts that arise during development.  
+  - Document and version control the project’s source code,ensuring proper branching and merging strategies.
+
+ **System Design and Architecture:**
+  - Design the overall architecture of the intelligent transportation system, including the integration of various components such as traffic light,sensors, and user interfaces.
+  - Define communication protocols and data formats for seamless interaction between different system elements.
+  - Create a detailed design specification document outlining system requirements, functionalities, and interfaces.
+
+ **Development and Testing:**
+  - Develop and implement the Adaptive Traffic Light System, which automatically adjusts traffic signals based on real-time road conditions and congestion levels.
+  - Develop and implement the Control Traffic Light functionality,allowing traffic administrators to manually adjust traffic signal settings when congestion reaches critical levels.
+  - Develop and implement the Warning Display feature,which detects potential accidents using sensors and triggers audible warnings accompanied by Color changes in the app.
+  - Develop and implement the Car Finding functionality,enabling users to locate their vehicles with a single button press on the Android application
+  - Conduct unit testing for individual software modules to verify their functionality and correctness.
+  - Perform integration testing to ensure seamless interaction between different system components.
+  - Conduct system-level testing to evaluate the overall performance, reliability, and user experience of the developed features.
 
 
 ## Contributing
