@@ -165,8 +165,8 @@ Use the built-in continuous integration in GitLab.
    - Configure the Android development environment to include the MQTT dependencies.
       - Add the following libraries to your project:
 
-      - org.eclipse.paho.android.service-1.1.1.jar
-      - org.eclipse.paho.client.mqttv3-1.2.5.jar
+        - org.eclipse.paho.android.service-1.1.1.jar
+        - org.eclipse.paho.client.mqttv3-1.2.5.jar
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/librs.png)
    - Define build configuration by following these:
