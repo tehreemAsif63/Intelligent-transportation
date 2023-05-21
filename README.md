@@ -74,17 +74,24 @@ Use the built-in continuous integration in GitLab.
 
 
 ## Installation
-1. Install Gitlab on your computer
- - You can download GitLab from the official website: https://about.gitlab.com/install/.
-2. Install the Arduino IDE
- - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
-3. Install Mosquitto
- - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
-4. Install Android Studio
- - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
-5. Sign up for Tinkercad and connect your microcontroller and sensors to your computer.
- - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
-   Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
+   1. Install Gitlab on your computer
+   - You can download GitLab from the official website: https://about.gitlab.com/install/.
+
+   2. Install the Arduino IDE
+   - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
+
+   3. Install Mosquitto
+   - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
+
+   4. Install Android Studio
+   - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
+
+   5. Sign up for Tinkercad - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
+
+   6. Install MQTTX
+   - Mqtt.x is a cross-platform MQTT client tool used to simplify testing and debugging of the MQTT protocol.
+      website https://MQTTX: Cross-platform MQTT 5.0 Desktop Client
+
 
 **Requirements:**
   1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
