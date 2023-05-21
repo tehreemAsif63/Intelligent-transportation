@@ -70,7 +70,7 @@ Use the built-in continuous integration in GitLab.
 
 ## System design diagram
 
-![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/img/Intelligent%20transportation%20system%20design%20diagram.png)
+![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SystemDiagram.png)
 
 
 ## Installation
@@ -99,10 +99,10 @@ Use the built-in continuous integration in GitLab.
    - Mqtt.x is a cross-platform MQTT client tool used to simplify testing and debugging of the MQTT protocol. 
      - https://mqttx.app/
 
-   **Requirements:**
-    1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
-    2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
-    3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
+ **Requirements:**
+  1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
+  2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
+  3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
 ## User Manual
   **To user the Intelligent Transportation System, you will need to follow these steps:**
@@ -143,7 +143,6 @@ Use the built-in continuous integration in GitLab.
         1. Click **Sketch > Include Library > Manage Libraries**… …
         2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
         3. Click Install:
-     
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcUnified.png)
      
    - For Wi-Fi on the WioTerminal.You can search for **"seeed rpcwifi"** library by typing the library name in the search box of **Arduino Library Manager**
@@ -181,16 +180,18 @@ Use the built-in continuous integration in GitLab.
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoRepository.png)
 
    - In order to enable App to bind to Paho Android Service, the following information needs to be added in **AndroidManifest.xml**
+
+
         <uses-permission android:name="android.permission.WAKE_LOCK" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE" />
-
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoAnroidService.png)
 
    - Declare the following services in **AndroidManifest.xml**
-        <service android:name="org.eclipse.paho.android.service.MqttService" />
 
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
    - For used of  the Paho allowing  the MQTT connection
 
