@@ -114,10 +114,7 @@ Use the built-in continuous integration in GitLab.
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
      - https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
 
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/wio%20terminal.jpg)
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/WioTerminalHardware-Overview.png)
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pinout-diargram.png)
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pinout-diargram-2.png)
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/wioTerminalOverview.png)
      
    **2.Software Setup:**
    - Open theArduino IDE on your computer.
