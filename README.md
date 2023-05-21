@@ -98,20 +98,11 @@ Use the built-in continuous integration in GitLab.
   2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
   3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
-## Usage
+## User Manual
 - **To user the Intelligent Transportation System, you will need to follow these steps:**
-  1. Connect the microcontroller and sensors to your computer according to the instructions provided by Tinkercad.
-  2. Open the Arduino IDE and load the project file either ATLS or ADAS, depending on which feature you want to use.
-  3. Compile and upload the code to the microcontroller
-  4. Run Mosquitto message broker on your computer to facilitate communication between devices.
-  5. Open Android Studio project for the Intelligent Transportation System.
-  6. Build and run the Android application on your device.
-  7. Use the app to control and monitor the features of the Intelligent Transportation System.
-  
-- **For ATLS, the system will automatically adjust the timing of the traffic lights based on traffic congestion detected by the sensors.** 
-- **For ADAS, the system will use distance seeing technology to detect surrounding vehicles or objects and provide early warnings to drivers of potential collisions.**
-
-
+    *1.Hardware Setup:*
+     - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:Get Started with Wio Terminal | Seeed Studio Wiki
+       ![image]![image]![image]![image]
 ## Support
 - **If you need help with the project, you can find support in the following ways:**
  1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
