@@ -185,7 +185,7 @@ Use the built-in continuous integration in GitLab.
 - Hassan Saleh: Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
 - Jessie Johnsson:
 - Tehreen Asif:
-- Elif Sayeed Yaqoud:
+- Elif Sayeed Yaqoud: Elif made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, I implemented a JSON file structure to securely store user information. Additionally, I designed an appealing layout that enhances the user experience. Moreover, I created a captivating splash screen that showcases the app's logo and name, providing an engaging start to the Android application. In the Arduino realm, I played a crucial role in integrating an ultrasound sensor, enabling real-time monitoring of passing vehicles to detect and analyze potential traffic congestion on the roadway. Beyond the technical aspects, I actively participated in the project's documentation efforts, assuming responsibility for capturing comprehensive requirements and user stories. I consistently updated and improved the project's wiki page, contributing to the overall success of the endeavor. Additionally, I dedicated substantial effort to crafting a user-friendly and informative user manual, facilitating ease of use and assisting end-users in maximizing their experience with the application. I always shared my idea withe my team to improve our project, helped my colleagues when it need.
 
 - Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, challenges faced or lessons learnt and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
 
@@ -204,3 +204,12 @@ This system is complex when it comes to the traffic lights and the driving assis
 - The project has reached its completion, with all developers working diligently and efficiently to deliver the system.
 
 
+## Special thanks go to:
+
+- **The course coordinator**
+- Fransisco Gomes
+- **Teacher assistants **
+- Oscar Reina Gustafsson
+- Juan García Díaz
+- Everyone on Sketch-fab for inspiration and actual models!
+  You!
