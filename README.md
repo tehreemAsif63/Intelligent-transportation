@@ -164,10 +164,9 @@ Use the built-in continuous integration in GitLab.
    - Set up an Android Virtual Device(AVD) minimum API 30.
    - Configure the Android development environment to include the MQTT dependencies.
       - Add the following libraries to your project:
-     
 
-      org.eclipse.paho.android.service-1.1.1.jar
-      org.eclipse.paho.client.mqttv3-1.2.5.jar
+      - org.eclipse.paho.android.service-1.1.1.jar
+      - org.eclipse.paho.client.mqttv3-1.2.5.jar
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/librs.png)
    - Define build configuration by following these:
@@ -176,14 +175,12 @@ Use the built-in continuous integration in GitLab.
    - Add Paho repository,Click **settings.gradle** add
 
            maven {
-            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"**
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
            }
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoRepository.png)
 
    - In order to enable App to bind to Paho Android Service, the following information needs to be added in **AndroidManifest.xml**
-
-
         <uses-permission android:name="android.permission.WAKE_LOCK" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <uses-permission android:name="android.permission.INTERNET" />
@@ -192,8 +189,6 @@ Use the built-in continuous integration in GitLab.
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoAnroidService.png)
 
    - Declare the following services in **AndroidManifest.xml**
-
-
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
