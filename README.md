@@ -182,7 +182,7 @@ Use the built-in continuous integration in GitLab.
 - Tehreen Asif:
 - Elif Sayeed Yaqoud:
 
-- Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
+- Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, challenges faced or lessons learnt and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
 
 
 - **Project members**
