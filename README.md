@@ -74,6 +74,7 @@ Use the built-in continuous integration in GitLab.
 
 
 ## Installation
+
    1. Install Gitlab on your computer
    - You can download GitLab from the official website: https://about.gitlab.com/install/.
 
