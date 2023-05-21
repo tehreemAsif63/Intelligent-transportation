@@ -75,22 +75,22 @@ Use the built-in continuous integration in GitLab.
 
 ## Installation
 
-   *1. Install Gitlab on your computer*
+   **1. Install Gitlab on your computer**
    - You can download GitLab from the official website: https://about.gitlab.com/install/.
 
-   *2. Install the Arduino IDE*
+   **2. Install the Arduino IDE**
    - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
 
-   *3. Install Mosquitto*
+   **3. Install Mosquitto**
    - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
 
-   *4. Install Android Studio*
+   **4. Install Android Studio**
    - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
 
-   *5. Sign up for Tinkercad*
+   **5. Sign up for Tinkercad**
    - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
 
-   *6. Install MQTTX*
+   **6. Install MQTTX**
    - Mqtt.x is a cross-platform MQTT client tool used to simplify testing and debugging of the MQTT protocol. website https://mqttx.app/
 
 **Requirements:**
@@ -99,13 +99,46 @@ Use the built-in continuous integration in GitLab.
   3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
 
 ## User Manual
-- **To user the Intelligent Transportation System, you will need to follow these steps:**
-    *1. Hardware Setup:*
-     - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:Get Started with Wio Terminal | Seeed Studio Wiki
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/blob/main/Android/img/wio%20terminal.jpg)
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/blob/main/Android/img/WioTerminalHardware-Overview.png)
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/blob/main/Android/img/pinout-diargram.png)
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/blob/main/Android/img/pinout-diargram-2.png)
+ **To user the Intelligent Transportation System, you will need to follow these steps:**
+  **1.Hardware Setup:**
+   - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/wio%20terminal.jpg)
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/WioTerminalHardware-Overview.png)
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pinout-diargram.png)
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pinout-diargram-2.png)
+     
+  **2.Software Setup:**
+   - Open theArduino IDE on your computer.
+   - Choose the correct port for your connected Arduino board within the Arduino IDE.you can follow these steps:
+      1. Click on **Tools > Board Manager** and Search **Seeed SAMD Boards 1.8.3”** version in the Boards Manager.
+       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SeeedSAMD.png)
+      2. Select your board and port:
+         You’ll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino. Selecting the **Wio Terminal**
+       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/port-bord.png)
+     
+   - Download the required libraries and dependencies for the Intelligent Transportation System.
+    - For **ATLS**,The Traffic lights system implements traffic lights based on the Red,Yellow,Blue light sensors.And the traffic congestion detected by the Ultrasonic sensors ,To install the Ultrasonic library follow these steps:
+      1. Download the UltrasonicRanger Library from Github 
+          - https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip.
+      2. Refer how to install library for Arduino
+          - https://wiki.seeedstudio.com/How_to_install_Arduino_Library
+    - For **ADAS**,The system will use distance seeing technology to detect front and back of the vehicles by the Ultrasonic sensors,Provide color vision warnings to drivers of potential collisions. and Find the car detected by Buzzer sensors.
+      you can read more about LED sensor,Buzzer sensor:
+          - https://wiki.seeedstudio.com/Grove-Red_LED/
+          - https://wiki.seeedstudio.com/Grove-Buzzer/
+
+   - For Wio Terminal Install Library **"rpcUnified"** from Arduino Library Manager,follow these steps:
+     1. Click **Sketch > Include Library > Manage Libraries**… …
+     2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
+     3. Click Install:
+        ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcUnified.png)
+     
+   - For Wi-Fi on the WioTerminal.You can search for **"seeed rpcwifi"** library by typing the library name in the search box of **Arduino Library Manager**
+     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcWifi.png)
+
+
+
+
 ## Support
 - **If you need help with the project, you can find support in the following ways:**
  1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers:
