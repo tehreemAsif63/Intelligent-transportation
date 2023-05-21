@@ -143,6 +143,7 @@ Use the built-in continuous integration in GitLab.
         1. Click **Sketch > Include Library > Manage Libraries**… …
         2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
         3. Click Install:
+     
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcUnified.png)
      
    - For Wi-Fi on the WioTerminal.You can search for **"seeed rpcwifi"** library by typing the library name in the search box of **Arduino Library Manager**
@@ -186,12 +187,14 @@ Use the built-in continuous integration in GitLab.
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE" />
+
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoAnroidService.png)
 
    - Declare the following services in **AndroidManifest.xml**
 
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
+
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
    - For used of  the Paho allowing  the MQTT connection
 
