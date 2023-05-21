@@ -107,7 +107,8 @@ Use the built-in continuous integration in GitLab.
 ## User Manual
   **To user the Intelligent Transportation System, you will need to follow these steps:**
    **1.Hardware Setup:**
-   - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
+   - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
+     - https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
 
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/wio%20terminal.jpg)
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/WioTerminalHardware-Overview.png)
@@ -132,15 +133,16 @@ Use the built-in continuous integration in GitLab.
           - https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip.
          2. Refer how to install library for Arduino
           - https://wiki.seeedstudio.com/How_to_install_Arduino_Library
+        
       - For **ADAS**,The system will use distance seeing technology to detect front and back of the vehicles by the Ultrasonic sensors,Provide color vision warnings to drivers of potential collisions. and Find the car detected by Buzzer sensors.
         you can read more about LED sensor,Buzzer sensor:
           - https://wiki.seeedstudio.com/Grove-Red_LED/
           - https://wiki.seeedstudio.com/Grove-Buzzer/
 
    - For Wio Terminal Install Library **"rpcUnified"** from Arduino Library Manager,follow these steps:
-     1. Click **Sketch > Include Library > Manage Libraries**… …
-     2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
-     3. Click Install
+        1. Click **Sketch > Include Library > Manage Libraries**… …
+        2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
+        3. Click Install:
      
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcUnified.png)
      
@@ -153,15 +155,17 @@ Use the built-in continuous integration in GitLab.
      ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pubsubClient.png)
 
    **3. Code Compilation and Upload:**
-        Once the code compiles successfully,upload it to the Wio terminal or the Arduino board you are using.
+   - Once the code compiles successfully,upload it to the Wio terminal or the Arduino board you are using.
 
    **4. Message Broker Setup:**
-        Install and run Mosquitto, a message broker,on your computer. This facilitates communication between the Android application and the hardware system.
+   - Install and run Mosquitto, a message broker,on your computer. This facilitates communication between the Android application and the hardware system.
 
    **5. Android Studio Setup:**
-        Set up an Android Virtual Device(AVD) minimum API 30.
-        Configure the Android development environment to include the MQTT dependencies.
+   - Set up an Android Virtual Device(AVD) minimum API 30.
+   - Configure the Android development environment to include the MQTT dependencies.
       - Add the following libraries to your project:
+
+
         **org.eclipse.paho.android.service-1.1.1.jar**
         **org.eclipse.paho.client.mqttv3-1.2.5.jar**
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/librs.png)
@@ -169,6 +173,7 @@ Use the built-in continuous integration in GitLab.
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/Configuration.png)
      - Add Paho repository,Click **settings.gradle** add
+
            **maven {**
             **url "https://repo.eclipse.org/content/repositories/paho-snapshots/"**
            **}**
@@ -182,11 +187,13 @@ Use the built-in continuous integration in GitLab.
         <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE" />
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoAnroidService.png)
-    - Declare the following services in **AndroidManifest.xml** 
+   - Declare the following services in **AndroidManifest.xml**
+
+
      **<service android:name="org.eclipse.paho.android.service.MqttService" />**
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
-    - For used of  the Paho allowing  the MQTT connection
+   - For used of  the Paho allowing  the MQTT connection
 
    ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/MQTTconnection.png)
 
