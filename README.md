@@ -72,11 +72,20 @@ Use the built-in continuous integration in GitLab.
 
 ## Features
 
-- | Normal traffic light     | General traffic light system that changes light automatically just like normal|
-- | Adaptive traffic light   | Traffic light system that adapts to the traffic light flow and changes lights when congestions happen|
-- | Control traffic light    | The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing|
-- | Car finding              | The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby|
-- | Warning display          | Displays a warning for approaching vehicles with different colors depending on the vehicles distance|
+- **Normal Traffic Light**
+    - General traffic light system that changes light automatically just like normal
+
+- **Adaptive Traffic Tight**
+    - Traffic light system that adapts to the traffic light flow and changes lights when congestions happen
+
+- **Control Traffic Light**
+    - The traffic administrator can control the traffic light system when the traffic is crowded to prevent congestions and queuing
+
+- **Car Finding**
+    - The vehicle makes a buzzer sound when the user is unable to find the vehicle nearby
+
+- **Warning Display**
+    - Displays a warning for approaching vehicles with different colors depending on the vehicles distance
 
 ## Purpose & Benefits
 - **Purpose**
@@ -103,7 +112,7 @@ Use the built-in continuous integration in GitLab.
 - /bugzilla/:bugNumber
 
 ## Demo Video
-   - https://www.youtube.com/watch?v=IZmz6ns-CH4
+ - https://www.youtube.com/watch?v=IZmz6ns-CH4
 
 ## System design diagram
 
@@ -136,26 +145,6 @@ Use the built-in continuous integration in GitLab.
    **6. Install MQTTX**
    - Mqtt.x is a cross-platform MQTT client tool used to simplify testing and debugging of the MQTT protocol. 
      - https://mqttx.app/
-1. Install Gitlab on your computer 
-* You can download GitLab from the official website: https://about.gitlab.com/install/.
-2. Install the Arduino IDE
- - You can download the Arduino IDE from the official website: https://www.arduino.cc/en/software/.
-3. Install Mosquitto
- - Mosquitto is an open-source message broker that is used for the communication between devices in the intelligent transportation system. You can download Mosquitto from the official website: https://mosquitto.org/download/.
-4. Install Android Studio
- - Android Studio is required to build and run the Android application for the intelligent transportation system. You can download Android Studio from the official website: https://developer.android.com/studio.
-5. Sign up for Tinkercad and connect your microcontroller and sensors to your computer.
- - Tinkercad is an online platform that allows you to design and simulate circuits. You can sign up for Tinkercad from the official website: https://www.tinkercad.com/.
-   Follow the instructions provided by Tinkercad to connect your microcontroller and sensors to your computer.
-
-**Requirements:**
-  1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
-  2. You will need to have a basic understanding of the C++ programming language to use API and libraries.
-  3. The Intelligent Transportation System is designed to run on every operating system and on Android applications.
-## User Manual
- **8. Using intelligent transportation app**
-    - Click on this link to access the instructions for using the app:
-      https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/User-Manual
 
  **Requirements:**
    1. The intelligent transportation system requires a microcontroller with sensors and actuators to be connected to your computer.
@@ -164,6 +153,7 @@ Use the built-in continuous integration in GitLab.
 
 ## Usage
   **To user the Intelligent Transportation System, you will need to follow these steps:**
+
    **1.Hardware Setup:**
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
      - https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
@@ -260,22 +250,24 @@ Use the built-in continuous integration in GitLab.
    **7. Control and Monitoring**
    - Once the Android application is running on your device, you can use it to control and monitor the features of the intelligent Transportation System.The application provides an intuitive interface for sending commands,receiving data, and visualizing sensor readings.
 
-
+## User Manual
+ **Using intelligent transportation app**
+ - Click on this link to access the instructions for using the app:
+   - https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/User-Manual
+   
 ## Support
 - **If you need help with the project, you can find support in the following ways:**
      1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers
      - https://discord.gg/KN5YJ7TU
      2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
-
-
 ## Roadmap
 
- **Research and Planning:**
+#### Research and Planning:
   - Conduct a comprehensive analysis of traffic patterns,congestion hotspots,and existing transportation infrastructure.identify key goals and objectives for the intelligent transportation system implementation.
   - Evaluate available technologies,sensors, and communication protocols suitable for the system.
 
- **Set Up GitLab:**
+#### Set Up GitLab:
   - Set up a GitLab repository for version control and collaboration.
   - Create a WiKi pages in the gitlab repository to document project information and procedures.
   - Utilize Gitlab’sMilestones feature to track project progress
@@ -286,12 +278,12 @@ Use the built-in continuous integration in GitLab.
   - Manage the gitlab repository, addressing any issues or conflicts that arise during development.  
   - Document and version control the project’s source code,ensuring proper branching and merging strategies.
 
- **System Design and Architecture:**
+#### System Design and Architecture:
   - Design the overall architecture of the intelligent transportation system, including the integration of various components such as traffic light,sensors, and user interfaces.
   - Define communication protocols and data formats for seamless interaction between different system elements.
   - Create a detailed design specification document outlining system requirements, functionalities, and interfaces.
 
- **Development and Testing:**
+#### Development and Testing:
   - Develop and implement the Adaptive Traffic Light System, which automatically adjusts traffic signals based on real-time road conditions and congestion levels.
   - Develop and implement the Control Traffic Light functionality,allowing traffic administrators to manually adjust traffic signal settings when congestion reaches critical levels.
   - Develop and implement the Warning Display feature,which detects potential accidents using sensors and triggers audible warnings accompanied by Color changes in the app.
@@ -326,7 +318,8 @@ Use the built-in continuous integration in GitLab.
 #### Communication
 - If you have any questions, feedback, or require assistance, please don't hesitate to reach out to us. You can contact one of our developers directly via email which is provided below in Author and acknowledgement or join our Discord community. We highly value your input and assure you that we will respond promptly to address any queries or concerns you may have.
 
-- Discord Community: [Click here](https://discord.gg/PbDeME76)
+- Discord Community: [Click here]
+  - https://discord.gg/PbDeME76
 
 - We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
 
@@ -338,7 +331,7 @@ Use the built-in continuous integration in GitLab.
 
 - Yingchao Ji: 
 - Hassan Saleh: Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
-- Jessie Johnsson:
+- Jessie Johnsson:I made important contributions to the installation and layout of hardware equipment, the realization of material requirements, the realization of Adruino board and interface configuration, etc., to ensure the smooth operation of the system. On the software side, Adruino configurates the environment and installs libraries through the use of acoustic sensors, as well as allowing data to be sent and subscribed to the server. I designed and implemented a stylish dynamic interface for Android applications, using the MQTT protocol to establish data communication between the Android application and the server, configuring the necessary development tools, SDKS, and dependencies, and installing the appropriate libraries and components. In addition, actively participate in the documentation of the project. Project requirements, user descriptions, and project progress reports
 - Tehreen Asif:Tehreem Asif made significant contributions to multiple aspects of the project. She played a pivotal role in implementing the normal traffic light system and defining the traffic light sequence. She also contributed to developing the necessary logic for the Android app and helped with the adaptive traffic light system. Additionally, she actively participated in shaping the project's requirements and user stories, contributed to documentation and wiki updates, improved the visual appeal of the car console pages, and established the car finding functionality through MQTT connection. Tehreem's dedication extended to fixing, updating, and proofreading the app's readme file, as well as creating a comprehensive user manual.
 - Elif Sayeed Yaqoud:I made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, I implemented a JSON file structure to securely store user information. Additionally, I designed an appealing layout that enhances the user experience. Moreover, I created a captivating splash screen that showcases the app's logo and name, providing an engaging start to the Android application. In the Arduino realm, I played a crucial role in integrating an ultrasound sensor, enabling real-time monitoring of passing vehicles to detect and analyze potential traffic congestion on the roadway. Beyond the technical aspects, I actively participated in the project's documentation efforts, assuming responsibility for capturing comprehensive requirements and user stories. I consistently updated and improved the project's wiki page, contributing to the overall success of the endeavor. Additionally, I dedicated substantial effort to crafting a user-friendly and informative user manual, facilitating ease of use and assisting end-users in maximizing their experience with the application.
 
@@ -356,11 +349,5 @@ Use the built-in continuous integration in GitLab.
  - This projects is licensed under the **University of Gothenburg and Chalmers** License
  - Feel free to modify and adapt the Intelligent Transportation System to suit your needs.Contributions are welcome, and any issues or suggestions can be reported in the issue tracker.
 
-This system is complex when it comes to the traffic lights and the driving assistance system, by making minor changes, it could affect the outcome of the whole idea. As of now, there is no license to this project.
-
 ## Project status
 - The project has reached its completion, with all developers working diligently and efficiently to deliver the system.
-
-
-
-- The project is continuous and it is in development. All developers are working efficiently and constantly to improve and release the system. 
