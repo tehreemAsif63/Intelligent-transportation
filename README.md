@@ -5,8 +5,9 @@
 - [Description](#description)
 - [Features](#features)
 - [Purpose & Benefits](#purpose-&-benefits)
-- [Badges](#badges)
-- [Visuals](#system-design-diagram)
+- [Demo Video](#demo-video)
+- [Visuals](#visuals)
+- [System design](#system-design-diagram)
 - [Installation](#installation)
 - [Usage](#usage)
 - [User Manual](#user-manual)
@@ -72,14 +73,6 @@
 - Collaborative Approach: Our project adopts a collaborative approach, where team members actively contribute to both Arduino code and Android app development. This fosters a holistic understanding of the project, promotes knowledge sharing, skill development, and effective teamwork. By leveraging the collective expertise of the team members, we ensure a comprehensive and robust implementation of the intelligent transportation system.
 - Overall, Intelligent Transportation brings forth a host of benefits, including improved traffic flow, enhanced safety measures, optimized resource utilization, a user-friendly interface, and a collaborative development approach. These advancements collectively contribute to an efficient, safe, and sustainable transportation ecosystem.
 
-## Badges
-- /appveyor/tests/:user/:repo
-- /appveyor/tests/:user/:repo/:branch
-- /eclipse-marketplace/dt/:name
-- /bitbucket/issues/:user/:repo
-- /amo/stars/:addonId
-- /bugzilla/:bugNumber
-
 ## Demo Video
  - https://www.youtube.com/watch?v=IZmz6ns-CH4
 
@@ -128,7 +121,7 @@
    3. The Intelligent Transportation System is designed to run on Android applications.
 
 ## Usage
-  #### To user the Intelligent Transportation System, you will need to follow these steps:**
+  #### To user the Intelligent Transportation System, you will need to follow these steps:
 
    **1.Hardware Setup:**
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
@@ -309,9 +302,9 @@
   - Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. 
   - Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
 - **Jessie Johnsson**:
-  - She actively participated in the early stages of requirement analysis and utilized her skills in problem analysis to clarify project requirements. She used user stories and project completion reports to plan sprint iterations, ensuring timely project delivery.
+  - She actively participated in the early stages of requirement analysis and utilized her skills in problem analysis to clarify project requirements. She created user stories ,README file ,wiki pages and project completion reports to plan sprint iterations, ensuring timely project delivery.
   - In the hardware domain, she was involved in the installation and layout of hardware devices, fulfilling material requirements, and successfully implementing the configuration of Adruino boards and interfaces, guaranteeing the smooth operation of the system.
-  - On the software side, she excelled in configuring the Adruino environment and installing relevant libraries. She leveraged acoustic sensors to achieve reliable data transmission and subscription, enabling seamless communication with the server.
+  - On the software side, she  configuried the Adruino environment and installing relevant libraries. She leveraged ultrasonic sensors to achieve reliable data transmission and subscription, enabling seamless communication with the server.
   - Furthermore, she designed and implemented a stylish and dynamic interface for the Android application. Using the MQTT protocol, she established data communication between the Android application and the server. She configured the necessary development tools, SDKs, and dependencies, and installed appropriate libraries and components to ensure the proper functioning of the application.
   - Within the team, she actively assisted team members in analyzing and resolving project bugs, as well as handling conflicts during project merges. Her contributions helped the team overcome technical challenges and drove the progress of the project.
 - **Tehreen Asif**:
@@ -319,7 +312,8 @@
   - She played a pivotal role in implementing the normal traffic light system and defining the traffic light sequence. She also contributed to developing the necessary logic for the Android app and helped with the adaptive traffic light system.
   - Additionally, she actively participated in shaping the project's requirements and user stories, contributed to documentation and wiki updates, improved the visual appeal of the car console pages, and established the car finding functionality through MQTT connection. 
   - Tehreem's dedication extended to fixing, updating, and proofreading the app's readme file, as well as creating a comprehensive user manual.
-- **Elif Sayeed Yaqoud**:She made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, 
+- **Elif Sayeed Yaqoud**:
+  - She made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, 
   - She implemented a JSON file structure to securely store user information. Additionally, she designed an appealing layout that enhances the user experience. Moreover,she created a captivating splash screen that showcases the app's logo and name, providing an engaging start to the Android application. 
   - In the Arduino realm, she played a crucial role in integrating an ultrasound sensor, enabling real-time monitoring of passing vehicles to detect and analyze potential traffic congestion on the roadway. Beyond the technical aspects.
   - She actively participated in the project's documentation efforts, assuming responsibility for capturing comprehensive requirements and user stories. I consistently updated and improved the project's wiki page, contributing to the overall success of the endeavor. Additionally, I dedicated substantial effort to crafting a user-friendly and informative user manual, facilitating ease of use and assisting end-users in maximizing their experience with the application.
