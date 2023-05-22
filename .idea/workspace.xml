@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
+<<<<<<< HEAD
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42db3280-c5ce-432f-88d3-e4b0b8cef102" name="Changes" comment="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
+=======
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9069e79-3d2f-4c08-8c8c-28bef934c6ca" name="Changes" comment="update: Updated Yingchao Ji's contribution description&#10;&#10;Updated Yingchao Ji's contribution description&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <change afterPath="$PROJECT_DIR$/Android/img/IntelligentTransportationVisuals.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+>>>>>>> e16a168fb4cc0b678a4a84ec1fdb13dd5f0decd7
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="readme" />
       </map>
     </option>
+=======
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/readme" />
+  </component>
+  <component name="Git.Settings">
+>>>>>>> e16a168fb4cc0b678a4a84ec1fdb13dd5f0decd7
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="2O69Z3w0KyMwEq88CsATNItXRzj" />
+=======
+  <component name="ProjectId" id="2Q7EL2c2Qg38jSA0uZUkYTYpMvu" />
+>>>>>>> e16a168fb4cc0b678a4a84ec1fdb13dd5f0decd7
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -57,6 +79,87 @@
       <updated>1681302496528</updated>
     </task>
     <option name="localTasksCounter" value="2" />
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VidaStone/AndroidStudioProjects/intelligent-transportation&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\VidaStone\AndroidStudioProjects\intelligent-transportation\Android\img" />
+      <recent name="C:\Users\VidaStone\AndroidStudioProjects\intelligent-transportation\Android" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="intelligent-transportation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="intelligent-transportation" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9069e79-3d2f-4c08-8c8c-28bef934c6ca" name="Changes" comment="" />
+      <created>1684696162588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684696162588</updated>
+      <workItem from="1684696165571" duration="829000" />
+      <workItem from="1684739830021" duration="1666000" />
+    </task>
+    <task id="LOCAL-00001" summary="update: Update hardware architecture diagram&#10;&#10;Update hardware architecture diagram&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <created>1684742605930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684742605930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update: Update software architecture diagram&#10;&#10;Update software architecture diagram&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <created>1684745885361</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684745885361</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update: Update the link of user Manual&#10;&#10;Update the link of user Manual&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <created>1684746869464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684746869465</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: fix a bug&#10;&#10;Fixed a bug due to modifying the activity_login.xml file name. update the README.md Yingcha Ji's contribution&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <created>1684753484595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684753484595</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: fix a bug&#10;&#10;Fixed a bug due to modifying the activity_login.xml file name. update the README.md Yingcha Ji's contribution&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se">
+      <created>1684753497968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684753497968</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+>>>>>>> e16a168fb4cc0b678a4a84ec1fdb13dd5f0decd7
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,7 +177,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
     <MESSAGE value="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
     <option name="LAST_COMMIT_MESSAGE" value="Implemented readme file&#10;&#10;The titels: Roadmap, contributing, Authors and acknowledgment, license and project status&#10;&#10;Co-Author Hassan Saleh &lt;gussalhaf@student.gu.se&gt;" />
+=======
+    <MESSAGE value="update: Updated Yingchao Ji's contribution description&#10;&#10;Updated Yingchao Ji's contribution description&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+    <MESSAGE value="update: Update hardware architecture diagram&#10;&#10;Update hardware architecture diagram&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+    <MESSAGE value="update: Update software architecture diagram&#10;&#10;Update software architecture diagram&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+    <MESSAGE value="update: Update the link of user Manual&#10;&#10;Update the link of user Manual&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+    <MESSAGE value="update: update README.md&#10;&#10;Update the README.md Yingcha Ji's contribution&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: update README.md&#10;&#10;Update the README.md Yingcha Ji's contribution&#10;&#10;Co-Authored-By: Yingchao Ji     gusjiyid@student.gu.se" />
+>>>>>>> e16a168fb4cc0b678a4a84ec1fdb13dd5f0decd7
   </component>
 </project>

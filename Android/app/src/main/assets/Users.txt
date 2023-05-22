@@ -1,0 +1,18 @@
+[
+  {
+    "username": "General",
+    "password": "general",
+    "type": "general",
+    "car": {},
+    "isBoundCar": false
+
+  },
+  {
+    "username": "Police",
+    "password": "police",
+    "type": "admin",
+    "car": {},
+    "isBoundCar": false
+
+  }
+]
