@@ -1,4 +1,4 @@
-# **Intelligent Transportation**
+# Intelligent Transportation
 
 ## Table of Content
 - [Getting started](#getting-started)
@@ -9,6 +9,7 @@
 - [Visuals](#system-design-diagram)
 - [Installation](#installation)
 - [Usage](#usage)
+- [User Manual](#user-manual)
 - [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [Authors and acknowledgment](#authors-&-acknowledgment)
@@ -19,39 +20,6 @@
 - To begin working on Intelligent Transportation, it is essential to have access to GitLab. If you don't have an account already, please create one by following the recommended steps to gain access.
 - If you are already experienced in this field, feel free to customize and modify this README.md file according to your needs. Make sure to document all the changes you make for reference.
 - To simplify the process, you can utilize the template provided below:
-
-#### Add your files
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation.git
-git branch -M main
-git push -uf origin main
-```
-
-#### Integrate with your tools
-- [ ] [Set up project integrations](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/settings/integrations)
-
-#### Collaborate with your team
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-#### Test and Deploy
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
 
 ## Name
 
@@ -88,13 +56,14 @@ Use the built-in continuous integration in GitLab.
     - Displays a warning for approaching vehicles with different colors depending on the vehicles distance
 
 ## Purpose & Benefits
-- **Purpose**
+
+**Purpose**
 - Intelligent Transportation is a practical solution to the everyday challenges faced in traffic situations. It addresses the issues of congestion, accidents, and time management that occur on a daily basis.
 - Our project focuses on leveraging intelligent transportation systems and cutting-edge technology to achieve several key objectives. Firstly, we aim to enhance the efficiency of traffic operations, ensuring smoother flow and minimizing congestion. By incorporating advanced algorithms, adaptive traffic light systems, and an intuitive Android application, we strive to optimize traffic management processes.
 - Furthermore, our project places a strong emphasis on improving traffic safety. Through the integration of intelligent systems and real-time monitoring, we aim to reduce the occurrence of accidents and mitigate potential risks on the road.
 - Ultimately, our overarching goal is to create a transportation network that is both highly efficient and significantly safer. By enhancing the overall commuting experience for drivers, passengers, and traffic administrators, we aim to contribute to a more sustainable and enjoyable urban environment.
 
-- **Benefits**
+**Benefits**
 - Intelligent Transportation offers numerous benefits that significantly improve various aspects of transportation systems:
 - Improved Traffic Flow: Implementation of intelligent transportation systems, including adaptive traffic light adjustment, aims to enhance traffic flow and alleviate congestion. This results in smoother and more efficient travel experiences for drivers, reducing delays and frustrations commonly associated with heavy traffic.
 - Enhanced Safety: By incorporating the Advanced Driving Assistance System (ADAS) and real-time alerts into the Android application, our project prioritizes road safety. The ADAS provides drivers with distance sensing and early warning systems, effectively reducing the risk of collisions and accidents. Additionally, real-time alerts keep users informed about potential hazards, road conditions, and other safety-related information, further enhancing overall safety.
@@ -117,8 +86,6 @@ Use the built-in continuous integration in GitLab.
 ## System design diagram
 
 ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SystemDiagram.png)
-
-# Get started
 
 ## Installation
 
@@ -152,7 +119,7 @@ Use the built-in continuous integration in GitLab.
    3. The Intelligent Transportation System is designed to run on Android applications.
 
 ## Usage
-  **To user the Intelligent Transportation System, you will need to follow these steps:**
+  #### To user the Intelligent Transportation System, you will need to follow these steps:**
 
    **1.Hardware Setup:**
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
@@ -252,14 +219,8 @@ Use the built-in continuous integration in GitLab.
 
 ## User Manual
  **Using intelligent transportation app**
- - Click on this link to access the instructions for using the app:
+ - Click on this link to Wiki page to access the instructions for using the app:
    - https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/User-Manual
-   
-## Support
-- **If you need help with the project, you can find support in the following ways:**
-     1. Chat room: You can join the chat room on Discord to ask questions and discuss the project with the following developers
-     - https://discord.gg/KN5YJ7TU
-     2. Slack : If you prefer to communicate via Slack , you can send a message to the TA or teacher.
 
 ## Roadmap
 
@@ -298,29 +259,27 @@ Use the built-in continuous integration in GitLab.
 - To contribute, we kindly ask you to follow the guidelines outlined below:
 
 #### Code Guidelines 
-- To ensure consistency and readability throughout the project, we kindly ask you to adhere to our coding guidelines when submitting your code contributions. These guidelines encompass the following best practices:
-* Use meaningful and descriptive variable and function names to enhance code clarity.
-* Include necessary comments where the code is complex to aid in understanding.
-* Follow proper indentation practices for improved code readability.
-* Provide clear and concise commit messages that describe the purpose of your changes.
-* As a precaution, push your code to your own branch to prevent any potential errors and bugs from affecting the main codebase.
+- To ensure consistency and readability throughout the project, we kindly ask you to adhere to our coding guidelines when submitting your code contributions. These guidelines encompass the following best practices
+ - Use meaningful and descriptive variable and function names to enhance code clarity.
+ - Include necessary comments where the code is complex to aid in understanding.
+ - Follow proper indentation practices for improved code readability.
+ - Provide clear and concise commit messages that describe the purpose of your changes.
+ - As a precaution, push your code to your own branch to prevent any potential errors and bugs from affecting the main codebase.
 
 #### Pull request
-- We encourage you to contribute code to the project by submitting a pull request. Your contributions can have a direct impact on the project's growth and success. To submit a pull request, please follow these steps:
-* Start with forking the repository and create a new branch for the changes you want to make.
-* You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
-* Ensure the code does not break the project's guideline, after you make the changes
-* Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
-* Add comments and documentation if you needed to classify the changes
-* Write clear and concise commit messages
-* Submit a pull request to the project's main branch in the repository for the developers to review.
+- We encourage you to contribute code to the project by submitting a pull request. Your contributions can have a direct impact on the project's growth and success. To submit a pull request, please follow these steps
+ - Start with forking the repository and create a new branch for the changes you want to make.
+ - You need to have a GitHub account and then press the  "Fork" button in the top-right corner which will create a copy of the project.
+ - Ensure the code does not break the project's guideline, after you make the changes
+ - Make the changes and keep on testing the project. We recommend creating a new branch to separate the project code and your changes.
+ - Add comments and documentation if you needed to classify the changes
+ - Write clear and concise commit messages
+ - Submit a pull request to the project's main branch in the repository for the developers to review.
 
 #### Communication
 - If you have any questions, feedback, or require assistance, please don't hesitate to reach out to us. You can contact one of our developers directly via email which is provided below in Author and acknowledgement or join our Discord community. We highly value your input and assure you that we will respond promptly to address any queries or concerns you may have.
-
-- Discord Community: [Click here]
+- Discord Community
   - https://discord.gg/PbDeME76
-
 - We sincerely appreciate your interest in contributing to our project, and we eagerly anticipate the opportunity to collaborate with you to further enhance its capabilities. Together, we can make it even better!
 
 
@@ -329,11 +288,11 @@ Use the built-in continuous integration in GitLab.
 - Each team member had the opportunity to work on Arduino code, Android app development, and documentation, ensuring a well-rounded understanding of the project. This approach fostered a collaborative environment where members could leverage their diverse skills and knowledge to contribute effectively.
 - This collaborative approach allowed for a well-rounded execution of the project, with every member actively involved in Android Studio code development, Arduino code development, and documentation. To ensure comprehensive coverage, the project was divided into two main areas of focus: Arduino code and Android Studio code.
 
-- Yingchao Ji: 
-- Hassan Saleh: Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
-- Jessie Johnsson:I made important contributions to the installation and layout of hardware equipment, the realization of material requirements, the realization of Adruino board and interface configuration, etc., to ensure the smooth operation of the system. On the software side, Adruino configurates the environment and installs libraries through the use of acoustic sensors, as well as allowing data to be sent and subscribed to the server. I designed and implemented a stylish dynamic interface for Android applications, using the MQTT protocol to establish data communication between the Android application and the server, configuring the necessary development tools, SDKS, and dependencies, and installing the appropriate libraries and components. In addition, actively participate in the documentation of the project. Project requirements, user descriptions, and project progress reports
-- Tehreen Asif:Tehreem Asif made significant contributions to multiple aspects of the project. She played a pivotal role in implementing the normal traffic light system and defining the traffic light sequence. She also contributed to developing the necessary logic for the Android app and helped with the adaptive traffic light system. Additionally, she actively participated in shaping the project's requirements and user stories, contributed to documentation and wiki updates, improved the visual appeal of the car console pages, and established the car finding functionality through MQTT connection. Tehreem's dedication extended to fixing, updating, and proofreading the app's readme file, as well as creating a comprehensive user manual.
-- Elif Sayeed Yaqoud:I made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, I implemented a JSON file structure to securely store user information. Additionally, I designed an appealing layout that enhances the user experience. Moreover, I created a captivating splash screen that showcases the app's logo and name, providing an engaging start to the Android application. In the Arduino realm, I played a crucial role in integrating an ultrasound sensor, enabling real-time monitoring of passing vehicles to detect and analyze potential traffic congestion on the roadway. Beyond the technical aspects, I actively participated in the project's documentation efforts, assuming responsibility for capturing comprehensive requirements and user stories. I consistently updated and improved the project's wiki page, contributing to the overall success of the endeavor. Additionally, I dedicated substantial effort to crafting a user-friendly and informative user manual, facilitating ease of use and assisting end-users in maximizing their experience with the application.
+- **Yingchao Ji**: 
+- **Hassan Saleh**: Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. Among his notable contributions were the creation of a captivating warning console and an engaging sign-up prompt. Additionally, he played a pivotal role in the development of the control traffic light system, where he leveraged the Arduino IDE to implement intricate logic and algorithms.
+- **Jessie Johnsson**:I made important contributions to the installation and layout of hardware equipment, the realization of material requirements, the realization of Adruino board and interface configuration, etc., to ensure the smooth operation of the system. On the software side, Adruino configurates the environment and installs libraries through the use of acoustic sensors, as well as allowing data to be sent and subscribed to the server. I designed and implemented a stylish dynamic interface for Android applications, using the MQTT protocol to establish data communication between the Android application and the server, configuring the necessary development tools, SDKS, and dependencies, and installing the appropriate libraries and components. In addition, actively participate in the documentation of the project. Project requirements, user descriptions, and project progress reports
+- **Tehreen Asif**:Tehreem Asif made significant contributions to multiple aspects of the project. She played a pivotal role in implementing the normal traffic light system and defining the traffic light sequence. She also contributed to developing the necessary logic for the Android app and helped with the adaptive traffic light system. Additionally, she actively participated in shaping the project's requirements and user stories, contributed to documentation and wiki updates, improved the visual appeal of the car console pages, and established the car finding functionality through MQTT connection. Tehreem's dedication extended to fixing, updating, and proofreading the app's readme file, as well as creating a comprehensive user manual.
+- **Elif Sayeed Yaqoud**:I made significant contributions to the functionality of the app by developing essential features, including a versatile login system tailored for various user types. To ensure seamless data management, I implemented a JSON file structure to securely store user information. Additionally, I designed an appealing layout that enhances the user experience. Moreover, I created a captivating splash screen that showcases the app's logo and name, providing an engaging start to the Android application. In the Arduino realm, I played a crucial role in integrating an ultrasound sensor, enabling real-time monitoring of passing vehicles to detect and analyze potential traffic congestion on the roadway. Beyond the technical aspects, I actively participated in the project's documentation efforts, assuming responsibility for capturing comprehensive requirements and user stories. I consistently updated and improved the project's wiki page, contributing to the overall success of the endeavor. Additionally, I dedicated substantial effort to crafting a user-friendly and informative user manual, facilitating ease of use and assisting end-users in maximizing their experience with the application.
 
 - Furthermore, the entire team actively contributed to the documentation process. They documented their code, processes, challenges faced or lessons learnt and project findings, ensuring that valuable insights and instructions were available for future reference. This comprehensive documentation not only served as a knowledge base but also facilitated effective collaboration within the team.
 
