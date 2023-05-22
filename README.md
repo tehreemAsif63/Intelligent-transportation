@@ -76,6 +76,10 @@
 ## Demo Video
  - https://www.youtube.com/watch?v=IZmz6ns-CH4
 
+## Visuals
+
+![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/IntelligentTransportationVisuals.png)
+
 ## System design
 
 -  **System design diagram**
