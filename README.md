@@ -223,7 +223,7 @@
 ## User Manual
  **Using intelligent transportation app**
  - Click on this link to Wiki page to access the instructions for using the app:
-   - https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/User-Manual
+   - https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/wikis/uploads/9ee86d8f70a309be6aeae77434de81b5/USER_MANUAL.docx.pdf
 
 ## Roadmap
 
