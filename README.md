@@ -291,12 +291,12 @@
 - This collaborative approach allowed for a well-rounded execution of the project, with every member actively involved in Android Studio code development, Arduino code development, and documentation. To ensure comprehensive coverage, the project was divided into two main areas of focus: Arduino code and Android Studio code.
 
 - **Yingchao Ji**:
-  - He was involved in the early stages of the project, contributing to project design and requirements analysis. He created a project structure diagram, defined milestones, and some parts of issues. And he took responsibility for the initial architectural design of the project.
-  - During the implementation of the Android code, he focused on two specific modules: the traffic light module and the car console module. For the traffic light module, he completed the page implementation and enabled dynamic page display through MQTT integration. For the car console module, he implemented the page and dynamic distance data.
-  - For Arduino code implementation, he collaborated with other group members to implement the adaptive traffic light functionality. And working on callback functions to receive messages. Furthermore, he worked with Jessie to implement the car distance sensing code.
-  - He established the MQTT connection, setting up the MQTT environment with Jessie by and ensuring its proper implementation.
+  - He contributed to project design and requirements analysis. He created a project structure diagram, defined milestones, and addressed certain parts of issues. And he assumed responsibility for the initial architectural design of the project.
+  - During the implementation of the Android code, he focused on two specific modules: the traffic light module and the car console module. For the traffic light module, he completed the page implementation and enabled dynamic page display through MQTT connection. For the car console module, he implemented the page and dynamic distance data.
+  - For Arduino code implementation, he collaborated with other group members to implement the adaptive traffic light functionality. He actively engaged in the development of callback functions to receive messages. Furthermore, he participated in the implementation of the car distance sensing code.
+  - He established the MQTT connection, setting up the MQTT environment with Jessie and ensuring its proper implementation.
   - For hardware connectivity, he actively participated in connecting and testing individual sensors.
-  - When it came to project documentation, he played a role in producing wiki pages and the README file and created the project demonstration video.
+  - When it came to project documentation, he played a role in producing wiki pages and the README file and created the project demonstration videos.
   - In the final sprint of the project, he participated in merges and updates to ensure smooth integration. He also fixes some bugs to ensure good performance of the project.
 - **Hassan Saleh**: 
   - Hassan Saleh's primary focus in development revolved around crafting visually appealing user interfaces for the Android application. 
