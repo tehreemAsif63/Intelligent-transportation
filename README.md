@@ -88,6 +88,7 @@
 
 -  **software architecture diagram**
 
+   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/software_architecture.png)
 
 ## Installation
 
