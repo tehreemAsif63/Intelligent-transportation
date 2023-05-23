@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean verifyCredentials(String username, String password) {
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(getAssets().open("Users.txt")));
+            reader = new BufferedReader(new InputStreamReader(getAssets().open("users.json")));
 
             StringBuilder jsonContent = new StringBuilder();
             String line;
