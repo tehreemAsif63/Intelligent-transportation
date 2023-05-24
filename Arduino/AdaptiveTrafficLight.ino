@@ -34,6 +34,9 @@ int ultraEast = 1;
 int ultraNorth = 8;
 
 int maxFlag = 40;
+int eastYellowPoint = maxFlag / 2 - 3;
+int halfMaxFlag = maxFlag / 2;
+int northYellowPoint = maxFlag - 3;
 int flag = 0;
 int tempFlag = -1;
 int countEastCar = 0;
@@ -111,7 +114,7 @@ void loop() {
 }
 
 void trafficLight(){
-  if(flag < maxFlag / 2 - 3){
+  if(flag < eastYellowPoint){
     digitalWrite(redEast, LOW);
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, HIGH);
@@ -123,20 +126,20 @@ void trafficLight(){
     countEastCar = 0;
 
     if (client.connect(ID)) {
-      String data = "east:green:" + String(maxFlag / 2 - 3 - flag) + ";north:red:" + String(maxFlag / 2 - flag);
+      String data = "east:green:" + String(eastYellowPoint - flag) + ";north:red:" + String(halfMaxFlag - flag);
       client.publish(TOPIC, data.c_str());
     }
 
     spr.setTextColor(TFT_GREEN);
     spr.drawString("East:  Green light: ",20,50);
-    spr.drawNumber(maxFlag / 2 - 3 - flag,260,50);
+    spr.drawNumber(eastYellowPoint - flag,260,50);
     spr.setTextColor(TFT_RED);
     spr.drawString("North: Red light: ",20,75);
-    spr.drawNumber(maxFlag / 2 - flag,260,75);
+    spr.drawNumber(halfMaxFlag - flag,260,75);
 
   }
   
-  if(flag >= maxFlag / 2 - 3 && flag < maxFlag / 2){
+  if(flag >= eastYellowPoint && flag < halfMaxFlag){
     digitalWrite(redEast, LOW);
     digitalWrite(yellowEast, HIGH);
   	digitalWrite(greenEast, LOW);
@@ -146,20 +149,20 @@ void trafficLight(){
     digitalWrite(greenNorth, LOW);
 
     if (client.connect(ID)) {
-      String data = "east:yellow:" + String(maxFlag / 2 - flag) + ";north:red:" + String(maxFlag / 2 - flag);
+      String data = "east:yellow:" + String(halfMaxFlag - flag) + ";north:red:" + String(halfMaxFlag - flag);
       client.publish(TOPIC, data.c_str());
     }
 
     spr.setTextColor(TFT_YELLOW);
     spr.drawString("East:  Yellow light:",20,50);
-    spr.drawNumber(maxFlag / 2 - flag,260,50);
+    spr.drawNumber(halfMaxFlag - flag,260,50);
     spr.setTextColor(TFT_RED);
     spr.drawString("North: Red light: ",20,75);
-    spr.drawNumber(maxFlag / 2 - flag,260,75);
+    spr.drawNumber(halfMaxFlag - flag,260,75);
 
   }
   
-  if(flag >= maxFlag / 2 && flag < maxFlag - 3){
+  if(flag >= halfMaxFlag && flag < northYellowPoint){
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
@@ -171,7 +174,7 @@ void trafficLight(){
     countNorthCar = 0;
 
     if (client.connect(ID)) {
-      String data = "east:red:" + String(maxFlag - flag) + ";north:green:" + String(maxFlag - 3 - flag);
+      String data = "east:red:" + String(maxFlag - flag) + ";north:green:" + String(northYellowPoint - flag);
       client.publish(TOPIC, data.c_str());
     }
 
@@ -180,10 +183,10 @@ void trafficLight(){
     spr.drawNumber(maxFlag - flag,260,50);
     spr.setTextColor(TFT_GREEN);
     spr.drawString("North: Green light: ",20,75);
-    spr.drawNumber(maxFlag - 3 - flag,260,75);
+    spr.drawNumber(northYellowPoint - flag,260,75);
   }
   
-  if(flag >= maxFlag - 3 && flag < maxFlag){
+  if(flag >= northYellowPoint && flag < maxFlag){
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
@@ -207,7 +210,7 @@ void trafficLight(){
 }
 
 void carOnEast(){
-	if(flag >= maxFlag / 2 && flag < maxFlag - 3){
+	if(flag >= halfMaxFlag && flag < northYellowPoint){
     double distance = 0.01723 * readUltrasonicDuration(ultraEast, ultraEast);
   	if(distance < 10){ 
       if(!isNewCarEast){ //To avoid duplicate counting
@@ -219,8 +222,8 @@ void carOnEast(){
             client.publish(TOPIC, data.c_str());
           }
           flag += 4;
-          if(flag > maxFlag - 3){
-          	flag = maxFlag - 3;
+          if(flag > northYellowPoint){
+          	flag = northYellowPoint;
           }
       }
       spr.drawString("Car Come from the east.",20,100);
@@ -231,7 +234,7 @@ void carOnEast(){
 }
 
 void carOnNorth(){
-	if(flag >= 0 && flag < maxFlag / 2 - 3){
+	if(flag >= 0 && flag < eastYellowPoint){
     double distance = 0.01723 * readUltrasonicDuration(ultraNorth, ultraNorth);
   	if(distance < 10){ //To avoid duplicate counting
       if(!isNewCarNorth){
@@ -244,8 +247,8 @@ void carOnNorth(){
         }
         spr.drawString("Car Come from the north.",20,100);
         flag += 5;
-        if(flag > maxFlag / 2 - 3 && flag < maxFlag - 3){
-          flag = maxFlag / 2 - 3;
+        if(flag > eastYellowPoint && flag < northYellowPoint){
+          flag = eastYellowPoint;
         }
       }
       spr.drawString("Car Come from the north.",20,100);
@@ -259,11 +262,11 @@ void userControl(){
   if(userType == 1){
       flag += 3;
       userType = 0;
-      if(flag > maxFlag / 2 -3 && flag < maxFlag / 2){
-        flag = maxFlag / 2 -3;
+      if(flag > eastYellowPoint && flag < halfMaxFlag){
+        flag = eastYellowPoint;
       }
-      if(flag > maxFlag -3){
-        flag = maxFlag -3;
+      if(flag > northYellowPoint){
+        flag = northYellowPoint;
       }
   }
 }
@@ -274,12 +277,12 @@ void adminControl(){
       isRenew = false;
     }
     if(whichGo == 1){
-      flag = maxFlag - 3;
+      flag = northYellowPoint;
       whichGo = 0;
     }
 
     if(whichGo == 2){
-      flag = maxFlag / 2 -3;
+      flag = eastYellowPoint;
       whichGo = 0;
     }
 
@@ -295,7 +298,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
   Serial.println();
   
-  if(payload[0]-48 == 1){ //payload[0]-48 is to make char to int
+  if(payload[0]-48 == 1){ //payload[0]-48 is to make byte to int
     userType = payload[0]-48;
     userControl();
   }
