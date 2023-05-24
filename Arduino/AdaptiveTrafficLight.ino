@@ -114,32 +114,47 @@ void loop() {
 }
 
 void trafficLight(){
-  if(flag < eastYellowPoint){
-    digitalWrite(redEast, LOW);
-    digitalWrite(yellowEast, LOW);
-  	digitalWrite(greenEast, HIGH);
-
-    digitalWrite(redNorth, HIGH);
-    digitalWrite(yellowNorth, LOW);
-    digitalWrite(greenNorth, LOW);
-
-    countEastCar = 0;
-
-    if (client.connect(ID)) {
-      String data = "east:green:" + String(eastYellowPoint - flag) + ";north:red:" + String(halfMaxFlag - flag);
-      client.publish(TOPIC, data.c_str());
+    if(flag < eastYellowPoint){
+        greenOnEast();
     }
+    if(flag >= eastYellowPoint && flag < halfMaxFlag){
+        yellowOnEast();
+    }
+    if(flag >= halfMaxFlag && flag < northYellowPoint){
+        greenOnNorth();
+    }
+    if(flag >= northYellowPoint && flag < maxFlag){
+        yellowOnNorth();
+    }
+}
 
-    spr.setTextColor(TFT_GREEN);
-    spr.drawString("East:  Green light: ",20,50);
-    spr.drawNumber(eastYellowPoint - flag,260,50);
-    spr.setTextColor(TFT_RED);
-    spr.drawString("North: Red light: ",20,75);
-    spr.drawNumber(halfMaxFlag - flag,260,75);
+void greenOnEast(){
 
-  }
-  
-  if(flag >= eastYellowPoint && flag < halfMaxFlag){
+      digitalWrite(redEast, LOW);
+      digitalWrite(yellowEast, LOW);
+      digitalWrite(greenEast, HIGH);
+
+      digitalWrite(redNorth, HIGH);
+      digitalWrite(yellowNorth, LOW);
+      digitalWrite(greenNorth, LOW);
+
+      countEastCar = 0;
+
+      if (client.connect(ID)) {
+        String data = "east:green:" + String(eastYellowPoint - flag) + ";north:red:" + String(halfMaxFlag - flag);
+        client.publish(TOPIC, data.c_str());
+      }
+
+      spr.setTextColor(TFT_GREEN);
+      spr.drawString("East:  Green light: ",20,50);
+      spr.drawNumber(eastYellowPoint - flag,260,50);
+      spr.setTextColor(TFT_RED);
+      spr.drawString("North: Red light: ",20,75);
+      spr.drawNumber(halfMaxFlag - flag,260,75);
+}
+
+void yellowOnEast(){
+
     digitalWrite(redEast, LOW);
     digitalWrite(yellowEast, HIGH);
   	digitalWrite(greenEast, LOW);
@@ -159,10 +174,10 @@ void trafficLight(){
     spr.setTextColor(TFT_RED);
     spr.drawString("North: Red light: ",20,75);
     spr.drawNumber(halfMaxFlag - flag,260,75);
+}
 
-  }
-  
-  if(flag >= halfMaxFlag && flag < northYellowPoint){
+void greenOnNorth(){
+
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
@@ -184,9 +199,10 @@ void trafficLight(){
     spr.setTextColor(TFT_GREEN);
     spr.drawString("North: Green light: ",20,75);
     spr.drawNumber(northYellowPoint - flag,260,75);
-  }
-  
-  if(flag >= northYellowPoint && flag < maxFlag){
+}
+
+void yellowOnNorth(){
+
     digitalWrite(redEast, HIGH);
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
@@ -206,7 +222,6 @@ void trafficLight(){
     spr.setTextColor(TFT_YELLOW);
     spr.drawString("North: Yellow light: ",20,75);
     spr.drawNumber(maxFlag - flag,260,75);
-  }
 }
 
 void carOnEast(){
