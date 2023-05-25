@@ -103,7 +103,9 @@ void loop() {
 
     trafficLight();
 
-    flag++;
+    if(!isPause){
+        flag++;
+    }
 
     printTitleOnWioTerminal();
     spr.pushSprite(0,0);//print on Wio terminal
@@ -301,9 +303,6 @@ void adminControl(){
       whichGo = 0;
     }
 
-    if(isPause){
-      flag --;
-    }
   }
 }
 
