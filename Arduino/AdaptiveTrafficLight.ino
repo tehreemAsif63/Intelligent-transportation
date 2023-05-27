@@ -136,11 +136,12 @@ void greenOnEast(){
       // Set the status of each light on east
       digitalWrite(redEast, LOW);
       digitalWrite(yellowEast, LOW);
-      digitalWrite(greenEast, HIGH);
+      digitalWrite(greenEast, HIGH); // the green light is on the east side
       // Set the status of each light on north
-      digitalWrite(redNorth, HIGH);
+      digitalWrite(redNorth, HIGH); // the red light is on the north side
       digitalWrite(yellowNorth, LOW);
       digitalWrite(greenNorth, LOW);
+      // setting other lights to low is to avoid that some lights are not turned off during the control process
 
       countEastCar = 0; // When the east side is green light, vehicles pass, countEastCar = 0
 
@@ -161,18 +162,20 @@ void greenOnEast(){
 void yellowOnEast(){
 
     digitalWrite(redEast, LOW);
-    digitalWrite(yellowEast, HIGH);
+    digitalWrite(yellowEast, HIGH); // the yellow light is on the east side
   	digitalWrite(greenEast, LOW);
 
-    digitalWrite(redNorth, HIGH);
+    digitalWrite(redNorth, HIGH); // the red light is on the north side
     digitalWrite(yellowNorth, LOW);
     digitalWrite(greenNorth, LOW);
+    // setting other lights to low is to avoid that some lights are not turned off during the control process
 
-    if (client.connect(ID)) {
+    if (client.connect(ID)) { // if the connection is successful
+      // The format of message is:   east:color:time;north:color:time
       String data = "east:yellow:" + String(halfMaxFlag - flag) + ";north:red:" + String(halfMaxFlag - flag);
-      client.publish(TOPIC, data.c_str());
+      client.publish(TOPIC, data.c_str()); // publish message
     }
-
+    // draw the information in Wio terminal
     spr.setTextColor(TFT_YELLOW);
     spr.drawString("East:  Yellow light:",20,50);
     spr.drawNumber(halfMaxFlag - flag,260,50);
@@ -183,21 +186,23 @@ void yellowOnEast(){
 
 void greenOnNorth(){
 
-    digitalWrite(redEast, HIGH);
+    digitalWrite(redEast, HIGH); // the red light is on the east side
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
 
     digitalWrite(redNorth, LOW);
     digitalWrite(yellowNorth, LOW);
-    digitalWrite(greenNorth, HIGH);
+    digitalWrite(greenNorth, HIGH); // the green light is on the north side
+    // setting other lights to low is to avoid that some lights are not turned off during the control process
 
-    countNorthCar = 0;
+    countNorthCar = 0; // When the north side is green light, vehicles pass, countEastCar = 0
 
-    if (client.connect(ID)) {
+    if (client.connect(ID)) { // if the connection is successful
+      // The format of message is:   east:color:time;north:color:time
       String data = "east:red:" + String(maxFlag - flag) + ";north:green:" + String(northYellowPoint - flag);
-      client.publish(TOPIC, data.c_str());
+      client.publish(TOPIC, data.c_str()); // publish message
     }
-
+    // draw the information in Wio terminal
     spr.setTextColor(TFT_RED);
     spr.drawString("East:  Red light: ",20,50);
     spr.drawNumber(maxFlag - flag,260,50);
@@ -208,19 +213,20 @@ void greenOnNorth(){
 
 void yellowOnNorth(){
 
-    digitalWrite(redEast, HIGH);
+    digitalWrite(redEast, HIGH); // the red light is on the east side
     digitalWrite(yellowEast, LOW);
   	digitalWrite(greenEast, LOW);
 
     digitalWrite(redNorth, LOW);
-    digitalWrite(yellowNorth, HIGH);
+    digitalWrite(yellowNorth, HIGH); // the yellow light is on the north side
     digitalWrite(greenNorth, LOW);
 
-    if (client.connect(ID)) {
+    if (client.connect(ID)) { // if the connection is successful
+      // The format of message is:   east:color:time;north:color:time
       String data = "east:red:" + String(maxFlag - flag) + ";north:yellow:" + String(maxFlag - flag);
-      client.publish(TOPIC, data.c_str());
+      client.publish(TOPIC, data.c_str()); // publish message
     }
-
+    // draw the information in Wio terminal
     spr.setTextColor(TFT_RED);
     spr.drawString("East:  Red light: ",20,50);
     spr.drawNumber(maxFlag - flag,260,50);
@@ -230,52 +236,52 @@ void yellowOnNorth(){
 }
 
 void carOnEast(){ // count the number of vehicles on east
-	if(flag >= halfMaxFlag && flag < northYellowPoint){ // red light on the east side
-    double distance = 0.01723 * readUltrasonicDuration(ultraEast, ultraEast); // calculate distance. 0.01723 = sonic_speed / 2 / 10000
-  	if(distance < 10){ //when distance < 10, we think there was a car passing
-      if(!isNewCarEast){ //to avoid duplicate counting. Only newly passed vehicles will be counted
-          isNewCarEast = true; // set isNewCarEast true, if it is the same car, it will not be counted in the next second
-          tone(WIO_BUZZER, 100, 1000); // Tone of the prompt
-          countEastCar ++; // number of car ++
-          if (client.connect(ID)) { // if the connection is successful
-            // The format of message is:   east:car:number;north:car:number
-            String data = "east:car:" + String(countEastCar) + ";north:car:0";
-            client.publish(TOPIC, data.c_str()); // publish message
+	if(flag >= halfMaxFlag && flag < northYellowPoint){ // when red light on the east side, green light on north side
+        double distance = 0.01723 * readUltrasonicDuration(ultraEast, ultraEast); // calculate distance. 0.01723 = sonic_speed / 2 / 10000
+        if(distance < 10){ //when distance < 10, we think there was a car passing
+          if(!isNewCarEast){ //to avoid duplicate counting. Only newly passed vehicles will be counted
+              isNewCarEast = true; // set isNewCarEast true, if it is the same car, it will not be counted in the next second
+              tone(WIO_BUZZER, 100, 1000); // tone of the prompt
+              countEastCar ++; // number of car ++
+              if (client.connect(ID)) { // if the connection is successful
+                // The format of message is:   east:car:number;north:car:number
+                String data = "east:car:" + String(countEastCar) + ";north:car:0";
+                client.publish(TOPIC, data.c_str()); // publish message
+              }
+              flag += 4; // flag + 4 mean The remaining time of the traffic light minus 4 seconds
+              if(flag > northYellowPoint){ // if the flag exceeds the start time of the yellow light on north
+                flag = northYellowPoint; // it should be returned to the start time of the yellow light.
+              } // because it is necessary to ensure that there are three seconds of yellow light between the green light and the red light.
           }
-          flag += 4; // flag + 4 mean The remaining time of the traffic light minus 4 seconds
-          if(flag > northYellowPoint){ // if the flag exceeds the start time of the yellow light on north
-          	flag = northYellowPoint; // it should be returned to the start time of the yellow light.
-          } // because it is necessary to ensure that there are three seconds of yellow light between the green light and the red light.
-      }
-      spr.drawString("Car Come from the east.",20,100); // draw message in the Wio terminal
-    }else{ // if distance >= 10, it means that the vehicle has passed or there is no vehicle
-    	isNewCarEast = false; // set isNewCarEast = false, so that we can continue to counting vehicles
-    }
+          spr.drawString("Car Come from the east.",20,100); // draw message in the Wio terminal
+        }else{ // if distance >= 10, it means that the vehicle has passed or there is no vehicle
+            isNewCarEast = false; // set isNewCarEast = false, so that we can continue to counting vehicles
+        }
   }
 }
 
 void carOnNorth(){ // count the number of vehicles on north
-	if(flag >= 0 && flag < eastYellowPoint){
-    double distance = 0.01723 * readUltrasonicDuration(ultraNorth, ultraNorth);
-  	if(distance < 10){
-      if(!isNewCarNorth){ //To avoid duplicate counting
-        isNewCarNorth = true;
-        tone(WIO_BUZZER, 100, 1000);
-        countNorthCar ++;
-        if (client.connect(ID)) {
-          String data = "east:car:0;north:car:" + String(countNorthCar);
-          client.publish(TOPIC, data.c_str());
+	if(flag >= 0 && flag < eastYellowPoint){ // when red light on the north side, green light on east side
+        double distance = 0.01723 * readUltrasonicDuration(ultraNorth, ultraNorth); // calculate distance. 0.01723 = sonic_speed / 2 / 10000
+        if(distance < 10){ //when distance < 10, we think there was a car passing
+          if(!isNewCarNorth){ //To avoid duplicate counting. Only newly passed vehicles will be counted
+            isNewCarNorth = true; // set isNewCarEast true, if it is the same car, it will not be counted in the next second
+            tone(WIO_BUZZER, 100, 1000); // tone of the prompt
+            countNorthCar ++; // number of car ++
+            if (client.connect(ID)) { // if the connection is successful
+              // The format of message is:   east:car:number;north:car:number
+              String data = "east:car:0;north:car:" + String(countNorthCar);
+              client.publish(TOPIC, data.c_str()); // publish message
+            }
+            flag += 4; // flag + 4 mean The remaining time of the traffic light minus 4 seconds
+            if(flag > eastYellowPoint && flag < northYellowPoint){ // if the flag exceeds the start time of the yellow light on east
+              flag = eastYellowPoint; // it should be returned to the start time of the yellow light.
+            } // because it is necessary to ensure that there are three seconds of yellow light between the green light and the red light.
+          }
+          spr.drawString("Car Come from the north.",20,100); // draw message in the Wio terminal
+        }else{ // if distance >= 10, it means that the vehicle has passed or there is no vehicle
+            isNewCarNorth = false; // set isNewCarEast = false, so that we can continue to counting vehicles
         }
-        spr.drawString("Car Come from the north.",20,100);
-        flag += 5;
-        if(flag > eastYellowPoint && flag < northYellowPoint){
-          flag = eastYellowPoint;
-        }
-      }
-      spr.drawString("Car Come from the north.",20,100);
-    }else{
-    	isNewCarNorth = false;
-    }
   }
 }
 
