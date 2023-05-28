@@ -40,12 +40,11 @@ public class ITUtils {
     public static ImageView imageView_car_background;
 
 
-
     public static void showDynamicPage(String str) {
         String[] messages = str.split(";");
         String[] firstData = messages[0].split(":");
 
-        if (firstData[0].equals("east")){
+        if (firstData[0].equals("east")) {
             String[] eastData = messages[0].split(":");
             String[] northData = messages[1].split(":");
             showEastData(eastData);
@@ -53,18 +52,17 @@ public class ITUtils {
         } else if (firstData[0].equals("distance")) {
             String[] frontDistance = messages[0].split(":");
             String[] backDistance = messages[1].split(":");
-            String fdStr = frontDistance[2];
-            String bdStr = backDistance[2];
-            showFrontDistance(fdStr);
-            showBackDistance(bdStr);
-            changeBackGround(fdStr, bdStr);
+            String frontStr = frontDistance[2];
+            String backStr = backDistance[2];
+            showFrontDistance(frontStr);
+            showBackDistance(backStr);
+            changeBackGround(frontStr, backStr);
         }
 
     }
 
 
-
-    public static void showEastData(String[] eastData){
+    public static void showEastData(String[] eastData) {
         switch (eastData[1]) {
             case "red":
                 textView_east_number.setTextColor(Color.RED);
@@ -87,7 +85,7 @@ public class ITUtils {
                 imageView_car_east2.setVisibility(View.GONE);
                 break;
             case "car":
-                if (eastData[2].equals("1")){
+                if (eastData[2].equals("1")) {
                     imageView_car_east1.setVisibility(View.VISIBLE);
                 } else if (eastData[2].equals("2")) {
                     imageView_car_east2.setVisibility(View.VISIBLE);
@@ -97,7 +95,7 @@ public class ITUtils {
         textView_east_number.setText(eastData[2].length() < 2 ? "0" + eastData[2] : eastData[2]);
     }
 
-    public static void showNorthData(String[] northData){
+    public static void showNorthData(String[] northData) {
         switch (northData[1]) {
             case "red":
                 textView_north_number.setTextColor(Color.RED);
@@ -120,7 +118,7 @@ public class ITUtils {
                 imageView_car_north2.setVisibility(View.GONE);
                 break;
             case "car":
-                if (northData[2].equals("1")){
+                if (northData[2].equals("1")) {
                     imageView_car_north1.setVisibility(View.VISIBLE);
                 } else if (northData[2].equals("2")) {
                     imageView_car_north2.setVisibility(View.VISIBLE);
@@ -130,74 +128,94 @@ public class ITUtils {
         textView_north_number.setText(northData[2].length() < 2 ? "0" + northData[2] : northData[2]);
     }
 
-    private static void showFrontDistance(String fdStr) {
-        textView_front_distance.setText(fdStr);
+    private static void showFrontDistance(String frontStr) {
+        textView_front_distance.setText(frontStr);
 
     }
-    private static void showBackDistance(String bdStr) {
-        textView_back_distance.setText(bdStr);
+
+    private static void showBackDistance(String backStr) {
+        textView_back_distance.setText(backStr);
     }
 
-    private static void changeBackGround(String fdStr, String bdStr) {
-        int fdInt = Integer.parseInt(fdStr.substring(0, fdStr.length() - 3));
-        int bdInt = Integer.parseInt(bdStr.substring(0, bdStr.length() - 3));
-        if (fdInt > 0 && fdInt < 15){
-            if (bdInt > 0 && bdInt < 15){
+    private static void changeBackGround(String frontStr, String backStr) {
+        int frontInt = Integer.parseInt(frontStr.substring(0, frontStr.length() - 3));
+        int backInt = Integer.parseInt(backStr.substring(0, backStr.length() - 3));
+
+        carFrontRed(frontInt, backInt);
+        carFrontYellow(frontInt, backInt);
+        carFrontGreen(frontInt, backInt);
+        carFrontBlue(frontInt, backInt);
+
+    }
+
+    private static void carFrontRed(int frontInt, int backInt) {
+        if (frontInt > 0 && frontInt < 15) {
+            if (backInt > 0 && backInt < 15) {
                 imageView_car_background.setImageResource(R.drawable.car_red_both);
             }
-            if (bdInt >= 15 && bdInt <= 30){
+            if (backInt >= 15 && backInt <= 30) {
                 imageView_car_background.setImageResource(R.drawable.car_red_yellow);
             }
-            if (bdInt > 30 && bdInt <= 50){
+            if (backInt > 30 && backInt <= 50) {
                 imageView_car_background.setImageResource(R.drawable.car_red_green);
             }
-            if (bdInt > 50){
+            if (backInt > 50) {
                 imageView_car_background.setImageResource(R.drawable.car_red_front);
             }
         }
-        if (fdInt >= 15 && fdInt <= 30){
-            if (bdInt > 0 && bdInt < 15){
+    }
+
+    private static void carFrontYellow(int frontInt, int backInt) {
+        if (frontInt >= 15 && frontInt <= 30) {
+            if (backInt > 0 && backInt < 15) {
                 imageView_car_background.setImageResource(R.drawable.car_yellow_red);
             }
-            if (bdInt >= 15 && bdInt <= 30){
+            if (backInt >= 15 && backInt <= 30) {
                 imageView_car_background.setImageResource(R.drawable.car_yellow_both);
             }
-            if (bdInt > 30 && bdInt <= 50){
+            if (backInt > 30 && backInt <= 50) {
                 imageView_car_background.setImageResource(R.drawable.car_yellow_green);
             }
-            if (bdInt > 50){
+            if (backInt > 50) {
                 imageView_car_background.setImageResource(R.drawable.car_yellow_front);
             }
         }
-        if (fdInt > 30 && fdInt <= 50){
-            if (bdInt > 0 && bdInt < 15){
+    }
+
+    private static void carFrontGreen(int frontInt, int backInt) {
+        if (frontInt > 30 && frontInt <= 50) {
+            if (backInt > 0 && backInt < 15) {
                 imageView_car_background.setImageResource(R.drawable.car_green_red);
             }
-            if (bdInt >= 15 && bdInt <= 30){
+            if (backInt >= 15 && backInt <= 30) {
                 imageView_car_background.setImageResource(R.drawable.car_green_yellow);
             }
-            if (bdInt > 30 && bdInt <= 50){
+            if (backInt > 30 && backInt <= 50) {
                 imageView_car_background.setImageResource(R.drawable.car_green_both);
             }
-            if (bdInt > 50){
+            if (backInt > 50) {
                 imageView_car_background.setImageResource(R.drawable.car_green_front);
             }
         }
-        if (fdInt > 50){
-            if (bdInt > 0 && bdInt < 15){
+    }
+
+    private static void carFrontBlue(int frontInt, int backInt) {
+        if (frontInt > 50) {
+            if (backInt > 0 && backInt < 15) {
                 imageView_car_background.setImageResource(R.drawable.car_red_back);
             }
-            if (bdInt >= 15 && bdInt <= 30){
+            if (backInt >= 15 && backInt <= 30) {
                 imageView_car_background.setImageResource(R.drawable.car_yellow_back);
             }
-            if (bdInt > 30 && bdInt <= 50){
+            if (backInt > 30 && backInt <= 50) {
                 imageView_car_background.setImageResource(R.drawable.car_green_back);
             }
-            if (bdInt > 50){
+            if (backInt > 50) {
                 imageView_car_background.setImageResource(R.drawable.car);
             }
         }
     }
+
 }
 
 
