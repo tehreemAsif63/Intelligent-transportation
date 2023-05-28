@@ -1,6 +1,5 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +13,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.intelligenttransportation.R;
+import com.intelligenttransportation.model.User;
+import com.intelligenttransportation.mqtt.BrokerConnection;
+import com.intelligenttransportation.mqtt.MqttClient;
 
 public class CarConsoleActivity extends AppCompatActivity {
 

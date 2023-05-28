@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.intelligenttransportation.R;
+import com.intelligenttransportation.model.Car;
+import com.intelligenttransportation.model.User;
 
 public class BindCarActivity extends AppCompatActivity {
 

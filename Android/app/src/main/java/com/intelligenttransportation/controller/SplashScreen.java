@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.intelligenttransportation.R;
 
 public class SplashScreen extends AppCompatActivity {
 

@@ -17,20 +17,20 @@
         android:theme="@style/Theme.IntelligentTransportation"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".controller.SplashScreen"
             android:exported="true" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".controller.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".BindCarActivity"
+            android:name=".controller.BindCarActivity"
             android:exported="true" />
         <activity
-            android:name=".AccountActivity"
+            android:name=".controller.AccountActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,10 +39,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TrafficLightActivity"
+            android:name=".controller.TrafficLightActivity"
             android:exported="true" />
         <activity
-            android:name=".CarConsoleActivity"
+            android:name=".controller.CarConsoleActivity"
             android:exported="true" />
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />

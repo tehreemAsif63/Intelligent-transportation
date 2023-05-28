@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.intelligenttransportation.R;
+import com.intelligenttransportation.model.User;
 
 public class MainActivity extends AppCompatActivity {
 

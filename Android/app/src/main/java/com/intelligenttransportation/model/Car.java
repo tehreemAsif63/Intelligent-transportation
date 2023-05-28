@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.model;
 
 import java.io.Serializable;
 

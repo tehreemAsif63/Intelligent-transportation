@@ -1,11 +1,10 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,6 +18,9 @@ import java.io.InputStreamReader;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.intelligenttransportation.R;
+import com.intelligenttransportation.model.User;
+
 import java.lang.reflect.Type;
 import java.util.List;
 public class LoginActivity extends AppCompatActivity {

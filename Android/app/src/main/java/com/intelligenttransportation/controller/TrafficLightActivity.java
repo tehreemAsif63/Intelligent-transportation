@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.intelligenttransportation.R;
+import com.intelligenttransportation.model.User;
+import com.intelligenttransportation.mqtt.BrokerConnection;
+import com.intelligenttransportation.mqtt.MqttClient;
 
 public class TrafficLightActivity extends AppCompatActivity {
 

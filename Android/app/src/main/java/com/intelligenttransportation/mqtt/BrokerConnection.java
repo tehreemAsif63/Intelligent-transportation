@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.mqtt;
 
 
 import android.content.Context;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.intelligenttransportation.controller.ITUtils;
 
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;

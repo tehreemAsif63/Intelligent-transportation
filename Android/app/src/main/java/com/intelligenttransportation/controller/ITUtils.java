@@ -1,9 +1,11 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.controller;
 
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.intelligenttransportation.R;
 
 public class ITUtils {
 

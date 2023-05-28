@@ -1,4 +1,4 @@
-package com.intelligenttransportation;
+package com.intelligenttransportation.mqtt;
 
 import android.content.Context;
 
