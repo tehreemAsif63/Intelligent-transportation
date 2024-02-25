@@ -1,0 +1,26 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc.)
+local.properties
+
+# Android Studio generated files
+.idea/
+
+# Android binaries (APKs, etc.)
+*.apk
+*.ap_
+
+# ProGuard files
+proguard/
+proguard-rules.pro
+
+# Log files
+*.log
+
+# Android Test generated files
+androidTest-results/
+
+# Unit test generated files
+test-results/
